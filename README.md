@@ -1,13 +1,16 @@
-# my-awesome-cs
 ## 写在前面
 
-真诚而实事求是地
+真诚而实事求是地，
 
 只收录了个人喜好觉得品味好的网站，
 
 如果有其他好的建议也欢迎提出，非常感谢。
 
 不定期更新
+
+github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
+
+
 
 **基础素质要求（自勉用，参考NJUPA内的要求）**
 
@@ -41,7 +44,9 @@ PPRP：
 
 [直观理解机器学习的数学过程](https://www.bilibili.com/video/BV1iW411T781?p=34&share_medium=iphone&share_plat=ios&share_session_id=918760D9-B272-4504-8DD6-82E44AFA8672&share_source=WEIXIN&share_tag=s_i&timestamp=1641652920&unique_k=aGspGLd)
 
-[矩阵求导入门](https://www.bilibili.com/video/BV1xk4y1B7RQ?p=1&share_medium=iphone&share_plat=ios&share_session_id=1F101D5C-2880-4C53-A556-3D2777F6AFC8&share_source=WEIXIN&share_tag=s_i&timestamp=1641653070&unique_k=GcJNM2u) 可以配合文档里NTU的矩阵求导食用或者数学参考那本书。
+[矩阵求导入门](https://www.bilibili.com/video/BV1xk4y1B7RQ?p=1&share_medium=iphone&share_plat=ios&share_session_id=1F101D5C-2880-4C53-A556-3D2777F6AFC8&share_source=WEIXIN&share_tag=s_i&timestamp=1641653070&unique_k=GcJNM2u) 或者你也可以参考我整理的文章：
+
+[https://sanbuphy.github.io/p/矩阵求导简易入门手册/](https://sanbuphy.github.io/p/矩阵求导简易入门手册/)
 
 [李航统计学习基础第一章补数学基础](https://www.bilibili.com/video/BV1o5411p7H2?p=8&share_medium=iphone&share_plat=ios&share_session_id=3AD6E589-C577-4D7A-88C6-6A3FAB1E41F1&share_source=WEIXIN&share_tag=s_i&timestamp=1641653147&unique_k=abvhCWL) 只需要第一张 补基础，其他有问题再找
 
@@ -101,6 +106,12 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+简单的git ssh秘钥教程
+
+[https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
+
+
+
 不知道变量怎么命名就可以看看：
 
 [https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
@@ -133,6 +144,22 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+一个关于各种生成网络和编码器小论文通读的博主，有些写的还可以（比较基础入门）
+
+[https://medium.com/@falconives](https://medium.com/@falconives)
+
+
+
+java相关技术栈资料大全博主（还有一些三大件相关的资料，还挺多
+
+[http://learn.lianglianglee.com/](http://learn.lianglianglee.com/)
+
+
+
+Linux性能分析工具大全（Linux/BSD性能专家Brendan Gregg）
+
+[https://www.brendangregg.com/linuxperf.html](https://www.brendangregg.com/linuxperf.html)
+
 ### 操作系统学习
 
 南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（强烈不建议一开始就读csapp
@@ -145,11 +172,19 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
   [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
 
-2022 南京大学拔尖计划《操作系统：设计与实现》
+  
 
-  课程主页：[http://jyywiki.cn/OS/2022/](http://jyywiki.cn/OS/2022/) (slides、示例代码)
+2022 南京大学拔尖计划《操作系统：设计与实现》 
 
-  视频地址： [https://www.bilibili.com/video/BV1Cm4y1d7Ur/](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) 
+(蒋炎岩 我永远的超级无敌酷炫宝藏男神，还有什么好说的呢？没有他我就永远不懂计算机的美丽 
+
+当然包云岗老师也是我的男神哈哈哈哈哈哈)
+
+课程主页：[http://jyywiki.cn/OS/2022/](http://jyywiki.cn/OS/2022/) (slides、示例代码)
+
+视频地址： [https://www.bilibili.com/video/BV1Cm4y1d7Ur/](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) 
+
+
 
 操作系统（哈工大李治军老师）课件可在下方链接获取。
 
@@ -160,6 +195,14 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
   配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
 
   
+
+其他文章:
+
+如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
+
+从一个ELF程序的加载窥探操作系统内核:[https://blog.csdn.net/goolyoh/category_11298420.html](https://blog.csdn.net/goolyoh/category_11298420.html)
+
+
 
 ### 计算机网络学习
 
@@ -315,6 +358,12 @@ Awesome Deep Learning
 
 [https://www.cplusplus.com/reference/](https://www.cplusplus.com/reference/)
 
+内联汇编学习
+
+[https://baijiahao.baidu.com/s?id=1722268508697136684](https://baijiahao.baidu.com/s?id=1722268508697136684)
+
+[https://www.jianshu.com/p/1782e14a0766](https://www.jianshu.com/p/1782e14a0766)
+
 ## python
 
 anaconda与Jupyter notebook安装教程
@@ -409,7 +458,9 @@ LaTeX 图片转代码
 
 [https://tongtianta.site/](https://tongtianta.site/)
 
+一文网尽CV/Robotics顶会论文常用高级词汇/句式！ by 叶小飞（推荐关注）
 
+[https://zhuanlan.zhihu.com/p/415926905](https://zhuanlan.zhihu.com/p/415926905)
 
 ## 其他日常使用网站
 
@@ -444,4 +495,44 @@ LaTeX 图片转代码
 [https://www.nounplus.net/grammarcheck/](https://www.nounplus.net/grammarcheck/)
 
 [https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
+
+
+
+### 英文论文好用工具
+
+
+
+## 基本小项目的demo
+
+
+
+
+
+[https://cuijiahua.com/blog/2020/03/dl-16.html](https://cuijiahua.com/blog/2020/03/dl-16.html)
+
+
+
+
+
+代码：
+
+
+
+
+
+[https://zhuanlan.zhihu.com/p/164457246](https://zhuanlan.zhihu.com/p/164457246)
+
+
+
+
+
+
+
+
+
+
+
+官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
+
+B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
 

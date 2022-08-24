@@ -361,6 +361,20 @@ ubuntu-drivers devices
 
 sudo apt install  输入显示的推荐版本
 
+
+
+CUDA与cvDNN的安装：（直接官网选择）
+
+[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+
+[https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+
+
+
+解决nvcc版本不一致问题（更换runtime映射
+
+[https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/)
+
 ## C
 
 翁恺的相关视频(入门和进阶)
@@ -513,17 +527,4 @@ LaTeX 图片转代码
 
 [https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
 
-
-
-### 英文论文好用工具
-
-
-
-## 基本小项目的demo
-
-
-
-
-
-[https://cuijiahua.com/blog/2020/03/dl-16.html](https://cuijiahua.com/blog/2020/03/dl-16.html)
 

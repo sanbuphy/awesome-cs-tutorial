@@ -1,8 +1,6 @@
 ## 写在前面
 
-真诚而实事求是地，
-
-只收录了个人喜好觉得品味好的网站，
+收录了个人喜好觉得品味好的网站，
 
 如果有其他好的建议也欢迎提出，非常感谢。
 
@@ -106,6 +104,12 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+anaconda 换源
+
+[https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
+
+
+
 简单的git ssh秘钥教程
 
 [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
@@ -127,6 +131,12 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
+
+
+
+anaconda快速下载
+
+[https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D)
 
 
 
@@ -159,6 +169,14 @@ java相关技术栈资料大全博主（还有一些三大件相关的资料，�
 Linux性能分析工具大全（Linux/BSD性能专家Brendan Gregg）
 
 [https://www.brendangregg.com/linuxperf.html](https://www.brendangregg.com/linuxperf.html)
+
+
+
+简单安装双系统
+
+1、安装windows（因为windows的boot优先级比较高）
+
+2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
 
 ### 操作系统学习
 
@@ -209,6 +227,9 @@ Linux性能分析工具大全（Linux/BSD性能专家Brendan Gregg）
 待补充
 
 
+其他文章：
+
+tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/](http://plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/)
 
 ### 数据结构与算法
 
@@ -343,6 +364,12 @@ Awesome Deep Learning
 [https://blog.csdn.net/lx_ros/article/details/124439120](https://blog.csdn.net/lx_ros/article/details/124439120)
 
 
+
+显卡驱动安装快速方法：
+
+ubuntu-drivers devices
+
+sudo apt install  输入显示的推荐版本
 
 ## C
 
@@ -499,40 +526,3 @@ LaTeX 图片转代码
 
 
 ### 英文论文好用工具
-
-
-
-## 基本小项目的demo
-
-
-
-
-
-[https://cuijiahua.com/blog/2020/03/dl-16.html](https://cuijiahua.com/blog/2020/03/dl-16.html)
-
-
-
-
-
-代码：
-
-
-
-
-
-[https://zhuanlan.zhihu.com/p/164457246](https://zhuanlan.zhihu.com/p/164457246)
-
-
-
-
-
-
-
-
-
-
-
-官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
-
-B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
-

@@ -6,6 +6,8 @@
 
 不定期更新
 
+
+带目录边栏（电脑上可看）：[https://sanbuphy.github.io/p/我的计算机学习网站集合/](https://sanbuphy.github.io/p/我的计算机学习网站集合/)
 github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
 
@@ -104,12 +106,6 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
-anaconda 换源
-
-[https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
-
-
-
 简单的git ssh秘钥教程
 
 [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
@@ -131,12 +127,6 @@ anaconda 换源
 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
-
-
-
-anaconda快速下载
-
-[https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D)
 
 
 
@@ -401,9 +391,9 @@ anaconda与Jupyter notebook安装教程
 
 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
-anaconda更新与下载包的镜像源更换
+anaconda 换源
 
-[https://zhuanlan.zhihu.com/p/35985834](https://zhuanlan.zhihu.com/p/35985834)
+[https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
 
 
 
@@ -526,3 +516,14 @@ LaTeX 图片转代码
 
 
 ### 英文论文好用工具
+
+
+
+## 基本小项目的demo
+
+
+
+
+
+[https://cuijiahua.com/blog/2020/03/dl-16.html](https://cuijiahua.com/blog/2020/03/dl-16.html)
+

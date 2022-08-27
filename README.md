@@ -8,6 +8,8 @@
 
 
 带目录边栏（电脑上可看）：[https://sanbuphy.github.io/p/我的计算机学习网站集合/](https://sanbuphy.github.io/p/我的计算机学习网站集合/)
+
+
 github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
 
@@ -106,6 +108,14 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+简单安装双系统
+
+1、安装windows（因为windows的boot优先级比较高）
+
+2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
+
+
+
 简单的git ssh秘钥教程
 
 [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
@@ -162,11 +172,23 @@ Linux性能分析工具大全（Linux/BSD性能专家Brendan Gregg）
 
 
 
-简单安装双系统
+面向程序员的各类调用库清单（主要是C/C++ PYTHON)
 
-1、安装windows（因为windows的boot优先级比较高）
+[https://github.com/programthink/opensource](https://github.com/programthink/opensource)
 
-2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
+
+
+GitHub中文排行榜
+
+[https://github.com/GrowingGit/GitHub-Chinese-Top-Charts](https://github.com/GrowingGit/GitHub-Chinese-Top-Charts)
+
+
+
+GitHub 上有趣、入门级的开源项目
+
+[https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+
+
 
 ### 操作系统学习
 
@@ -227,6 +249,10 @@ tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问�
 
 [https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html)
 
+labuladong 的算法小抄
+
+[https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
+
 
 
 ### 深度学习相关
@@ -276,6 +302,12 @@ tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问�
 李沐动手学深度学习（适合速成，打基础建议李宏毅）
 
 [https://zh.d2l.ai/index.html](https://zh.d2l.ai/index.html)
+
+
+
+李沐深度学习精读
+
+[https://github.com/mli/paper-reading](https://github.com/mli/paper-reading)
 
 
 
@@ -345,15 +377,15 @@ Awesome Deep Learning
 
 
 
+#### 3D感知相关
+
+从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
+
+[https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch](https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch)
+
+
+
 #### 深度学习的杂物间
-
-孪生神经网络的相关实现：
-
-[https://blog.csdn.net/weixin_44791964/article/details/107406072](https://blog.csdn.net/weixin_44791964/article/details/107406072)
-
-[https://blog.csdn.net/lx_ros/article/details/124439120](https://blog.csdn.net/lx_ros/article/details/124439120)
-
-
 
 显卡驱动安装快速方法：
 
@@ -374,6 +406,26 @@ CUDA与cvDNN的安装：（直接官网选择）
 解决nvcc版本不一致问题（更换runtime映射
 
 [https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/)
+
+
+
+孪生神经网络的相关实现：
+
+[https://blog.csdn.net/weixin_44791964/article/details/107406072](https://blog.csdn.net/weixin_44791964/article/details/107406072)
+
+[https://blog.csdn.net/lx_ros/article/details/124439120](https://blog.csdn.net/lx_ros/article/details/124439120)
+
+
+
+ncnn推理框架开发版测试
+
+[https://zhuanlan.zhihu.com/p/458139435](https://zhuanlan.zhihu.com/p/458139435)
+
+
+
+深度学习500问
+
+[https://github.com/shliang0603/Awesome-DeepLearning-500FAQ](https://github.com/shliang0603/Awesome-DeepLearning-500FAQ)
 
 ## C
 
@@ -443,6 +495,16 @@ Scipy Lecture Notes//Advanced Python Constructs//Advanced NumP
 
 
 
+opencv图像处理100问，可用来查缺补漏（有些格式问题但不影响
+
+[https://github.com/gzr2017/ImageProcessing100Wen](https://github.com/gzr2017/ImageProcessing100Wen)
+
+
+
+有趣的Python爬虫和Python数据分析小项目（有些方法可能因为是3年前的东西会失效
+
+[https://github.com/Alfred1984/interesting-python](https://github.com/Alfred1984/interesting-python)
+
 ## C++
 
 c++入门学习（建议直接看书加上翁恺或侯捷）
@@ -462,6 +524,12 @@ c++并发编程
 双笙子佯谬    图形学大佬，Zeno和Taichi Blend的作者
 
 [https://space.bilibili.com/263032155](https://space.bilibili.com/263032155)
+
+
+
+C++ Core Guidelines 
+
+[https://github.com/isocpp/CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
 
 
 
@@ -517,6 +585,10 @@ LaTeX 图片转代码
 
 
 
+2017年买房经历总结出来的买房购房知识
+
+[https://github.com/houshanren/hangzhou_house_knowledge](https://github.com/houshanren/hangzhou_house_knowledge)
+
 ## 英语
 
 ### 英文语法在线修改
@@ -526,5 +598,3 @@ LaTeX 图片转代码
 [https://www.nounplus.net/grammarcheck/](https://www.nounplus.net/grammarcheck/)
 
 [https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
-
-

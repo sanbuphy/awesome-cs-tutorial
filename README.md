@@ -116,6 +116,18 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
+
+[https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
+
+
+
+图吧工具箱（给自己电脑做硬件分析等等
+
+[http://www.tbtool.cn/](http://www.tbtool.cn/)
+
+
+
 简单的git ssh秘钥教程
 
 [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
@@ -131,12 +143,6 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 有关linux的基础讲解，有配图和自己的理解，推荐一读。
 
 [https://segmentfault.com/u/public0821](https://segmentfault.com/u/public0821)
-
-
-
-有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
-
-[https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
 
 
 
@@ -577,6 +583,20 @@ LaTeX 图片转代码
 
 
 
+## 有趣的故事
+
+谷歌背后的数学
+
+[https://www.changhai.org/articles/technology/misc/google_math.php](https://www.changhai.org/articles/technology/misc/google_math.php)
+
+
+
+火光摇曳(数学科普) Rickjin(靳志辉)   （非常好传递了统计之美）
+
+[https://uploads.cosx.org/2014/07/gamma.pdf](https://uploads.cosx.org/2014/07/gamma.pdf)
+
+
+
 ## 心理健康建设
 
 如何在工作中学习（好的方法论）
@@ -598,3 +618,4 @@ LaTeX 图片转代码
 [https://www.nounplus.net/grammarcheck/](https://www.nounplus.net/grammarcheck/)
 
 [https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
+

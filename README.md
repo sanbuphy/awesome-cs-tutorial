@@ -154,9 +154,17 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+正则表达式入门与练习
+
+[https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
+
 正则表达式可视化浏览
 
 [https://regexr.com/](https://regexr.com/)
+
+长正则表达式结构可视化
+
+[https://regexper.com/](https://regexper.com/)
 
 
 
@@ -195,6 +203,20 @@ GitHub 上有趣、入门级的开源项目
 [https://github.com/521xueweihan/HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
 
 
+
+美化自己的github界面
+
+[github.com/rzashakeri/beautify-github-profile](http://github.com/rzashakeri/beautify-github-profile) 
+
+[https://bowenyoung.cn/posts/githubBeautify](https://bowenyoung.cn/posts/githubBeautify)
+
+社区制作的一键生成界面：[https://rahuldkjain.github.io/gh-profile-readme-generator/](https://rahuldkjain.github.io/gh-profile-readme-generator/)
+
+
+
+公众号 / 真没什么逻辑的作者（为什么这么设计系列文章）涉及网络、数据库、操作系统等
+
+[https://draveness.me/whys-the-design/](https://draveness.me/whys-the-design/)
 
 ### 操作系统学习
 
@@ -240,6 +262,12 @@ GitHub 上有趣、入门级的开源项目
 
 
 
+南京大学软件分析课程：
+
+[https://tai-e.pascal-lab.net/pa1.html#_1-作业导览](https://tai-e.pascal-lab.net/pa1.html#_1-作业导览)
+
+[https://space.bilibili.com/2919428/channel/series](https://space.bilibili.com/2919428/channel/series)
+
 ### 计算机网络学习
 
 待补充
@@ -248,6 +276,24 @@ GitHub 上有趣、入门级的开源项目
 其他文章：
 
 tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/](http://plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/)
+
+
+
+这个博主写了网络编程相关的一系列文章：[https://juejin.cn/user/862486453028888/posts](https://juejin.cn/user/862486453028888/posts)
+
+其中我最喜欢：Nginx一网打尽：动静分离、压缩、缓存、黑白名单、跨域、高可用、性能优化：
+
+[https://juejin.cn/post/7112826654291918855](https://juejin.cn/post/7112826654291918855)
+
+
+
+有前端Nginx服务器在线配置，及大改善修改nginx的配置体验
+
+[https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN)
+
+项目来源：[https://github.com/digitalocean/nginxconfig.io](https://github.com/digitalocean/nginxconfig.io)
+
+
 
 ### 数据结构与算法
 
@@ -259,9 +305,11 @@ labuladong 的算法小抄
 
 [https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
 
+ACWING的课
 
+[https://www.acwing.com/activity/](https://www.acwing.com/activity/)
 
-### 深度学习相关
+### 深度学习大类
 
 #### 有关理论基础（但我还是建议直接看李宏毅）
 
@@ -361,6 +409,8 @@ Awesome Deep Learning
 
 
 
+
+
 #### 手写深度学习项目
 
 小土堆 pytorch学习
@@ -423,17 +473,61 @@ CUDA与cvDNN的安装：（直接官网选择）
 
 
 
-ncnn推理框架开发版测试
-
-[https://zhuanlan.zhihu.com/p/458139435](https://zhuanlan.zhihu.com/p/458139435)
-
 
 
 深度学习500问
 
 [https://github.com/shliang0603/Awesome-DeepLearning-500FAQ](https://github.com/shliang0603/Awesome-DeepLearning-500FAQ)
 
-## C
+
+
+### 深度学习部署
+
+（由于太难需要额外开个类别）
+
+
+
+giantpanda 很不错的一个公众号（这是他们整理的网站），涉及部署的内容比较多且硬核，很推荐。
+
+[http://giantpandacv.com/resources/](http://giantpandacv.com/resources/)
+
+
+
+ncnn推理框架开发版测试
+
+[https://zhuanlan.zhihu.com/p/458139435](https://zhuanlan.zhihu.com/p/458139435)
+
+
+
+#### 推理框架
+
+ncnn
+
+[https://github.com/Tencent/ncnn](https://github.com/Tencent/ncnn)
+
+ncnn源码阅读学习
+
+[https://blog.csdn.net/sinat_31425585/category_9312419.html](https://blog.csdn.net/sinat_31425585/category_9312419.html)
+
+openvino
+
+[https://space.bilibili.com/38566875](https://space.bilibili.com/38566875)
+
+bbuf老师的onnx学习笔记
+
+[ONNX学习笔记 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346511883)
+
+#### 实例参考
+
+待测试
+
+[成蹊 - 知乎 (zhihu.com)](https://www.zhihu.com/people/li-li-fu-70/posts)
+
+
+
+
+
+## C与汇编
 
 翁恺的相关视频(入门和进阶)
 
@@ -447,11 +541,21 @@ ncnn推理框架开发版测试
 
 [https://www.cplusplus.com/reference/](https://www.cplusplus.com/reference/)
 
+汇编语言在线解析网站
+
+[https://godbolt.org/](https://godbolt.org/)
+
 内联汇编学习
 
 [https://baijiahao.baidu.com/s?id=1722268508697136684](https://baijiahao.baidu.com/s?id=1722268508697136684)
 
 [https://www.jianshu.com/p/1782e14a0766](https://www.jianshu.com/p/1782e14a0766)
+
+
+
+"undefined reference to XXX"问题总结
+
+[https://github.com/Captain1986/CaptainBlackboard/blob/master/D%230001-undefined_reference_to_XXX/D%230001.md](https://github.com/Captain1986/CaptainBlackboard/blob/master/D#0001-undefined_reference_to_XXX/D#0001.md)
 
 ## python
 
@@ -581,7 +685,9 @@ LaTeX 图片转代码
 
 [https://www.wenshushu.cn/](https://www.wenshushu.cn/)
 
+偏极客的新闻网，无广告，而且有一套防刷热度算法，也不搞推荐算法
 
+[https://news.ycombinator.com/news](https://news.ycombinator.com/news)
 
 ## 有趣的故事
 
@@ -608,6 +714,16 @@ LaTeX 图片转代码
 2017年买房经历总结出来的买房购房知识
 
 [https://github.com/houshanren/hangzhou_house_knowledge](https://github.com/houshanren/hangzhou_house_knowledge)
+
+2022年杭州购房指南
+
+[github.com/zkqiang/hangzhou-house-guide](http://github.com/zkqiang/hangzhou-house-guide) 
+
+2020年11月上海购房指南
+
+[github.com/ayuer/shanghai_house_knowledge](http://github.com/ayuer/shanghai_house_knowledge)
+
+
 
 ## 英语
 

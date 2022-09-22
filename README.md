@@ -92,7 +92,7 @@ CS自学指南【必看】
 
 【北美名校CS课程集锦】2.加州大学伯克利分校CS课程全集 - 文兄的文章 - 知乎 [https://zhuanlan.zhihu.com/p/102083014](https://zhuanlan.zhihu.com/p/102083014)
 
-
+### 基本操作 
 
 GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学
 
@@ -105,6 +105,18 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 南大PA教程最下面的一些简单入门和材料
 
 [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
+
+
+
+git常见操作整理
+
+[https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+
+
+
+简单的git ssh秘钥教程
+
+[https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
 
 
 
@@ -128,29 +140,9 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
-简单的git ssh秘钥教程
-
-[https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
-
-
-
 不知道变量怎么命名就可以看看：
 
 [https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
-
-
-
-有关linux的基础讲解，有配图和自己的理解，推荐一读。
-
-[https://segmentfault.com/u/public0821](https://segmentfault.com/u/public0821)
-
-
-
-一个对cpu和网络了解都非常深入的工程师
-
-[https://plantegg.github.io/](https://plantegg.github.io/)
-
-其中最好的一类文章（有关cpu的讲解）[https://plantegg.github.io/2021/06/01/CPU的制造和概念/](https://plantegg.github.io/2021/06/01/CPU的制造和概念/)
 
 
 
@@ -165,6 +157,22 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 长正则表达式结构可视化
 
 [https://regexper.com/](https://regexper.com/)
+
+
+
+### 其他有趣的文章
+
+有关linux的基础讲解，有配图和自己的理解，推荐一读。
+
+[https://segmentfault.com/u/public0821](https://segmentfault.com/u/public0821)
+
+
+
+一个对cpu和网络了解都非常深入的工程师
+
+[https://plantegg.github.io/](https://plantegg.github.io/)
+
+其中最好的一类文章（有关cpu的讲解）[https://plantegg.github.io/2021/06/01/CPU的制造和概念/](https://plantegg.github.io/2021/06/01/CPU的制造和概念/)
 
 
 
@@ -218,6 +226,12 @@ GitHub 上有趣、入门级的开源项目
 
 [https://draveness.me/whys-the-design/](https://draveness.me/whys-the-design/)
 
+
+
+Roadmap to becoming a developer
+
+[https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+
 ### 操作系统学习
 
 南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（强烈不建议一开始就读csapp
@@ -252,7 +266,13 @@ GitHub 上有趣、入门级的开源项目
 
   配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
 
-  
+
+
+MIT 6.S081: Operating System Engineering
+
+[https://csdiy.wiki/操作系统/MIT6.S081/](https://csdiy.wiki/操作系统/MIT6.S081/)
+
+
 
 其他文章:
 
@@ -267,6 +287,8 @@ GitHub 上有趣、入门级的开源项目
 [https://tai-e.pascal-lab.net/pa1.html#_1-作业导览](https://tai-e.pascal-lab.net/pa1.html#_1-作业导览)
 
 [https://space.bilibili.com/2919428/channel/series](https://space.bilibili.com/2919428/channel/series)
+
+
 
 ### 计算机网络学习
 
@@ -453,6 +475,8 @@ sudo apt install  输入显示的推荐版本
 
 CUDA与cvDNN的安装：（直接官网选择）
 
+教程可参考：[https://blog.csdn.net/tangjiahao10/article/details/125227005](https://blog.csdn.net/tangjiahao10/article/details/125227005)
+
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
 [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
@@ -499,6 +523,10 @@ ncnn推理框架开发版测试
 
 
 
+Build & Share Delightful Machine Learning Apps
+
+[https://gradio.app/](https://gradio.app/)
+
 #### 推理框架
 
 ncnn
@@ -525,7 +553,17 @@ bbuf老师的onnx学习笔记
 
 
 
+### 有趣的深度学习小程序与应用
 
+比disco diffusion更强大的绘制工具SD：
+
+在自己电脑运行Stable Diffusion和完整项目下载
+
+[https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g](https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g)
+
+StableDiffusion Int8量化教程与ONNX导出推理
+
+[https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw](https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw)
 
 ## C与汇编
 
@@ -605,6 +643,12 @@ Scipy Lecture Notes//Advanced Python Constructs//Advanced NumP
 
 
 
+SICP Python 描述 中文版
+
+[https://wizardforcel.gitbooks.io/sicp-py/content/](https://wizardforcel.gitbooks.io/sicp-py/content/)
+
+
+
 opencv图像处理100问，可用来查缺补漏（有些格式问题但不影响
 
 [https://github.com/gzr2017/ImageProcessing100Wen](https://github.com/gzr2017/ImageProcessing100Wen)
@@ -614,6 +658,18 @@ opencv图像处理100问，可用来查缺补漏（有些格式问题但不影�
 有趣的Python爬虫和Python数据分析小项目（有些方法可能因为是3年前的东西会失效
 
 [https://github.com/Alfred1984/interesting-python](https://github.com/Alfred1984/interesting-python)
+
+
+
+### 实例项目等
+
+supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志部署
+
+[https://zhuanlan.zhihu.com/p/79227989](https://zhuanlan.zhihu.com/p/79227989)
+
+
+
+
 
 ## C++
 
@@ -663,6 +719,10 @@ LaTeX 图片转代码
 
 [https://web.baimiaoapp.com/image-to-latex](https://web.baimiaoapp.com/image-to-latex)
 
+LaTeX手写字符识别（不知道字符的代码是什么的时候）
+
+[http://detexify.kirelabs.org/classify.html](http://detexify.kirelabs.org/classify.html)
+
 论文翻译
 
 [https://tongtianta.site/](https://tongtianta.site/)
@@ -703,6 +763,10 @@ LaTeX 图片转代码
 
 
 
+计算的极限
+
+[https://fwjmath.wordpress.com/recommended-list/](https://fwjmath.wordpress.com/recommended-list/)
+
 ## 心理健康建设
 
 如何在工作中学习（好的方法论）
@@ -734,4 +798,16 @@ LaTeX 图片转代码
 [https://www.nounplus.net/grammarcheck/](https://www.nounplus.net/grammarcheck/)
 
 [https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
+
+
+
+### 英文论文好用工具
+
+TextRanch 句子参考
+
+[https://textranch.com/](https://textranch.com/)
+
+QuillBot 文段改写
+
+[https://quillbot.com/](https://quillbot.com/)
 

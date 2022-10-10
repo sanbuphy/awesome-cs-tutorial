@@ -107,7 +107,7 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
-git相关
+**git相关**
 
   git常见操作整理
 
@@ -139,7 +139,7 @@ git相关
 
 
 
-简单更换ubuntu镜像源
+简单更换ubuntu镜像源     
 
   Settings→About→Software Updates→Download from 
 

@@ -1,11 +1,10 @@
 ## 写在前面
 
-收录了个人喜好觉得品味好的网站，
+收录了个人喜好觉得品味好的网站（也有一些小工具），
 
 如果有其他好的建议也欢迎提出，非常感谢。
 
 不定期更新
-
 
 带目录边栏（电脑上可看）：[https://sanbuphy.github.io/p/我的计算机学习网站集合/](https://sanbuphy.github.io/p/我的计算机学习网站集合/)
 
@@ -108,23 +107,43 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
-git常见操作整理
+git相关
 
-[https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+  git常见操作整理
+
+  [https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+
+  简单的git ssh秘钥教程
+
+  [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
+
+  简单的pr教程
+
+  [https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html](https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html)
+
+  github linux下的desktop版
+
+  [https://github.com/shiftkey/desktop/releases](https://github.com/shiftkey/desktop/releases)
 
 
 
-简单的git ssh秘钥教程
-
-[https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
+快速下载ubuntu镜像: 找到官网下载链接后使用wget下载
 
 
 
 简单安装双系统
 
-1、安装windows（因为windows的boot优先级比较高）
+  1、安装windows（因为windows的boot优先级比较高）
 
-2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
+  2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
+
+
+
+简单更换ubuntu镜像源
+
+  Settings→About→Software Updates→Download from 
+
+  选择其他服务器，然后找到中国，选择进行测试以便找到最快的站点。
 
 
 
@@ -146,19 +165,25 @@ git常见操作整理
 
 
 
-正则表达式入门与练习
+正则表达式相关
 
-[https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
+  正则表达式入门与练习
 
-正则表达式可视化浏览
+  [https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 
-[https://regexr.com/](https://regexr.com/)
+  正则表达式可视化浏览
 
-长正则表达式结构可视化
+  [https://regexr.com/](https://regexr.com/)
 
-[https://regexper.com/](https://regexper.com/)
+  长正则表达式结构可视化
 
+  [https://regexper.com/](https://regexper.com/)
 
+  常用正则表达式汇总（车牌号手机号姓名IP等等）
+
+  [http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html](http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html)
+
+  
 
 ### 其他有趣的文章
 
@@ -266,7 +291,7 @@ Roadmap to becoming a developer
 
   配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
 
-
+  
 
 MIT 6.S081: Operating System Engineering
 
@@ -274,11 +299,11 @@ MIT 6.S081: Operating System Engineering
 
 
 
-其他文章:
+浙江大学周亚金老师的操作系统课课件（写的很好，有操作和现代的一些规范备注，我很喜欢）
 
-如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
+在Schedule中可以获取到全部课件
 
-从一个ELF程序的加载窥探操作系统内核:[https://blog.csdn.net/goolyoh/category_11298420.html](https://blog.csdn.net/goolyoh/category_11298420.html)
+[https://yajin.org/os2018fall/](https://yajin.org/os2018fall/)
 
 
 
@@ -287,6 +312,22 @@ MIT 6.S081: Operating System Engineering
 [https://tai-e.pascal-lab.net/pa1.html#_1-作业导览](https://tai-e.pascal-lab.net/pa1.html#_1-作业导览)
 
 [https://space.bilibili.com/2919428/channel/series](https://space.bilibili.com/2919428/channel/series)
+
+
+
+其他文章:
+
+如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
+
+从一个ELF程序的加载窥探操作系统内核:
+
+[https://blog.csdn.net/goolyoh/category_11298420.html](https://blog.csdn.net/goolyoh/category_11298420.html)
+
+如何实现最小的hello world?
+
+[https://cjting.me/2020/12/10/tiny-x64-helloworld/](https://cjting.me/2020/12/10/tiny-x64-helloworld/)
+
+
 
 
 
@@ -547,6 +588,10 @@ bbuf老师的onnx学习笔记
 
 #### 实例参考
 
+各种开发版的基础功能调通
+
+[https://blog.csdn.net/sxj731533730](https://blog.csdn.net/sxj731533730)
+
 待测试
 
 [成蹊 - 知乎 (zhihu.com)](https://www.zhihu.com/people/li-li-fu-70/posts)
@@ -595,19 +640,39 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 [https://github.com/Captain1986/CaptainBlackboard/blob/master/D%230001-undefined_reference_to_XXX/D%230001.md](https://github.com/Captain1986/CaptainBlackboard/blob/master/D#0001-undefined_reference_to_XXX/D#0001.md)
 
+
+
 ## python
 
-anaconda与Jupyter notebook安装教程
+anaconda基础
 
-[https://zhuanlan.zhihu.com/p/37093476](https://zhuanlan.zhihu.com/p/37093476)
+  国内的anaconda镜像下载
 
-国内的anaconda镜像下载
+  [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
-[https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+  (windows)anaconda与Jupyter notebook安装教程
 
-anaconda 换源
+  [https://zhuanlan.zhihu.com/p/37093476](https://zhuanlan.zhihu.com/p/37093476)
 
-[https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
+  (linux)anaconda安装教程
+    - 下载deb格式的anaconda安装包
+    - 安装后在终端使用source ~/.bashrc即可在终端看到(base)标识（不要在管理员模式下运行）
+
+  anaconda 换源(记得更换源的时候删去default 以及备份原来的）
+
+  [https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
+
+  pip -i镜像源合集（个人喜欢用百度的）
+
+  [https://www.cnblogs.com/sunnydou/p/5801760.html](https://www.cnblogs.com/sunnydou/p/5801760.html)
+
+  requirements.txt的生成教程
+
+  [https://www.cnblogs.com/lvjinfeng/articles/16333180.html](https://www.cnblogs.com/lvjinfeng/articles/16333180.html)
+
+  conda与pip虚拟环境导出与转移（方便移植）
+
+  [https://blog.csdn.net/weixin_42272869/article/details/122471357](https://blog.csdn.net/weixin_42272869/article/details/122471357)
 
 
 
@@ -628,6 +693,12 @@ Python Cookbook 3rd Edition
 Python并行编程
 
 [https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/index.html](https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/index.html)
+
+
+
+Python 3 标准库实例教程(真正现代、进阶的python教程
+
+[https://learnku.com/docs/pymotw](https://learnku.com/docs/pymotw)
 
 
 
@@ -669,7 +740,15 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 
 
+教你阅读 Python 开源项目代码（里面有一些基础开源项目可以参考）
 
+[https://learnku.com/articles/23010/teach-you-to-read-the-python-open-source-project-code](https://learnku.com/articles/23010/teach-you-to-read-the-python-open-source-project-code)
+
+
+
+很不错的python状态机（可以画成图）展示工具：
+
+[https://github.com/laike9m/Cyberbrain](https://github.com/laike9m/Cyberbrain)
 
 ## C++
 
@@ -682,6 +761,14 @@ awesome项目（包含了绝大部分的c++相关资源）
 [https://github.com/fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 
 [http://jobbole.github.io/awesome-python-cn/](http://jobbole.github.io/awesome-python-cn/)
+
+
+
+C++ reference（字典）
+
+[https://en.cppreference.com/w/](https://en.cppreference.com/w/)
+
+
 
 c++并发编程
 
@@ -698,6 +785,10 @@ C++ Core Guidelines
 [https://github.com/isocpp/CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
 
 
+
+c++手写数据库练习 CMU 15-445: Database Systems
+
+[https://csdiy.wiki/数据库系统/15445/](https://csdiy.wiki/数据库系统/15445/)
 
 ### C++的杂物间
 

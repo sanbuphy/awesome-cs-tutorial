@@ -239,6 +239,8 @@ GitHub 上有趣、入门级的开源项目
 
 美化自己的github界面
 
+[https://zhuanlan.zhihu.com/p/454597068](https://zhuanlan.zhihu.com/p/454597068)
+
 [github.com/rzashakeri/beautify-github-profile](http://github.com/rzashakeri/beautify-github-profile) 
 
 [https://bowenyoung.cn/posts/githubBeautify](https://bowenyoung.cn/posts/githubBeautify)
@@ -256,6 +258,12 @@ GitHub 上有趣、入门级的开源项目
 Roadmap to becoming a developer
 
 [https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+
+
+
+小林 x 图解计算机基础（国内最好的八股文整理之一）（图解网络和操作系统）
+
+[https://xiaolincoding.com/](https://xiaolincoding.com/)
 
 ### 操作系统学习
 
@@ -326,8 +334,6 @@ MIT 6.S081: Operating System Engineering
 如何实现最小的hello world?
 
 [https://cjting.me/2020/12/10/tiny-x64-helloworld/](https://cjting.me/2020/12/10/tiny-x64-helloworld/)
-
-
 
 
 
@@ -472,8 +478,6 @@ Awesome Deep Learning
 
 
 
-
-
 #### 手写深度学习项目
 
 小土堆 pytorch学习
@@ -493,6 +497,12 @@ Awesome Deep Learning
 [https://www.bilibili.com/video/BV1JR4y1g77H](https://www.bilibili.com/video/BV1JR4y1g77H?spm_id_from=333.999.0.0&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
 
 [https://space.bilibili.com/472467171](https://space.bilibili.com/472467171)
+
+
+
+#### 在线数据集网站
+
+[https://universe.roboflow.com/](https://universe.roboflow.com/)
 
 
 
@@ -516,6 +526,10 @@ sudo apt install  输入显示的推荐版本
 
 CUDA与cvDNN的安装：（直接官网选择）
 
+注意：a100和3090ti不支持cuda11以下，请装113以上的版本。
+
+推荐装cuda的时候可以用sh的模式，然后顺带安装了驱动（之前就不用装了）对动态库的默认支持更好
+
 教程可参考：[https://blog.csdn.net/tangjiahao10/article/details/125227005](https://blog.csdn.net/tangjiahao10/article/details/125227005)
 
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
@@ -524,9 +538,19 @@ CUDA与cvDNN的安装：（直接官网选择）
 
 
 
-解决nvcc版本不一致问题（更换runtime映射
+安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source，且记得修改对应版本（如cuda-11.5）
 
-[https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/)
+（具体的安装和卸载也可以参考[https://flywine.blog.csdn.net/article/details/81879514](https://flywine.blog.csdn.net/article/details/81879514)）
+
+```Bash
+export PATH="/usr/local/cuda-11.5/bin:$PATH" 
+export LD_LIBRARY_PATH="/usr/local/cuda-11.5/lib64:$LD_LIBRARY_PATH" 
+
+```
+
+解决nvcc版本不一致问题（可能的方法，更换runtime映射
+
+[https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/) 
 
 
 
@@ -538,8 +562,6 @@ CUDA与cvDNN的安装：（直接官网选择）
 
 
 
-
-
 深度学习500问
 
 [https://github.com/shliang0603/Awesome-DeepLearning-500FAQ](https://github.com/shliang0603/Awesome-DeepLearning-500FAQ)
@@ -548,13 +570,15 @@ CUDA与cvDNN的安装：（直接官网选择）
 
 ### 深度学习部署
 
-（由于太难需要额外开个类别）
 
 
+GiantPandaCV
 
-giantpanda 很不错的一个公众号（这是他们整理的网站），涉及部署的内容比较多且硬核，很推荐。
+国内最好的部署相关公众平台之一，涉及部署的内容比较多且硬核，五星推荐。
 
 [http://giantpandacv.com/resources/](http://giantpandacv.com/resources/)
+
+[http://giantpandacv.com/project/部署优化/](http://giantpandacv.com/project/部署优化/)
 
 
 
@@ -642,9 +666,13 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 
 
+有关硬件开发（嵌入式）的推荐个人博客列表
+
+[https://github.com/JesseGuoX/DoHard](https://github.com/JesseGuoX/DoHard)
+
 ## python
 
-anaconda基础
+**anaconda基础**
 
   国内的anaconda镜像下载
 
@@ -732,6 +760,10 @@ opencv图像处理100问，可用来查缺补漏（有些格式问题但不影�
 
 
 
+requests库官方手册（交互常用，主要需理解请求头等）
+
+[https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
+
 ### 实例项目等
 
 supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志部署
@@ -814,6 +846,10 @@ LaTeX手写字符识别（不知道字符的代码是什么的时候）
 
 [http://detexify.kirelabs.org/classify.html](http://detexify.kirelabs.org/classify.html)
 
+LaTeX开源OCR方案
+
+[https://github.com/lukas-blecher/LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)
+
 论文翻译
 
 [https://tongtianta.site/](https://tongtianta.site/)
@@ -831,6 +867,10 @@ LaTeX手写字符识别（不知道字符的代码是什么的时候）
 流程图绘制：
 
 [https://app.diagrams.net/](https://app.diagrams.net/)
+
+json可视化：
+
+[https://c.runoob.com/front-end/53/](https://c.runoob.com/front-end/53/)
 
 快速文件传输（随意分享给人不用网盘）
 

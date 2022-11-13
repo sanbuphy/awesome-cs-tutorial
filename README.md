@@ -97,9 +97,8 @@ GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学
 
 The Missing Semester of Your CS Education 中文版（强烈推荐）
 
-  官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
-
-  B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
+- 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
+- B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
 
 南大PA教程最下面的一些简单入门和材料
 
@@ -109,21 +108,21 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 **git相关**
 
-  git常见操作整理
+- git常见操作整理
 
-  [https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+[https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 
-  简单的git ssh秘钥教程
+- 简单的git ssh秘钥教程
 
-  [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
+[https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
 
-  简单的pr教程
+- 简单的pr教程
 
-  [https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html](https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html)
+[https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html](https://mmcv.readthedocs.io/zh_CN/latest/community/pr.html)
 
-  github linux下的desktop版
+- github linux下的desktop版
 
-  [https://github.com/shiftkey/desktop/releases](https://github.com/shiftkey/desktop/releases)
+[https://github.com/shiftkey/desktop/releases](https://github.com/shiftkey/desktop/releases)
 
 
 
@@ -141,9 +140,8 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 简单更换ubuntu镜像源     
 
-  Settings→About→Software Updates→Download from 
-
-  选择其他服务器，然后找到中国，选择进行测试以便找到最快的站点。
+- Settings→About→Software Updates→Download from 
+- 选择其他服务器，然后找到中国，选择进行测试以便找到最快的站点。
 
 
 
@@ -167,21 +165,21 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 正则表达式相关
 
-  正则表达式入门与练习
+- 正则表达式入门与练习
 
-  [https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
+[https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 
-  正则表达式可视化浏览
+- 正则表达式可视化浏览
 
-  [https://regexr.com/](https://regexr.com/)
+[https://regexr.com/](https://regexr.com/)
 
-  长正则表达式结构可视化
+- 长正则表达式结构可视化
 
-  [https://regexper.com/](https://regexper.com/)
+[https://regexper.com/](https://regexper.com/)
 
-  常用正则表达式汇总（车牌号手机号姓名IP等等）
+- 常用正则表达式汇总（车牌号手机号姓名IP等等）
 
-  [http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html](http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html)
+[http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html](http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html)
 
   
 
@@ -273,9 +271,7 @@ Roadmap to becoming a developer
 
 [https://www.icourse163.org/course/nju-1001625001#/info](https://www.icourse163.org/course/nju-1001625001#/info)
 
-前置：南京大学计算机基础实验（做了能让你真的变强）
-
-  [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
+前置：南京大学计算机基础实验（做了能让你真的变强）[https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
 
   
 
@@ -293,13 +289,11 @@ Roadmap to becoming a developer
 
 操作系统（哈工大李治军老师）课件可在下方链接获取。
 
-  慕课网: [http://www.feemic.cn/mooc/icourse163/1002692015#。](http://www.feemic.cn/mooc/icourse163/1002692015#。)
+- 慕课网: [http://www.feemic.cn/mooc/icourse163/1002692015#。](http://www.feemic.cn/mooc/icourse163/1002692015#。)
+- 百度云链接：[https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw](https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw) 提取码：qoll
+- 配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
 
-  百度云链接：[https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw](https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw) 提取码：qoll
-
-  配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
-
-  
+```
 
 MIT 6.S081: Operating System Engineering
 
@@ -516,6 +510,12 @@ Awesome Deep Learning
 
 #### 深度学习的杂物间
 
+快速下载torch安装包（wget下载然后直接pip install）
+
+[https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
+
+
+
 显卡驱动安装快速方法：
 
 ubuntu-drivers devices
@@ -531,6 +531,10 @@ CUDA与cvDNN的安装：（直接官网选择）
 推荐装cuda的时候可以用sh的模式，然后顺带安装了驱动（之前就不用装了）对动态库的默认支持更好
 
 教程可参考：[https://blog.csdn.net/tangjiahao10/article/details/125227005](https://blog.csdn.net/tangjiahao10/article/details/125227005)
+
+(注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装）
+
+- [Archive of Previous CUDA Releases](https://developer.nvidia.com/cuda-toolkit-archive)
 
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
@@ -674,33 +678,32 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 **anaconda基础**
 
-  国内的anaconda镜像下载
+- 国内的anaconda镜像下载
 
-  [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+[https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
-  (windows)anaconda与Jupyter notebook安装教程
+- (windows)anaconda与Jupyter notebook安装教程
 
-  [https://zhuanlan.zhihu.com/p/37093476](https://zhuanlan.zhihu.com/p/37093476)
+[https://zhuanlan.zhihu.com/p/37093476](https://zhuanlan.zhihu.com/p/37093476)
 
-  (linux)anaconda安装教程
+- (linux)anaconda安装教程
     - 下载deb格式的anaconda安装包
     - 安装后在终端使用source ~/.bashrc即可在终端看到(base)标识（不要在管理员模式下运行）
+- anaconda 换源(记得更换源的时候删去default 以及备份原来的）
 
-  anaconda 换源(记得更换源的时候删去default 以及备份原来的）
+[https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
 
-  [https://blog.csdn.net/qq_33590958/article/details/103291206](https://blog.csdn.net/qq_33590958/article/details/103291206)
+- pip -i镜像源合集（个人喜欢用百度的）
 
-  pip -i镜像源合集（个人喜欢用百度的）
+[https://www.cnblogs.com/sunnydou/p/5801760.html](https://www.cnblogs.com/sunnydou/p/5801760.html)
 
-  [https://www.cnblogs.com/sunnydou/p/5801760.html](https://www.cnblogs.com/sunnydou/p/5801760.html)
+- requirements.txt的生成教程
 
-  requirements.txt的生成教程
+[https://www.cnblogs.com/lvjinfeng/articles/16333180.html](https://www.cnblogs.com/lvjinfeng/articles/16333180.html)
 
-  [https://www.cnblogs.com/lvjinfeng/articles/16333180.html](https://www.cnblogs.com/lvjinfeng/articles/16333180.html)
+- conda与pip虚拟环境导出与转移（方便移植）
 
-  conda与pip虚拟环境导出与转移（方便移植）
-
-  [https://blog.csdn.net/weixin_42272869/article/details/122471357](https://blog.csdn.net/weixin_42272869/article/details/122471357)
+[https://blog.csdn.net/weixin_42272869/article/details/122471357](https://blog.csdn.net/weixin_42272869/article/details/122471357)
 
 
 
@@ -872,13 +875,17 @@ json可视化：
 
 [https://c.runoob.com/front-end/53/](https://c.runoob.com/front-end/53/)
 
-快速文件传输（随意分享给人不用网盘）
+快速文件传输（随意分享给人不用网盘）(拷贝兔也可以）
 
 [https://www.wenshushu.cn/](https://www.wenshushu.cn/)
 
 偏极客的新闻网，无广告，而且有一套防刷热度算法，也不搞推荐算法
 
 [https://news.ycombinator.com/news](https://news.ycombinator.com/news)
+
+Whisper AI剪视频小工具
+
+[https://www.bilibili.com/video/BV1Pe4y1t7de/](https://www.bilibili.com/video/BV1Pe4y1t7de/)
 
 ## 有趣的故事
 

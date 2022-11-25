@@ -183,6 +183,16 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
   
 
+docker的一切：
+
+[https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
+
+NVIDIA docker
+
+[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+
+
+
 ### 其他有趣的文章
 
 有关linux的基础讲解，有配图和自己的理解，推荐一读。
@@ -524,7 +534,7 @@ sudo apt install  输入显示的推荐版本
 
 
 
-CUDA与cvDNN的安装：（直接官网选择）
+CUDA与cuDNN的安装：（直接官网选择）
 
 注意：a100和3090ti不支持cuda11以下，请装113以上的版本。
 
@@ -555,6 +565,10 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.5/lib64:$LD_LIBRARY_PATH"
 解决nvcc版本不一致问题（可能的方法，更换runtime映射
 
 [https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/) 
+
+解决cudnn找不到 问题（软连接到系统库）
+
+[https://blog.csdn.net/qq451882471/article/details/106967942](https://blog.csdn.net/qq451882471/article/details/106967942)
 
 
 
@@ -596,7 +610,7 @@ Build & Share Delightful Machine Learning Apps
 
 [https://gradio.app/](https://gradio.app/)
 
-#### 推理框架
+#### 推理&加速框架
 
 ncnn
 
@@ -613,6 +627,10 @@ openvino
 bbuf老师的onnx学习笔记
 
 [ONNX学习笔记 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346511883)
+
+TVM官方中文手册
+
+[https://tvm.hyper.ai/docs/](https://tvm.hyper.ai/docs/)
 
 #### 实例参考
 
@@ -799,6 +817,14 @@ awesome项目（包含了绝大部分的c++相关资源）
 
 
 
+Modern CMake 简体中文版
+
+[https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/](https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/)
+
+cmakelist生成的makefile调试用make VERBOSE=1 而不是 make -nb
+
+
+
 C++ reference（字典）
 
 [https://en.cppreference.com/w/](https://en.cppreference.com/w/)
@@ -830,6 +856,18 @@ c++手写数据库练习 CMU 15-445: Database Systems
 DJI thermal analysis tool  相关教程（日文
 
 [https://qiita.com/tutu/items/b5cf2b39dd30786d9064](https://qiita.com/tutu/items/b5cf2b39dd30786d9064)
+
+
+
+### 音视频相关
+
+ffmpeg原理 罗上文
+
+[https://ffmpeg.xianwaizhiyin.net/cover.html](https://ffmpeg.xianwaizhiyin.net/cover.html)
+
+
+
+
 
 
 
@@ -886,6 +924,8 @@ json可视化：
 Whisper AI剪视频小工具
 
 [https://www.bilibili.com/video/BV1Pe4y1t7de/](https://www.bilibili.com/video/BV1Pe4y1t7de/)
+
+[https://github.com/mli/autocut/](https://github.com/mli/autocut/)
 
 ## 有趣的故事
 
@@ -948,6 +988,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

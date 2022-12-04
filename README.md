@@ -145,6 +145,17 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
+sudo apt-get update: 0% [正在等待报头]问题的解决
+
+（参考[https://article.itxueyuan.com/XP2rn](https://article.itxueyuan.com/XP2rn)）
+
+- 先断网然后找到Settings→About→Software Updates关闭所有下载
+- sudo apt-get clean
+- 接下来将/etc/apt/source.list文件内容清空并保存
+- 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
+
+
+
 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
@@ -154,6 +165,12 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 图吧工具箱（给自己电脑做硬件分析等等
 
 [http://www.tbtool.cn/](http://www.tbtool.cn/)
+
+
+
+DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
+
+[https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
 
 
@@ -190,6 +207,24 @@ docker的一切：
 NVIDIA docker
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+
+docker — use proxy
+
+1. make sure your proxy bind 172.17.0.1 and port  
+2. add that in dockerfile
+
+```Docker
+ENV http_proxy "http://172.17.0.1:8888/"
+
+ENV HTTP_PROXY "http://172.17.0.1:8888/"
+
+ENV https_proxy "http://172.17.0.1:8888/"
+
+ENV HTTPS_PROXY "http://172.17.0.1:8888/"
+```
+3. run it 
+
+注释：如果遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
 
 
 
@@ -570,6 +605,10 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.5/lib64:$LD_LIBRARY_PATH"
 
 [https://blog.csdn.net/qq451882471/article/details/106967942](https://blog.csdn.net/qq451882471/article/details/106967942)
 
+CUDA GPG Repository Key
+
+[https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772](https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772)
+
 
 
 孪生神经网络的相关实现：
@@ -656,6 +695,8 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 [https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw](https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw)
 
+
+
 ## C与汇编
 
 翁恺的相关视频(入门和进阶)
@@ -691,6 +732,14 @@ StableDiffusion Int8量化教程与ONNX导出推理
 有关硬件开发（嵌入式）的推荐个人博客列表
 
 [https://github.com/JesseGuoX/DoHard](https://github.com/JesseGuoX/DoHard)
+
+
+
+A curated list of C good stuff. 
+
+This project does *not* index anything C++-related; only pure C stuff is considered.
+
+[https://github.com/sanbuphy/awesome-c](https://github.com/sanbuphy/awesome-c)
 
 ## python
 
@@ -847,9 +896,17 @@ C++ Core Guidelines
 
 
 
+Google C++ Style Guide
+
+[https://google.github.io/styleguide/cppguide.html](https://google.github.io/styleguide/cppguide.html)
+
+
+
 c++手写数据库练习 CMU 15-445: Database Systems
 
 [https://csdiy.wiki/数据库系统/15445/](https://csdiy.wiki/数据库系统/15445/)
+
+
 
 ### C++的杂物间
 
@@ -861,15 +918,15 @@ DJI thermal analysis tool  相关教程（日文
 
 ### 音视频相关
 
+音视频原理必看国内大神-雷神
+
+[https://blog.csdn.net/leixiaohua1020/article/details/18893769](https://blog.csdn.net/leixiaohua1020/article/details/18893769)
+
+
+
 ffmpeg原理 罗上文
 
 [https://ffmpeg.xianwaizhiyin.net/cover.html](https://ffmpeg.xianwaizhiyin.net/cover.html)
-
-
-
-
-
-
 
 ## 学术论文
 
@@ -898,6 +955,10 @@ LaTeX开源OCR方案
 一文网尽CV/Robotics顶会论文常用高级词汇/句式！ by 叶小飞（推荐关注）
 
 [https://zhuanlan.zhihu.com/p/415926905](https://zhuanlan.zhihu.com/p/415926905)
+
+AI论文检索
+
+[https://elicit.org/](https://elicit.org/)
 
 ## 其他日常使用网站
 

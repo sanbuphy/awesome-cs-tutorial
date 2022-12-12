@@ -93,14 +93,12 @@ CS自学指南【必看】
 
 ### 基本操作 
 
-GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学
+**GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学**
 
-The Missing Semester of Your CS Education 中文版（强烈推荐）
-
-- 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
-- B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
-
-南大PA教程最下面的一些简单入门和材料
+- The Missing Semester of Your CS Education 中文版（强烈推荐）
+    - 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
+    - B站：[https://www.bilibili.com/video/BV1x7411H7wa?t=2829](https://www.bilibili.com/video/BV1x7411H7wa?t=2829)
+- 南大PA教程最下面的一些简单入门和材料
 
 [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
 
@@ -126,61 +124,42 @@ The Missing Semester of Your CS Education 中文版（强烈推荐）
 
 
 
-快速下载ubuntu镜像: 找到官网下载链接后使用wget下载
+**ubuntu常见疑难解答**
+
+- 快速下载ubuntu镜像: 找到官网下载链接后使用wget下载
+- 简单安装双系统
+
+    1、安装windows（因为windows的boot优先级比较高）
+
+    2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
+- 简单更换ubuntu镜像源     
+    - Settings→About→Software Updates→Download from 
+    - 选择其他服务器，然后找到中国，选择进行测试以便找到最快的站点。
+- sudo apt-get update: 0% [正在等待报头]问题的解决（参考[https://article.itxueyuan.com/XP2rn](https://article.itxueyuan.com/XP2rn)）
+    - 先断网然后找到Settings→About→Software Updates关闭所有下载
+    - sudo apt-get clean
+    - 接下来将/etc/apt/source.list文件内容清空并保存
+    - 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
 
 
 
-简单安装双系统
+**windows常见工具箱**
 
-  1、安装windows（因为windows的boot优先级比较高）
-
-  2、安装ubuntu，他能检测到和windows并存的状态，选择那个安装即可
-
-
-
-简单更换ubuntu镜像源     
-
-- Settings→About→Software Updates→Download from 
-- 选择其他服务器，然后找到中国，选择进行测试以便找到最快的站点。
-
-
-
-sudo apt-get update: 0% [正在等待报头]问题的解决
-
-（参考[https://article.itxueyuan.com/XP2rn](https://article.itxueyuan.com/XP2rn)）
-
-- 先断网然后找到Settings→About→Software Updates关闭所有下载
-- sudo apt-get clean
-- 接下来将/etc/apt/source.list文件内容清空并保存
-- 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
-
-
-
-有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
+- 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
 
-
-
-图吧工具箱（给自己电脑做硬件分析等等
+- 图吧工具箱（给自己电脑做硬件分析等等
 
 [http://www.tbtool.cn/](http://www.tbtool.cn/)
 
-
-
-DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
+- DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
 
 [https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
 
 
-不知道变量怎么命名就可以看看：
-
-[https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
-
-
-
-正则表达式相关
+**正则表达式相关**
 
 - 正则表达式入门与练习
 
@@ -200,17 +179,26 @@ DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
 
   
 
-docker的一切：
+**docker相关:**
+
+- docker的一切：
 
 [https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
 
-NVIDIA docker
+- NVIDIA docker
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
-docker — use proxy
+- docker换源（拉镜像极大加速）
 
-1. make sure your proxy bind 172.17.0.1 and port  
+[https://blog.51cto.com/u_13281972/2997681](https://blog.51cto.com/u_13281972/2997681)
+
+- docker  pull images — use proxy 
+
+[https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/)
+
+- docker — use proxy（在容器内）
+1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
 2. add that in dockerfile
 
 ```Docker
@@ -227,6 +215,10 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 注释：如果遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
 
 
+
+不知道变量怎么命名就可以看看：
+
+[https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
 
 ### 其他有趣的文章
 
@@ -308,7 +300,7 @@ Roadmap to becoming a developer
 
 [https://xiaolincoding.com/](https://xiaolincoding.com/)
 
-### 操作系统学习
+### 操作系统与体系结构
 
 南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（强烈不建议一开始就读csapp
 
@@ -362,7 +354,7 @@ MIT 6.S081: Operating System Engineering
 
 
 
-其他文章:
+**其他有趣文章:**
 
 如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
 
@@ -378,7 +370,7 @@ MIT 6.S081: Operating System Engineering
 
 ### 计算机网络学习
 
-待补充
+课程类待补充
 
 
 其他文章：
@@ -439,23 +431,23 @@ ACWING的课
 
 **李宏毅相关课程**
 
-0. 李宏毅老师的课程主页：
+- 李宏毅老师的课程主页：
 
 [https://speech.ee.ntu.edu.tw/~hylee/index.php](https://speech.ee.ntu.edu.tw/~hylee/index.php) 这是李老师的个人主页，可以找到每年ML的课程主页，然后获取作业代码和Kaggle链接  
 
-1.李宏毅《机器学习》：  
+- 李宏毅《机器学习》：  
 
 [https://www.bilibili.com/video/BV1Ht411g7Ef](https://www.bilibili.com/video/BV1Ht411g7Ef)  
 
-2.李宏毅机器学习笔记：  
+- 李宏毅机器学习笔记：  
 
 [https://gitee.com/datawhalechina/leeml-notes](https://gitee.com/datawhalechina/leeml-notes)  
 
-3.李宏毅《机器学习/深度学习》2021课程：
+- 李宏毅《机器学习/深度学习》2021课程：
 
 [https://www.bilibili.com/video/BV1JA411c7VT?p=34](https://www.bilibili.com/video/BV1JA411c7VT?p=34)  
 
-4.李宏毅2022课程：  
+- 李宏毅2022课程：  
 
 [https://www.bilibili.com/video/BV1JK4y1D7Wb/](https://www.bilibili.com/video/BV1JK4y1D7Wb/)
 
@@ -464,8 +456,6 @@ ACWING的课
 李沐动手学深度学习（适合速成，打基础建议李宏毅）
 
 [https://zh.d2l.ai/index.html](https://zh.d2l.ai/index.html)
-
-
 
 李沐深度学习精读
 
@@ -626,8 +616,6 @@ CUDA GPG Repository Key
 
 
 ### 深度学习部署
-
-
 
 GiantPandaCV
 
@@ -1049,4 +1037,5 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
 

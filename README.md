@@ -354,6 +354,12 @@ MIT 6.S081: Operating System Engineering
 
 
 
+教科书《计算机体系结构基础》（胡伟武等，第三版）的开源版本
+
+[https://github.com/foxsen/archbase](https://github.com/foxsen/archbase)
+
+
+
 **其他有趣文章:**
 
 如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
@@ -842,9 +848,13 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 ## C++
 
-c++入门学习（建议直接看书加上翁恺或侯捷）
+**c++入门学习（看自己兴趣按需索取）**
 
-可以b站搜索翁恺的c++
+- 浙大翁恺（简单，适合快速过一遍）：[https://www.bilibili.com/video/BV1dE41167hJ?p=34](https://www.bilibili.com/video/BV1dE41167hJ?p=34)
+- 南科大于仕琪（现代化，十分推荐）[https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1](https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1)
+- 侯捷老师视频（看完于老师可以无缝衔接，资源就不公开了，推荐看完1、2、3）
+
+
 
 awesome项目（包含了绝大部分的c++相关资源）
 
@@ -1037,5 +1047,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
 

@@ -102,6 +102,9 @@ CS自学指南【必看】
 
 [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
 
+- 命令行的艺术（总结了各种命令行下相关好物）
+    - [https://github.com/jlevy/the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+
 
 
 **git相关**
@@ -156,6 +159,11 @@ CS自学指南【必看】
 - DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
 
 [https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
+
+- windows上安装ubuntu(WSL2)： 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
+- WSL中如何使用v2的proxy：
+    - [https://nafx.top/archives/88ca14b9.html](https://nafx.top/archives/88ca14b9.html)
+    - [https://zhuanlan.zhihu.com/p/414627975](https://zhuanlan.zhihu.com/p/414627975)
 
 
 
@@ -213,6 +221,12 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 3. run it 
 
 注释：如果遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
+
+- docker磁盘占用查看与缓存清理
+
+[https://blog.csdn.net/m0_67390963/article/details/126327604](https://blog.csdn.net/m0_67390963/article/details/126327604)
+
+
 
 
 
@@ -643,6 +657,14 @@ Build & Share Delightful Machine Learning Apps
 
 [https://gradio.app/](https://gradio.app/)
 
+
+
+CUDA C++ Programming Guide
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+
+
 #### 推理&加速框架
 
 ncnn
@@ -906,6 +928,12 @@ c++手写数据库练习 CMU 15-445: Database Systems
 
 
 
+C++ Standard Draft Sources（一起成为语言律师）
+
+[https://github.com/cplusplus/draft](https://github.com/cplusplus/draft)
+
+
+
 ### C++的杂物间
 
 DJI thermal analysis tool  相关教程（日文
@@ -1047,4 +1075,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
 

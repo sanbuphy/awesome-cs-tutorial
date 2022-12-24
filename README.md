@@ -161,9 +161,10 @@ CS自学指南【必看】
 [https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
 - windows上安装ubuntu(WSL2)： 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
-- WSL中如何使用v2的proxy：
-    - [https://nafx.top/archives/88ca14b9.html](https://nafx.top/archives/88ca14b9.html)
-    - [https://zhuanlan.zhihu.com/p/414627975](https://zhuanlan.zhihu.com/p/414627975)
+- WSL中如何使用win v2ray的proxy：（直接在wsl里面跑即可）
+    - 第一步 安装：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)（安装后其他步骤参考[https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray](https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray)
+    - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可，你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
+    - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
 
 
 
@@ -206,8 +207,31 @@ CS自学指南【必看】
 [https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/)
 
 - docker — use proxy（在容器内）
-1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
-2. add that in dockerfile
+    - 方法一：
+
+    -it 以及加上了host命令进入docker后（比如：）
+
+```Bash
+nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registry.baidubce.com/paddlepaddle/paddle:latest-gpu-cuda10.2-cudnn7-dev](http://registry.baidubce.com/paddlepaddle/paddle:latest-gpu-cuda10.2-cudnn7-dev) /bin/bash
+```
+
+    此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
+
+    `export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172即可使用）
+
+```Bash
+export http_proxy="http://172.17.0.1:8888/"
+
+export HTTP_PROXY="http://172.17.0.1:8888/"
+
+export https_proxy="http://172.17.0.1:8888/"
+
+export HTTPS_PROXY="http://172.17.0.1:8888/"
+```
+
+    - 方法二：
+        1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
+        2. add that in dockerfile
 
 ```Docker
 ENV http_proxy "http://172.17.0.1:8888/"
@@ -218,7 +242,7 @@ ENV https_proxy "http://172.17.0.1:8888/"
 
 ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 ```
-3. run it 
+        3. run it 
 
 注释：如果遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
 
@@ -226,13 +250,21 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 [https://blog.csdn.net/m0_67390963/article/details/126327604](https://blog.csdn.net/m0_67390963/article/details/126327604)
 
+- 利用docker调试代码，以apollo为例：
 
+[https://zhuanlan.zhihu.com/p/468146522](https://zhuanlan.zhihu.com/p/468146522)
 
 
 
 不知道变量怎么命名就可以看看：
 
 [https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
+
+
+
+
+
+
 
 ### 其他有趣的文章
 
@@ -429,6 +461,10 @@ ACWING的课
 
 [https://www.acwing.com/activity/](https://www.acwing.com/activity/)
 
+GitHub's largest open-source algorithm library
+
+[https://the-algorithms.com/](https://the-algorithms.com/)
+
 ### 深度学习大类
 
 #### 有关理论基础（但我还是建议直接看李宏毅）
@@ -587,6 +623,8 @@ CUDA与cuDNN的安装：（直接官网选择）
 
 教程可参考：[https://blog.csdn.net/tangjiahao10/article/details/125227005](https://blog.csdn.net/tangjiahao10/article/details/125227005)
 
+[https://blog.csdn.net/weixin_37926734/article/details/123033286](https://blog.csdn.net/weixin_37926734/article/details/123033286)
+
 (注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装）
 
 - [Archive of Previous CUDA Releases](https://developer.nvidia.com/cuda-toolkit-archive)
@@ -594,6 +632,8 @@ CUDA与cuDNN的安装：（直接官网选择）
 [https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
 [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+
+注，有时候cudnn自带的deb安装不好用，可以用tar的自己cp代替。
 
 
 
@@ -757,6 +797,24 @@ This project does *not* index anything C++-related; only pure C stuff is conside
 
 [https://github.com/sanbuphy/awesome-c](https://github.com/sanbuphy/awesome-c)
 
+
+
+LLVM编译过程
+
+```Bash
+wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz
+tar xvJf llvm-10.0.0.src.tar.xz
+cd llvm-10.0.0.src
+mkdir build
+cd build
+cmake .. -DLLVM_ENABLE_RTTI:BOOL=ON -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD=“X86;NVPTX” -DLLVM_ENABLE_ASSERTIONS=ON
+# 如果你想在 NVIDIA Jetson TX2 上进行构建, 请使用 -DLLVM_TARGETS_TO_BUILD="ARM;NVPTX"
+make -j 8
+sudo make install
+# 检查你安装的 LLVM 版本
+llvm-config —version  # 应该是 10.0.0
+```
+
 ## python
 
 **anaconda基础**
@@ -779,6 +837,10 @@ This project does *not* index anything C++-related; only pure C stuff is conside
 - pip -i镜像源合集（个人喜欢用百度的）
 
 [https://www.cnblogs.com/sunnydou/p/5801760.html](https://www.cnblogs.com/sunnydou/p/5801760.html)
+
+- 非conda pip直接换源（conf）
+
+[https://www.runoob.com/w3cnote/pip-cn-mirror.html](https://www.runoob.com/w3cnote/pip-cn-mirror.html)
 
 - requirements.txt的生成教程
 
@@ -891,6 +953,12 @@ Modern CMake 简体中文版
 [https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/](https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/)
 
 cmakelist生成的makefile调试用make VERBOSE=1 而不是 make -nb
+
+
+
+cmake快速入门
+
+[https://juejin.cn/post/6844903557183832078](https://juejin.cn/post/6844903557183832078)
 
 
 
@@ -1075,6 +1143,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

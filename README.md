@@ -91,6 +91,14 @@ CS自学指南【必看】
 
 【北美名校CS课程集锦】2.加州大学伯克利分校CS课程全集 - 文兄的文章 - 知乎 [https://zhuanlan.zhihu.com/p/102083014](https://zhuanlan.zhihu.com/p/102083014)
 
+Quick Reference开发人员速查表（各种语言、脚本、常用工具的命令速查）
+
+[https://quickref.me/](https://quickref.me/)
+
+[https://xushanxiang.com/ref/](https://xushanxiang.com/ref/)
+
+
+
 ### 基本操作 
 
 **GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学**
@@ -107,6 +115,14 @@ CS自学指南【必看】
 
 
 
+**系统相关**
+
+如何开机自动挂载新硬盘（非ubuntu安装硬盘）
+
+[https://blog.csdn.net/qq_27370437/article/details/117806294](https://blog.csdn.net/qq_27370437/article/details/117806294)
+
+
+
 **git相关**
 
 - git常见操作整理
@@ -116,6 +132,10 @@ CS自学指南【必看】
 - 简单的git ssh秘钥教程
 
 [https://blog.csdn.net/helloasimo/article/details/123778112](https://blog.csdn.net/helloasimo/article/details/123778112)
+
+- 添加了SSH密钥，git推送/拉取时要求验证
+
+[https://blog.csdn.net/qq_37435462/article/details/122240506](https://blog.csdn.net/qq_37435462/article/details/122240506)
 
 - 简单的pr教程
 
@@ -165,6 +185,7 @@ CS自学指南【必看】
     - 第一步 安装：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)（安装后其他步骤参考[https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray](https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray)
     - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可，你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
     - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
+    - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
 
 
 
@@ -194,6 +215,10 @@ CS自学指南【必看】
 
 [https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
 
+- 使docker能够避免输入sudo（通过 docker info检查是否要sudo才可输出）
+
+[https://www.yisu.com/zixun/139260.html](https://www.yisu.com/zixun/139260.html)
+
 - NVIDIA docker
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
@@ -202,22 +227,27 @@ CS自学指南【必看】
 
 [https://blog.51cto.com/u_13281972/2997681](https://blog.51cto.com/u_13281972/2997681)
 
+- 修改Docker默认镜像和容器的存储位置
+
+[https://www.cnblogs.com/chentiao/p/16963647.html](https://www.cnblogs.com/chentiao/p/16963647.html)
+
 - docker  pull images — use proxy 
 
 [https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/)
 
 - docker — use proxy（在容器内）
-    - 方法一：
 
-    -it 以及加上了host命令进入docker后（比如：）
+**方法一：**
+
+-it 以及加上了host命令进入docker后（比如：）
 
 ```Bash
 nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registry.baidubce.com/paddlepaddle/paddle:latest-gpu-cuda10.2-cudnn7-dev](http://registry.baidubce.com/paddlepaddle/paddle:latest-gpu-cuda10.2-cudnn7-dev) /bin/bash
 ```
 
-    此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
+此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
 
-    `export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172即可使用）
+`export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172即可使用）
 
 ```Bash
 export http_proxy="http://172.17.0.1:8888/"
@@ -229,9 +259,9 @@ export https_proxy="http://172.17.0.1:8888/"
 export HTTPS_PROXY="http://172.17.0.1:8888/"
 ```
 
-    - 方法二：
-        1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
-        2. add that in dockerfile
+**方法二：**
+  1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
+  2. add that in dockerfile
 
 ```Docker
 ENV http_proxy "http://172.17.0.1:8888/"
@@ -242,9 +272,11 @@ ENV https_proxy "http://172.17.0.1:8888/"
 
 ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 ```
-        3. run it 
+  3. run it 
 
-注释：如果遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
+**方法三：**运行终端版的v2ray之类的软件，后台运行后直接使用proxychains4的http代理即可（很多不能走socker）
+
+注释：如果而在终端遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
 
 - docker磁盘占用查看与缓存清理
 
@@ -254,15 +286,13 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 [https://zhuanlan.zhihu.com/p/468146522](https://zhuanlan.zhihu.com/p/468146522)
 
+  
+
 
 
 不知道变量怎么命名就可以看看：
 
 [https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
-
-
-
-
 
 
 
@@ -525,6 +555,10 @@ GitHub's largest open-source algorithm library
 
 
 
+pytorch底层源码解析（一个很不错的博主）
+
+[https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
+
 #### 开源库/项目
 
 OpenMMLab
@@ -599,11 +633,7 @@ Awesome Deep Learning
 
 
 
-#### 深度学习的杂物间
-
-快速下载torch安装包（wget下载然后直接pip install）
-
-[https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
+#### NVIDIA安装与常见问题
 
 
 
@@ -635,6 +665,10 @@ CUDA与cuDNN的安装：（直接官网选择）
 
 注，有时候cudnn自带的deb安装不好用，可以用tar的自己cp代替。
 
+TensorRT的安装（参考Debian Installation）
+
+[https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian)
+
 
 
 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source，且记得修改对应版本（如cuda-11.5）
@@ -658,6 +692,26 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.5/lib64:$LD_LIBRARY_PATH"
 CUDA GPG Repository Key
 
 [https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772](https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772)
+
+Tensorrt X docker环境搭建（现在（20221228）tensorrt-ubuntu已经支持deb安装，如果tar就选linux的）
+
+[https://blog.csdn.net/hxj0323/article/details/115859174](https://blog.csdn.net/hxj0323/article/details/115859174)
+
+update后nvidia报GPG相关问题（我在18.04的docker遇到）：
+
+```Bash
+echo 'deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /' > /etc/apt/sources.list.d/cuda.list
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com  $(加入报错的密钥)
+apt update
+```
+
+
+
+#### 其他
+
+快速下载torch安装包（wget下载然后直接pip install）
+
+[https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
 
 
 
@@ -727,6 +781,10 @@ TVM官方中文手册
 
 [https://tvm.hyper.ai/docs/](https://tvm.hyper.ai/docs/)
 
+tensorrt 插件自生成（腾讯TPAT）
+
+[https://github.com/Tencent/TPAT](https://github.com/Tencent/TPAT)
+
 #### 实例参考
 
 各种开发版的基础功能调通
@@ -736,6 +794,10 @@ TVM官方中文手册
 待测试
 
 [成蹊 - 知乎 (zhihu.com)](https://www.zhihu.com/people/li-li-fu-70/posts)
+
+paddle_to_openvino算子开发
+
+[https://aistudio.baidu.com/aistudio/projectdetail/5241605?channelType=0&channel=0](https://aistudio.baidu.com/aistudio/projectdetail/5241605?channelType=0&channel=0)
 
 
 
@@ -1143,4 +1205,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
 

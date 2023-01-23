@@ -186,6 +186,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
     - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可，你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
     - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
     - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
+- 注意！WSL2经常会与主机时间不同步，这可能会造成很多问题（包括proxy用不了），你最好设置一个启动脚本或自己执行`sudo hwclock -s`强制对WSL2时间进行同步，可使用`hwclock`查看WSL的当前时间
 
 
 
@@ -246,6 +247,8 @@ nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registr
 ```
 
 此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
+
+export ALL_PROXY="[http://172.17.0.1:8888/](http://172.17.0.1:8888/)"
 
 `export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172即可使用）
 
@@ -448,7 +451,9 @@ MIT 6.S081: Operating System Engineering
 
 [https://cjting.me/2020/12/10/tiny-x64-helloworld/](https://cjting.me/2020/12/10/tiny-x64-helloworld/)
 
+Linux 内核揭密（一系列关于 Linux 内核和其内在机理的帖子。）
 
+[https://xinqiu.gitbooks.io/linux-inside-zh/content/](https://xinqiu.gitbooks.io/linux-inside-zh/content/)
 
 ### 计算机网络学习
 
@@ -494,6 +499,16 @@ ACWING的课
 GitHub's largest open-source algorithm library
 
 [https://the-algorithms.com/](https://the-algorithms.com/)
+
+
+
+### 设计模式
+
+一个图文并茂的设计模式学习网站
+
+[refactoringguru.cn/design-patterns](http://refactoringguru.cn/design-patterns) 
+
+
 
 ### 深度学习大类
 
@@ -784,6 +799,10 @@ TVM官方中文手册
 tensorrt 插件自生成（腾讯TPAT）
 
 [https://github.com/Tencent/TPAT](https://github.com/Tencent/TPAT)
+
+大缺弦的在线onnx转换器
+
+[https://convertmodel.com/](https://convertmodel.com/)
 
 #### 实例参考
 

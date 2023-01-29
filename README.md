@@ -500,6 +500,10 @@ GitHub's largest open-source algorithm library
 
 [https://the-algorithms.com/](https://the-algorithms.com/)
 
+数据结构与算法可视化
+
+[https://visualgo.net/zh](https://visualgo.net/zh)
+
 
 
 ### 设计模式
@@ -1021,6 +1025,30 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 
 
+c++的jupyter notebook 扩展（用来写小作业）
+
+`conda install -c conda-forge xeus-cling`
+
+`conda install -c conda-forge jupyterlab`
+
+然后输入 jupyter lab 就可以看到有c11到17内核支持的了。
+
+如果想要在vscode使用，只要复制带token的那一大串东西然后在vscode打开jupyter下面找到server连接远程即可。
+
+
+
+c++ 在线测试：
+
+[https://cpp.sh/](https://cpp.sh/)
+
+
+
+各类语言在线解析网站，包括汇编调试和各种C++标准下的insight函数
+
+[https://godbolt.org/](https://godbolt.org/)
+
+
+
 awesome项目（包含了绝大部分的c++相关资源）
 
 [https://github.com/fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
@@ -1224,6 +1252,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

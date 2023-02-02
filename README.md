@@ -123,6 +123,16 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
+**vscode相关**
+
+- 自动格式化python代码
+
+首先安装google的格式化程序：`pip install yapf`
+
+然后键入`ctrl+shift+p`然后输入`settings`往下找到用户的json，如果你是WSL的话就要找到对应WSL的config，然后输入` "python.formatting.provider": "yapf"`。之后只要使用`Alt+shift+F`即可格式化整体的python项目代码。
+
+
+
 **git相关**
 
 - git常见操作整理
@@ -166,6 +176,26 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
+**WSL2常见疑难解答**
+
+- windows上安装ubuntu(WSL2)： 
+
+1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
+
+- 安装WSL2专用systemctl【目前（2023/02/02）只能用于20.04,请勿在22.04中使用！】
+
+[https://github.com/DamionGans/ubuntu-wsl2-systemd-script](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)
+
+- WSL中如何使用win v2ray的proxy：（直接在wsl里面跑即可）
+    - 第一步 安装：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)（安装后其他步骤参考[https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray](https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray)
+    - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可（或者自己去安装一下wsl2的systemctl），你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
+    - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
+    - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
+- 注意！WSL2经常会与主机时间不同步，这可能会造成很多问题（包括proxy用不了），你最好设置一个启动脚本或自己执行`sudo hwclock -s`强制对WSL2时间进行同步，可使用`sudo hwclock`查看WSL的当前时间，
+- 以防出现奇怪问题你可以经常对WSL做快照：[https://blog.csdn.net/weixin_43425561/article/details/115765148](https://blog.csdn.net/weixin_43425561/article/details/115765148)
+
+
+
 **windows常见工具箱**
 
 - 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
@@ -179,14 +209,6 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 - DISM++ 最好用的windows控制面板工具箱（直接看release部分下载
 
 [https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
-
-- windows上安装ubuntu(WSL2)： 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
-- WSL中如何使用win v2ray的proxy：（直接在wsl里面跑即可）
-    - 第一步 安装：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)（安装后其他步骤参考[https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray](https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray)
-    - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可，你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
-    - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
-    - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
-- 注意！WSL2经常会与主机时间不同步，这可能会造成很多问题（包括proxy用不了），你最好设置一个启动脚本或自己执行`sudo hwclock -s`强制对WSL2时间进行同步，可使用`hwclock`查看WSL的当前时间
 
 
 
@@ -216,11 +238,32 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 [https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
 
+- 在WSL2下使用docker
+
+【你只需要安装docker desktop然后参考这个教程，点点就能用了】：
+
+[https://dockerdocs.cn/docker-for-windows/wsl/](https://dockerdocs.cn/docker-for-windows/wsl/)
+
+可以很方便使用！无需按照命令行安装即可使用docker！
+
+- 安装docker后启动时遇到：Failed to connect to bus: Host is down（我在WSL2遇到，非必要不使用，最好还是先安装一下systemctl确保能用）
+
+```Bash
+# 运行下列操作即可，然后 sudo systemctl daemon-reload
+# https://gist.github.com/alyleite/ca8b10581dbecd722d9dcc35b50d9b2b
+sudo apt-get update && sudo apt-get install -yqq daemonize dbus-user-session fontconfig
+
+sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+
+exec sudo nsenter -t $(pidof systemd) -a su - $LOGNAME
+
+snap version
+```
 - 使docker能够避免输入sudo（通过 docker info检查是否要sudo才可输出）
 
 [https://www.yisu.com/zixun/139260.html](https://www.yisu.com/zixun/139260.html)
 
-- NVIDIA docker
+- NVIDIA docker——nvidia-docker2的相关安装
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
@@ -838,68 +881,6 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 
 
-## C与汇编
-
-翁恺的相关视频(入门和进阶)
-
-[https://www.icourse163.org/u/wengkai?userId=318013](https://www.icourse163.org/u/wengkai?userId=318013)
-
-100个GDB小技巧：
-
-[https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html](https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html)
-
-标准库收录网站
-
-[https://www.cplusplus.com/reference/](https://www.cplusplus.com/reference/)
-
-汇编语言在线解析网站
-
-[https://godbolt.org/](https://godbolt.org/)
-
-内联汇编学习
-
-[https://baijiahao.baidu.com/s?id=1722268508697136684](https://baijiahao.baidu.com/s?id=1722268508697136684)
-
-[https://www.jianshu.com/p/1782e14a0766](https://www.jianshu.com/p/1782e14a0766)
-
-
-
-"undefined reference to XXX"问题总结
-
-[https://github.com/Captain1986/CaptainBlackboard/blob/master/D%230001-undefined_reference_to_XXX/D%230001.md](https://github.com/Captain1986/CaptainBlackboard/blob/master/D#0001-undefined_reference_to_XXX/D#0001.md)
-
-
-
-有关硬件开发（嵌入式）的推荐个人博客列表
-
-[https://github.com/JesseGuoX/DoHard](https://github.com/JesseGuoX/DoHard)
-
-
-
-A curated list of C good stuff. 
-
-This project does *not* index anything C++-related; only pure C stuff is considered.
-
-[https://github.com/sanbuphy/awesome-c](https://github.com/sanbuphy/awesome-c)
-
-
-
-LLVM编译过程
-
-```Bash
-wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz
-tar xvJf llvm-10.0.0.src.tar.xz
-cd llvm-10.0.0.src
-mkdir build
-cd build
-cmake .. -DLLVM_ENABLE_RTTI:BOOL=ON -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD=“X86;NVPTX” -DLLVM_ENABLE_ASSERTIONS=ON
-# 如果你想在 NVIDIA Jetson TX2 上进行构建, 请使用 -DLLVM_TARGETS_TO_BUILD="ARM;NVPTX"
-make -j 8
-sudo make install
-# 检查你安装的 LLVM 版本
-llvm-config —version  # 应该是 10.0.0
-```
-
 ## python
 
 **anaconda基础**
@@ -934,6 +915,18 @@ llvm-config —version  # 应该是 10.0.0
 - conda与pip虚拟环境导出与转移（方便移植）
 
 [https://blog.csdn.net/weixin_42272869/article/details/122471357](https://blog.csdn.net/weixin_42272869/article/details/122471357)
+
+- conda常见命令和疑难问题解答：
+
+有时候你可能会遇到类似`Solving environment: failed with initial frozen solve. Retrying with flexible solve.`的问题，先耐心等等！让他遍历重试完各个库（我在conda安装cling的时候遇到）
+
+如果还是有问题再按照网上的方法进行更新conda或者重新安装conda。（或者不要在base下安装）
+
+删除虚拟环境：`conda remove -n ENV_NAME —all`
+
+conda更新：`conda update anaconda`
+
+conda所有库更新：`conda update --all`
 
 
 
@@ -1015,6 +1008,80 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 [https://github.com/laike9m/Cyberbrain](https://github.com/laike9m/Cyberbrain)
 
+
+
+## C与汇编
+
+翁恺的相关视频(入门和进阶)
+
+[https://www.icourse163.org/u/wengkai?userId=318013](https://www.icourse163.org/u/wengkai?userId=318013)
+
+100个GDB小技巧：
+
+[https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html](https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html)
+
+标准库收录网站
+
+[https://www.cplusplus.com/reference/](https://www.cplusplus.com/reference/)
+
+汇编语言在线解析网站
+
+[https://godbolt.org/](https://godbolt.org/)
+
+内联汇编学习
+
+[https://baijiahao.baidu.com/s?id=1722268508697136684](https://baijiahao.baidu.com/s?id=1722268508697136684)
+
+[https://www.jianshu.com/p/1782e14a0766](https://www.jianshu.com/p/1782e14a0766)
+
+
+
+"undefined reference to XXX"问题总结
+
+[https://github.com/Captain1986/CaptainBlackboard/blob/master/D%230001-undefined_reference_to_XXX/D%230001.md](https://github.com/Captain1986/CaptainBlackboard/blob/master/D#0001-undefined_reference_to_XXX/D#0001.md)
+
+
+
+有关硬件开发（嵌入式）的推荐个人博客列表
+
+[https://github.com/JesseGuoX/DoHard](https://github.com/JesseGuoX/DoHard)
+
+
+
+A curated list of C good stuff. 
+
+This project does *not* index anything C++-related; only pure C stuff is considered.
+
+[https://github.com/sanbuphy/awesome-c](https://github.com/sanbuphy/awesome-c)
+
+
+
+LLVM编译过程
+
+```Bash
+wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz
+tar xvJf llvm-10.0.0.src.tar.xz
+cd llvm-10.0.0.src
+mkdir build
+cd build
+cmake .. -DLLVM_ENABLE_RTTI:BOOL=ON -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD=“X86;NVPTX” -DLLVM_ENABLE_ASSERTIONS=ON
+# 如果你想在 NVIDIA Jetson TX2 上进行构建, 请使用 -DLLVM_TARGETS_TO_BUILD="ARM;NVPTX"
+make -j 8
+sudo make install
+# 检查你安装的 LLVM 版本
+llvm-config —version  # 应该是 10.0.0
+```
+
+
+
+C语言的jupyter notebook拓展安装：
+
+```Bash
+pip install jupyter-c-kernel
+install_c_kernel
+jupyter kernelspec list
+```
+
 ## C++
 
 **c++入门学习（看自己兴趣按需索取）**
@@ -1071,6 +1138,12 @@ cmake快速入门
 
 
 
+CMake菜谱（CMake Cookbook中文版）（面向实际应用小工具，推荐）
+
+[https://www.bookstack.cn/read/CMake-Cookbook/README.md](https://www.bookstack.cn/read/CMake-Cookbook/README.md)
+
+
+
 C++ reference（字典）
 
 [https://en.cppreference.com/w/](https://en.cppreference.com/w/)
@@ -1111,6 +1184,18 @@ C++ Standard Draft Sources（一起成为语言律师）
 
 
 
+详细的C/C++编程规范指南，由360质量工程部编著，适用于桌面、服务端及嵌入式软件系统。
+
+[https://github.com/Qihoo360/safe-rules](https://github.com/Qihoo360/safe-rules)
+
+
+
+程序可移植性保证cmake。可获取系统信息、编译器、平台、指令集等信息。
+
+[https://www.bookstack.cn/read/CMake-Cookbook/content-chapter2-2.5-chinese.md](https://www.bookstack.cn/read/CMake-Cookbook/content-chapter2-2.5-chinese.md)
+
+
+
 ### C++的杂物间
 
 DJI thermal analysis tool  相关教程（日文
@@ -1130,6 +1215,16 @@ DJI thermal analysis tool  相关教程（日文
 ffmpeg原理 罗上文
 
 [https://ffmpeg.xianwaizhiyin.net/cover.html](https://ffmpeg.xianwaizhiyin.net/cover.html)
+
+
+
+## 程序性能优化
+
+性能优化实战收集（包括听风扇声音测性能）
+
+[https://github.com/plantegg/programmer_case](https://github.com/plantegg/programmer_case)
+
+
 
 ## 学术论文
 

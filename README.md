@@ -182,7 +182,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
 
-- 安装WSL2专用systemctl【目前（2023/02/02）只能用于20.04,请勿在22.04中使用！】
+- 安装WSL2专用systemctl【目前（2023/02/02）只能用于20.04,请勿在22.04中使用！】（慎重使用，可能会导致pycharm连接出现问题，请先快照后再进行尝试！
 
 [https://github.com/DamionGans/ubuntu-wsl2-systemd-script](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)
 
@@ -482,6 +482,12 @@ MIT 6.S081: Operating System Engineering
 
 
 
+【MIT公开课】6.172 软件性能工程
+
+[https://www.bilibili.com/video/BV1wA411h7N7/](https://www.bilibili.com/video/BV1wA411h7N7/)
+
+
+
 **其他有趣文章:**
 
 如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
@@ -557,7 +563,7 @@ GitHub's largest open-source algorithm library
 
 
 
-### 深度学习大类
+## 深度学习大类
 
 #### 有关理论基础（但我还是建议直接看李宏毅）
 
@@ -821,7 +827,7 @@ CUDA C++ Programming Guide
 
 
 
-#### 推理&加速框架
+#### 推理&加速量化框架
 
 ncnn
 
@@ -850,6 +856,12 @@ tensorrt 插件自生成（腾讯TPAT）
 大缺弦的在线onnx转换器
 
 [https://convertmodel.com/](https://convertmodel.com/)
+
+很好的量化工具——PPQ
+
+[https://github.com/openppl-public/ppq](https://github.com/openppl-public/ppq)
+
+
 
 #### 实例参考
 
@@ -1124,6 +1136,28 @@ awesome项目（包含了绝大部分的c++相关资源）
 
 
 
+cmake 快速编译安装：
+
+前往官网下载最新发行版：[https://cmake.org/download/](https://cmake.org/download/)     然后如下运行即可：
+
+```Bash
+#卸载旧版本
+sudo apt-get autoremove cmake
+
+#安装新版本
+./configure
+make -j20
+sudo make install
+
+#如果此时cmake --verion 没有变化或者不存在，把下面这个加入程序到环境变量即可
+vim ~/.bashrc
+# export PATH=/usr/local/share/cmake-3.25:$PATH
+source ~/.bashrc   
+
+```
+
+
+
 Modern CMake 简体中文版
 
 [https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/](https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/)
@@ -1218,11 +1252,27 @@ ffmpeg原理 罗上文
 
 
 
+### cuda相关
+
+适合入门的小型Python编译器项目（包含cuda相关内容）
+
+[https://zhuanlan.zhihu.com/p/603352525](https://zhuanlan.zhihu.com/p/603352525)
+
+cuda学习教程
+
+[https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
+
+
+
+
+
 ## 程序性能优化
 
 性能优化实战收集（包括听风扇声音测性能）
 
 [https://github.com/plantegg/programmer_case](https://github.com/plantegg/programmer_case)
+
+
 
 
 
@@ -1280,11 +1330,27 @@ json可视化：
 
 [https://news.ycombinator.com/news](https://news.ycombinator.com/news)
 
+快速拼接图像和其他常用图片处理工具
+
+[http://www.atoolbox.net/Tool.php?Id=978](http://www.atoolbox.net/Tool.php?Id=978)
+
+黑白照片上色
+
+[https://palette.fm/](https://palette.fm/)
+
+## 其他有趣的项目
+
+CodeGeeX: 多语言代码生成模型（代码生成与代码翻译）
+
+[https://github.com/THUDM/CodeGeeX/blob/main/README_zh.md](https://github.com/THUDM/CodeGeeX/blob/main/README_zh.md)
+
 Whisper AI剪视频小工具
 
 [https://www.bilibili.com/video/BV1Pe4y1t7de/](https://www.bilibili.com/video/BV1Pe4y1t7de/)
 
 [https://github.com/mli/autocut/](https://github.com/mli/autocut/)
+
+
 
 ## 有趣的故事
 
@@ -1347,4 +1413,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
 

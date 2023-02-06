@@ -101,7 +101,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 ### 基本操作 
 
-**GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学**
+#### **GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学**
 
 - The Missing Semester of Your CS Education 中文版（强烈推荐）
     - 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
@@ -115,7 +115,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**系统相关及系统信息相关**
+#### **系统相关及系统信息相关**
 
 如何开机自动挂载新硬盘（非ubuntu安装硬盘）
 
@@ -125,9 +125,30 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 [https://github.com/pytorch/cpuinfo](https://github.com/pytorch/cpuinfo)
 
+如何维护和切换gcc与g++代码（两种方案）
+
+最简单的，通过设置不同优先级并切换即可：
+
+```Bash
+# https://www.cnblogs.com/haiyonghao/p/14440283.html
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40
+# 设置gcc-5的优先级
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50
+# 修改系统中的默认gcc版本
+sudo update-alternatives --config gcc
+
+#如果想要根据优先级切换gcc版本，可以输入这个后在输入前面设定的数字
+sudo update-alternatives --config gcc
+
+```
+
+[https://blog.csdn.net/FX677588/article/details/78681325](https://blog.csdn.net/FX677588/article/details/78681325)
+
+[https://cloud.tencent.com/developer/article/1430839](https://cloud.tencent.com/developer/article/1430839)
 
 
-**vscode相关**
+
+#### **vscode相关**
 
 - 自动格式化python代码
 
@@ -137,7 +158,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**git相关**
+#### **git相关**
 
 - git常见操作整理
 
@@ -161,7 +182,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**ubuntu常见疑难解答**
+#### **ubuntu常见疑难解答**
 
 - 快速下载ubuntu镜像: 找到官网下载链接后使用wget下载
 - 简单安装双系统
@@ -180,7 +201,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**WSL2常见疑难解答**
+#### **WSL2常见疑难解答**
 
 - windows上安装ubuntu(WSL2)： 
 
@@ -200,7 +221,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**windows常见工具箱**
+#### **windows常见工具箱**
 
 - 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
@@ -214,9 +235,13 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 [https://github.com/Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
+- Ubuntu - bash脚本与 Windows - bat 脚本互相转换工具（Bash to Bat Converter
+
+[https://daniel-sc.github.io/bash-shell-to-bat-converter/](https://daniel-sc.github.io/bash-shell-to-bat-converter/)
 
 
-**正则表达式相关**
+
+#### **正则表达式相关**
 
 - 正则表达式入门与练习
 
@@ -236,7 +261,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
   
 
-**docker相关:**
+#### **docker相关**
 
 - docker的一切：
 
@@ -524,6 +549,8 @@ Linux 内核揭密（一系列关于 Linux 内核和其内在机理的帖子。�
 
 [https://xinqiu.gitbooks.io/linux-inside-zh/content/](https://xinqiu.gitbooks.io/linux-inside-zh/content/)
 
+
+
 ### 计算机网络学习
 
 课程类待补充
@@ -585,7 +612,9 @@ GitHub's largest open-source algorithm library
 
 ## 深度学习大类
 
-#### 有关理论基础（但我还是建议直接看李宏毅）
+
+
+### 有关理论基础（但我还是建议直接看李宏毅）
 
 **周志华**
 
@@ -603,7 +632,7 @@ GitHub's largest open-source algorithm library
 
 
 
-**李宏毅相关课程**
+### **李宏毅相关课程**
 
 - 李宏毅老师的课程主页：
 
@@ -647,7 +676,9 @@ pytorch底层源码解析（一个很不错的博主）
 
 [https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
 
-#### 开源库/项目
+
+
+### 开源库/项目
 
 OpenMMLab
 
@@ -693,7 +724,7 @@ Awesome Deep Learning
 
 
 
-#### 手写深度学习项目
+### 手写深度学习项目
 
 小土堆 pytorch学习
 
@@ -715,13 +746,13 @@ Awesome Deep Learning
 
 
 
-#### 在线数据集网站
+### 在线数据集网站
 
 [https://universe.roboflow.com/](https://universe.roboflow.com/)
 
 
 
-#### 3D感知相关
+### 3D感知相关
 
 从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
 
@@ -729,11 +760,11 @@ Awesome Deep Learning
 
 
 
-#### NVIDIA安装与常见问题
+### NVIDIA CUDA类安装与常见问题
 
 
 
-显卡驱动安装快速方法：
+- 显卡驱动安装快速方法：
 
 ubuntu-drivers devices
 
@@ -741,7 +772,7 @@ sudo apt install  输入显示的推荐版本
 
 
 
-CUDA与cuDNN的安装：（直接官网选择）
+- CUDA与cuDNN的安装：（直接官网选择）
 
 注意：a100和3090ti不支持cuda11以下，请装113以上的版本。
 
@@ -751,7 +782,9 @@ CUDA与cuDNN的安装：（直接官网选择）
 
 [https://blog.csdn.net/weixin_37926734/article/details/123033286](https://blog.csdn.net/weixin_37926734/article/details/123033286)
 
-(注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装）
+cudnn的卸载可参考：[https://zhuanlan.zhihu.com/p/83971195](https://zhuanlan.zhihu.com/p/83971195)
+
+(注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装,或在下面的网页中找到archive）
 
 - [Archive of Previous CUDA Releases](https://developer.nvidia.com/cuda-toolkit-archive)
 
@@ -759,7 +792,9 @@ CUDA与cuDNN的安装：（直接官网选择）
 
 [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
-注，有时候cudnn自带的deb安装不好用，可以用tar的自己cp代替。
+cudnn的官方安装教程（通过tar文件自己cp或者根据教程安装deb）
+
+[https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)
 
 TensorRT的安装（参考Debian Installation）
 
@@ -767,7 +802,7 @@ TensorRT的安装（参考Debian Installation）
 
 
 
-安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source，且记得修改对应版本（如cuda-11.5）
+- 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source，且记得修改对应版本（如cuda-11.5）
 
 （具体的安装和卸载也可以参考[https://flywine.blog.csdn.net/article/details/81879514](https://flywine.blog.csdn.net/article/details/81879514)）
 
@@ -801,9 +836,24 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com  $(加入报错的密�
 apt update
 ```
 
+解决类似 `error code is libcuda.so: cannot open shared object file: No such file or directory`的问题：[https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file](https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file)
+
+```Bash
+# 此处我们搜索的是libcuda.so
+sudo find /usr/ -name 'libcuda.so' #有时候搜索的是libcuda.so.*
+# 这一步是为了找到所在文件夹，我在WSL中搜到了几个文件夹下，我任意加入一个文件夹到LD_PATH：
+
+# 假如前一步发现libcuda的位置为：/usr/lib/wsl/lib/libcuda.so
+# 告诉系统要在这里找，你也可以把这句话加入到~/.bashrc然后source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib  
+
+```
+
+此时再次运行就不会报错了！
 
 
-#### 其他
+
+### 其他
 
 快速下载torch安装包（wget下载然后直接pip install）
 
@@ -929,7 +979,7 @@ StableDiffusion Int8量化教程与ONNX导出推理
 
 ## python
 
-**anaconda基础**
+### **anaconda基础**
 
 - 国内的anaconda镜像下载
 
@@ -1342,6 +1392,8 @@ AI论文检索
 
 [https://elicit.org/](https://elicit.org/)
 
+
+
 ## 其他日常使用网站
 
 有关思维导图的代码（类似markdown）生成：
@@ -1371,6 +1423,8 @@ json可视化：
 黑白照片上色
 
 [https://palette.fm/](https://palette.fm/)
+
+
 
 ## 其他有趣的项目
 
@@ -1447,4 +1501,3 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-

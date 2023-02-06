@@ -115,11 +115,15 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 
 
-**系统相关**
+**系统相关及系统信息相关**
 
 如何开机自动挂载新硬盘（非ubuntu安装硬盘）
 
 [https://blog.csdn.net/qq_27370437/article/details/117806294](https://blog.csdn.net/qq_27370437/article/details/117806294)
+
+获取CPU的性能信息和常见信息，涵盖x86/arm等多硬件
+
+[https://github.com/pytorch/cpuinfo](https://github.com/pytorch/cpuinfo)
 
 
 
@@ -332,7 +336,15 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 [https://zhuanlan.zhihu.com/p/468146522](https://zhuanlan.zhihu.com/p/468146522)
 
-  
+- 导出自己的镜像和导入：
+
+[https://yeasy.gitbook.io/docker_practice/container/import_export](https://yeasy.gitbook.io/docker_practice/container/import_export)
+
+- 提交自己的镜像到dockehub：(你也可以参考上面提到的docker的一切，里面什么都有。
+
+可参考 [https://blog.csdn.net/butterfly5211314/article/details/83068807](https://blog.csdn.net/butterfly5211314/article/details/83068807)
+
+
 
 
 
@@ -421,6 +433,14 @@ Roadmap to becoming a developer
 小林 x 图解计算机基础（国内最好的八股文整理之一）（图解网络和操作系统）
 
 [https://xiaolincoding.com/](https://xiaolincoding.com/)
+
+
+
+linux inside  讲解了一下linux内部运行机制，比如Program startup process in userspace
+
+[https://0xax.gitbooks.io/linux-insides/content/Misc/linux-misc-4.html](https://0xax.gitbooks.io/linux-insides/content/Misc/linux-misc-4.html)
+
+
 
 ### 操作系统与体系结构
 
@@ -665,6 +685,14 @@ Awesome Deep Learning
 
 
 
+华校专，曾任阿里巴巴资深算法工程师 多年以来学习总结的笔记（机器学习和深度学习）
+
+[https://www.huaxiaozhuan.com/](https://www.huaxiaozhuan.com/)
+
+有关实践方法论的总结：[https://www.huaxiaozhuan.com/深度学习/chapters/18_practical.html](https://www.huaxiaozhuan.com/深度学习/chapters/18_practical.html)
+
+
+
 #### 手写深度学习项目
 
 小土堆 pytorch学习
@@ -827,6 +855,8 @@ CUDA C++ Programming Guide
 
 
 
+
+
 #### 推理&加速量化框架
 
 ncnn
@@ -876,6 +906,10 @@ tensorrt 插件自生成（腾讯TPAT）
 paddle_to_openvino算子开发
 
 [https://aistudio.baidu.com/aistudio/projectdetail/5241605?channelType=0&channel=0](https://aistudio.baidu.com/aistudio/projectdetail/5241605?channelType=0&channel=0)
+
+高性能推理，TensorRT C++/Python库，tensorrt学习参考
+
+[https://github.com/shouxieai/tensorRT_Pro](https://github.com/shouxieai/tensorRT_Pro)
 
 
 
@@ -1413,6 +1447,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

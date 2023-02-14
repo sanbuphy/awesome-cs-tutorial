@@ -101,7 +101,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 ### 基本操作 
 
-#### **GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学**
+#### GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学
 
 - The Missing Semester of Your CS Education 中文版（强烈推荐）
     - 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
@@ -112,10 +112,15 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 - 命令行的艺术（总结了各种命令行下相关好物）
     - [https://github.com/jlevy/the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+- 如何学习写shell脚本（封装）可参考的项目：
 
+[https://github.com/sanbuphy/vimplus/blob/master/install.sh](https://github.com/sanbuphy/vimplus/blob/master/install.sh)
 
+- shell和程序开头的字符画LOGO生成工具
 
-#### **系统相关及系统信息相关**
+[https://tools.kalvinbg.cn/txt/ascii](https://tools.kalvinbg.cn/txt/ascii)
+
+#### 系统相关及系统信息相关
 
 如何开机自动挂载新硬盘（非ubuntu安装硬盘）
 
@@ -148,7 +153,7 @@ sudo update-alternatives --config gcc
 
 
 
-#### **vscode相关**
+#### vscode相关
 
 - 自动格式化python代码
 
@@ -158,7 +163,7 @@ sudo update-alternatives --config gcc
 
 
 
-#### **git相关**
+#### git相关
 
 - git常见操作整理
 
@@ -182,7 +187,7 @@ sudo update-alternatives --config gcc
 
 
 
-#### **ubuntu常见疑难解答**
+#### ubuntu常见疑难解答
 
 - 快速下载ubuntu镜像: 找到官网下载链接后使用wget下载
 - 简单安装双系统
@@ -201,11 +206,15 @@ sudo update-alternatives --config gcc
 
 
 
-#### **WSL2常见疑难解答**
+#### WSL2常见疑难解答
 
 - windows上安装ubuntu(WSL2)： 
 
 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
+
+- WSL2常用命令（开启关闭甚至注销等等
+
+[https://learn.microsoft.com/zh-cn/windows/wsl/basic-commands](https://learn.microsoft.com/zh-cn/windows/wsl/basic-commands)
 
 - 安装WSL2专用systemctl【目前（2023/02/02）只能用于20.04,请勿在22.04中使用！】（慎重使用，可能会导致pycharm连接出现问题，请先快照后再进行尝试！
 
@@ -221,7 +230,7 @@ sudo update-alternatives --config gcc
 
 
 
-#### **windows常见工具箱**
+#### windows常见工具箱
 
 - 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
@@ -239,9 +248,15 @@ sudo update-alternatives --config gcc
 
 [https://daniel-sc.github.io/bash-shell-to-bat-converter/](https://daniel-sc.github.io/bash-shell-to-bat-converter/)
 
+- windows-linux命令行对照表
+
+[https://www.geeksforgeeks.org/linux-vs-windows-commands/](https://www.geeksforgeeks.org/linux-vs-windows-commands/)
 
 
-#### **正则表达式相关**
+
+
+
+#### 正则表达式相关
 
 - 正则表达式入门与练习
 
@@ -261,7 +276,7 @@ sudo update-alternatives --config gcc
 
   
 
-#### **docker相关**
+#### docker相关
 
 - docker的一切：
 
@@ -802,13 +817,15 @@ TensorRT的安装（参考Debian Installation）
 
 
 
-- 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source，且记得修改对应版本（如cuda-11.5）
+- 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source。
+
+**如果你想要修改版本，可以修改cuda的软链接（选择其他版本的cuda），或者在bashrc中的cuda后面加上版本，如cuda-11.2**
 
 （具体的安装和卸载也可以参考[https://flywine.blog.csdn.net/article/details/81879514](https://flywine.blog.csdn.net/article/details/81879514)）
 
 ```Bash
-export PATH="/usr/local/cuda-11.5/bin:$PATH" 
-export LD_LIBRARY_PATH="/usr/local/cuda-11.5/lib64:$LD_LIBRARY_PATH" 
+export PATH="/usr/local/cuda/bin:$PATH" 
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH" 
 
 ```
 
@@ -836,7 +853,7 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com  $(加入报错的密�
 apt update
 ```
 
-解决类似 `error code is libcuda.so: cannot open shared object file: No such file or directory`的问题：[https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file](https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file)
+- 解决类似 `error code is libcuda.so: cannot open shared object file: No such file or directory`的问题：[https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file](https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file)
 
 ```Bash
 # 此处我们搜索的是libcuda.so
@@ -845,7 +862,7 @@ sudo find /usr/ -name 'libcuda.so' #有时候搜索的是libcuda.so.*
 
 # 假如前一步发现libcuda的位置为：/usr/lib/wsl/lib/libcuda.so
 # 告诉系统要在这里找，你也可以把这句话加入到~/.bashrc然后source ~/.bashrc
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/wsl/lib  
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib  
 
 ```
 
@@ -899,9 +916,7 @@ Build & Share Delightful Machine Learning Apps
 
 
 
-CUDA C++ Programming Guide
 
-[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
 
 
 
@@ -1336,7 +1351,7 @@ ffmpeg原理 罗上文
 
 
 
-### cuda相关
+### CUDA
 
 适合入门的小型Python编译器项目（包含cuda相关内容）
 
@@ -1346,7 +1361,13 @@ cuda学习教程
 
 [https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
 
+CUDA-Programming-Guide-in-Chinese
 
+[https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese](https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese)
+
+CUDA C++ Programming Guide
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
 
 
 
@@ -1501,3 +1522,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
+

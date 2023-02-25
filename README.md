@@ -151,6 +151,12 @@ sudo update-alternatives --config gcc
 
 [https://cloud.tencent.com/developer/article/1430839](https://cloud.tencent.com/developer/article/1430839)
 
+如何及时获取可视化的CPU频率和使用率信息：(Linux 查看CPU当前运行频率和温度)
+
+sudo pip install s-tui
+
+sudo s-tui
+
 
 
 #### vscode相关
@@ -185,6 +191,10 @@ sudo update-alternatives --config gcc
 
 [https://github.com/shiftkey/desktop/releases](https://github.com/shiftkey/desktop/releases)
 
+- git的rebase的使用说明（可用于合并多次commit,修改commit等情况）
+
+[https://www.jianshu.com/p/4a8f4af4e803](https://www.jianshu.com/p/4a8f4af4e803)
+
 
 
 #### ubuntu常见疑难解答
@@ -208,6 +218,10 @@ sudo update-alternatives --config gcc
 
 #### WSL2常见疑难解答
 
+- WSL入坑指南（很全的资料，包括开发环境的配置）
+
+[https://dowww.spencerwoo.com/](https://dowww.spencerwoo.com/)
+
 - windows上安装ubuntu(WSL2)： 
 
 1、在microsoft下载ubuntu 2、根据下列方式导出并导入镜像，防止占用C盘空间（默认安装在C盘）[http://t.zoukankan.com/davidchild-p-15606786.html](http://t.zoukankan.com/davidchild-p-15606786.html)   （用这个方法还可以及时快照保存~
@@ -227,6 +241,20 @@ sudo update-alternatives --config gcc
     - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
 - 注意！WSL2经常会与主机时间不同步，这可能会造成很多问题（包括proxy用不了），你最好设置一个启动脚本或自己执行`sudo hwclock -s`强制对WSL2时间进行同步，可使用`sudo hwclock`查看WSL的当前时间，
 - 以防出现奇怪问题你可以经常对WSL做快照：[https://blog.csdn.net/weixin_43425561/article/details/115765148](https://blog.csdn.net/weixin_43425561/article/details/115765148)
+- 改变/增加WSL2的内存、swap空间大小
+
+在C盘的用户主目录下（比如我的是C:\Users\sanbu）创建`.wslconfig`文件夹，在里面输入
+
+```text
+[wsl2]
+memory=8GB
+swap=16GB
+# 为 WSL 2 虚拟机分配的处理器核心数量
+# processors=<number>
+
+```
+
+在配置设置完之后，在powershell执行`wsl --shutdown`命令进行关闭，随后再打开即可（注意，如果你使用了docker-desktop，实际上也是基于wsl2构建的，所以也会影响到的对应环境的资源
 
 
 
@@ -482,6 +510,12 @@ linux inside  讲解了一下linux内部运行机制，比如Program startup pro
 
 
 
+苏剑林的空间（从数学再到NLP再到天文都有涉猎
+
+[https://spaces.ac.cn/](https://spaces.ac.cn/)
+
+
+
 ### 操作系统与体系结构
 
 南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（强烈不建议一开始就读csapp
@@ -629,7 +663,7 @@ GitHub's largest open-source algorithm library
 
 
 
-### 有关理论基础（但我还是建议直接看李宏毅）
+### 理论基础（时间少直接看李沐/李宏毅）
 
 **周志华**
 
@@ -693,6 +727,30 @@ pytorch底层源码解析（一个很不错的博主）
 
 
 
+
+
+### 手写深度学习入门项目
+
+小土堆 pytorch学习
+
+[https://space.bilibili.com/203989554](https://space.bilibili.com/203989554?spm_id_from=333.337.search-card.all.click)
+
+
+
+霹雳吧啦Wz 图像分类篇章 以及目标检测
+
+[https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290](https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290)
+
+
+
+手写YOLO系列和fast rcnn系列：
+
+[https://www.bilibili.com/video/BV1JR4y1g77H](https://www.bilibili.com/video/BV1JR4y1g77H?spm_id_from=333.999.0.0&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
+
+[https://space.bilibili.com/472467171](https://space.bilibili.com/472467171)
+
+
+
 ### 开源库/项目
 
 OpenMMLab
@@ -739,31 +797,23 @@ Awesome Deep Learning
 
 
 
-### 手写深度学习项目
+王树森（小红书算法工程师、基础模型团队负责人）老师的推荐系统、强化学习相关课程
 
-小土堆 pytorch学习
+[https://github.com/wangshusen/RecommenderSystem](https://github.com/wangshusen/RecommenderSystem)
 
-[https://space.bilibili.com/203989554](https://space.bilibili.com/203989554?spm_id_from=333.337.search-card.all.click)
-
-
-
-霹雳吧啦Wz 图像分类篇章 以及目标检测
-
-[https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290](https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290)
-
-
-
-手写YOLO系列和fast rcnn系列：
-
-[https://www.bilibili.com/video/BV1JR4y1g77H](https://www.bilibili.com/video/BV1JR4y1g77H?spm_id_from=333.999.0.0&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
-
-[https://space.bilibili.com/472467171](https://space.bilibili.com/472467171)
+[https://github.com/wangshusen/DRL](https://github.com/wangshusen/DRL)
 
 
 
 ### 在线数据集网站
 
 [https://universe.roboflow.com/](https://universe.roboflow.com/)
+
+
+
+NLPDataSet（刘聪NLP收集的各种nlp数据集，接近50个。。。）
+
+[https://github.com/liucongg/NLPDataSet](https://github.com/liucongg/NLPDataSet)
 
 
 
@@ -775,9 +825,7 @@ Awesome Deep Learning
 
 
 
-### NVIDIA CUDA类安装与常见问题
-
-
+### NVIDIA环境配置常见问题
 
 - 显卡驱动安装快速方法：
 
@@ -892,6 +940,31 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib
 
 
 
+### MLsystem
+
+ML system 入坑指南
+
+[https://zhuanlan.zhihu.com/p/608318764](https://zhuanlan.zhihu.com/p/608318764)
+
+
+
+微软出品 人工智能系统
+
+[https://github.com/microsoft/AI-System](https://github.com/microsoft/AI-System)
+
+
+
+《机器学习系统：设计和实现》（个人觉得很好
+[https://openmlsys.github.io/#](https://openmlsys.github.io/#)
+
+
+
+MLIR 文章视频汇总（MLIR目的是做一个通用、可复用的编译器框架
+
+[https://zhuanlan.zhihu.com/p/141256429](https://zhuanlan.zhihu.com/p/141256429)
+
+
+
 ### 深度学习部署
 
 GiantPandaCV
@@ -916,9 +989,11 @@ Build & Share Delightful Machine Learning Apps
 
 
 
+Optimum :
 
+ Optimum is an extension of 🤗 Transformers that provides a set of performance optimization tools to train and run models on targeted hardware with maximum efficiency.
 
-
+[https://huggingface.co/docs/optimum/index](https://huggingface.co/docs/optimum/index)
 
 
 
@@ -976,21 +1051,21 @@ paddle_to_openvino算子开发
 
 [https://github.com/shouxieai/tensorRT_Pro](https://github.com/shouxieai/tensorRT_Pro)
 
+A lite C++ toolkit of awesome AI models with ONNXRuntime, NCNN, MNN and TNN. YOLOv5, YOLOX, YOLOP, YOLOv6, YOLOR, MODNet, YOLOX, YOLOv7, YOLOv8. MNN, NCNN, TNN, ONNXRuntime.
 
+[https://github.com/DefTruth/lite.ai.toolkit/blob/main/README.zh.md](https://github.com/DefTruth/lite.ai.toolkit/blob/main/README.zh.md)
 
-### 有趣的深度学习小程序与应用
+onxxruntime源码带读
 
-比disco diffusion更强大的绘制工具SD：
+[https://zhuanlan.zhihu.com/p/530925674](https://zhuanlan.zhihu.com/p/530925674)
 
-在自己电脑运行Stable Diffusion和完整项目下载
+美团视觉GPU推理服务部署架构优化实践（美团关于GPU的推理部署有很多不错的文章
 
-[https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g](https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g)
+[https://zhuanlan.zhihu.com/p/605094862](https://zhuanlan.zhihu.com/p/605094862)
 
-StableDiffusion Int8量化教程与ONNX导出推理
+NCNN底层源码带读
 
-[https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw](https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw)
-
-
+[https://zhuanlan.zhihu.com/p/588809520](https://zhuanlan.zhihu.com/p/588809520)
 
 ## python
 
@@ -1038,6 +1113,11 @@ StableDiffusion Int8量化教程与ONNX导出推理
 conda更新：`conda update anaconda`
 
 conda所有库更新：`conda update --all`
+
+- 导出自己安装的那些包（freeze是全部！）：使用pipreqs库
+- powershell下看不到（base）之类的虚拟库信息，显示出脚本安全问题无法启用，可在powershell管理员模式下输入`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`即可解决问题。
+
+
 
 
 
@@ -1445,9 +1525,25 @@ json可视化：
 
 [https://palette.fm/](https://palette.fm/)
 
+让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装）
 
+[https://github.com/521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)
 
-## 其他有趣的项目
+## 有趣的项目
+
+比disco diffusion更强大的绘制工具SD：
+
+在自己电脑运行Stable Diffusion和完整项目下载
+
+[https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g](https://mp.weixin.qq.com/s/syEkqbBSmTwdi_cPB6Kd3g)
+
+StableDiffusion Int8量化教程与ONNX导出推理
+
+[https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw](https://mp.weixin.qq.com/s/18EIga7w9y1FG0oWcnysIw)
+
+ChatGPT 中文调教指南
+
+[https://github.com/PlexPt/awesome-chatgpt-prompts-zh](https://github.com/PlexPt/awesome-chatgpt-prompts-zh)
 
 CodeGeeX: 多语言代码生成模型（代码生成与代码翻译）
 
@@ -1522,6 +1618,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

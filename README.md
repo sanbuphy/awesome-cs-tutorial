@@ -157,6 +157,10 @@ sudo pip install s-tui
 
 sudo s-tui
 
+如何打造Ubuntu Togo  利用虚拟机
+
+[https://blog.csdn.net/afsafasfa/article/details/125782222](https://blog.csdn.net/afsafasfa/article/details/125782222)
+
 
 
 #### vscode相关
@@ -310,6 +314,10 @@ swap=16GB
 
 [https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
 
+- windows下安装docker desktop到其他硬盘（主要是mklink /j "C:\Program Files\Docker" "D:\Program Files\Docker"）以防空间占用过多
+
+参考：[https://blog.csdn.net/liangcsdn111/article/details/110236655](https://blog.csdn.net/liangcsdn111/article/details/110236655)
+
 - 在WSL2下使用docker
 
 【你只需要安装docker desktop然后参考这个教程，点点就能用了】：
@@ -412,7 +420,10 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 可参考 [https://blog.csdn.net/butterfly5211314/article/details/83068807](https://blog.csdn.net/butterfly5211314/article/details/83068807)
 
+- windows下docker挂载本地文件夹（利用powershell或者cmd之类的）
 
+-v /d/PycharmProjects:/test    （注意一下这个形式）
+-v挂载本地文件夹到docker容器中，在容器中修改/test文件夹中的内容也就是修改D:\PycharmProjects文件夹中的内容
 
 
 
@@ -1031,7 +1042,13 @@ tensorrt 插件自生成（腾讯TPAT）
 
 [https://github.com/openppl-public/ppq](https://github.com/openppl-public/ppq)
 
+ONNX性能测试工具
 
+[https://github.com/ThanatosShinji/onnx-tool](https://github.com/ThanatosShinji/onnx-tool)
+
+A web-based tool for visualizing and analyzing convolutional neural network architectures (or technically, any directed acyclic graph)
+
+[https://dgschwend.github.io/netscope/quickstart.html](https://dgschwend.github.io/netscope/quickstart.html)
 
 #### 实例参考
 
@@ -1066,6 +1083,16 @@ onxxruntime源码带读
 NCNN底层源码带读
 
 [https://zhuanlan.zhihu.com/p/588809520](https://zhuanlan.zhihu.com/p/588809520)
+
+text2vec, text to vector. 文本向量表征工具，把文本转化为向量矩阵，实现了Word2Vec、RankBM25、Sentence-BERT、CoSENT等文本表征、文本相似度计算模型，开箱即用。
+
+[https://github.com/shibing624/text2vec](https://github.com/shibing624/text2vec)
+
+ChatFlow - Personalize your ChatGPT workflows and build the road to automation
+
+[https://github.com/prompt-engineering/chat-flow](https://github.com/prompt-engineering/chat-flow)
+
+
 
 ## python
 
@@ -1457,7 +1484,9 @@ CUDA C++ Programming Guide
 
 [https://github.com/plantegg/programmer_case](https://github.com/plantegg/programmer_case)
 
+byte-unixbench  用于测试linux环境下的benchmark测试（包括云服务器）
 
+[https://github.com/kdlucas/byte-unixbench](https://github.com/kdlucas/byte-unixbench)
 
 
 
@@ -1529,6 +1558,12 @@ json可视化：
 
 [https://github.com/521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)
 
+利用学生、教职工身份可以享受到的相关学生优惠、教育优惠或教师优惠的权益合集
+
+[https://github.com/ivmm/Student-resources](https://github.com/ivmm/Student-resources)
+
+
+
 ## 有趣的项目
 
 比disco diffusion更强大的绘制工具SD：
@@ -1554,6 +1589,16 @@ Whisper AI剪视频小工具
 [https://www.bilibili.com/video/BV1Pe4y1t7de/](https://www.bilibili.com/video/BV1Pe4y1t7de/)
 
 [https://github.com/mli/autocut/](https://github.com/mli/autocut/)
+
+“Codeium - a tool that helps developers make changes in unfamiliar languages or codebases”
+
+[https://www.codeium.com/playground](https://www.codeium.com/playground)
+
+Turn your pandas dataframe into a Tableau-style User Interface for visual analysis（简单可视化数据分析）
+
+[https://github.com/Kanaries/pygwalker](https://github.com/Kanaries/pygwalker)
+
+
 
 
 

@@ -217,6 +217,7 @@ sudo s-tui
     - sudo apt-get clean
     - 接下来将/etc/apt/source.list文件内容清空并保存
     - 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
+- 给第三方软件appimage加上快捷方式：[https://www.cnblogs.com/HGNET/p/16396589.html](https://www.cnblogs.com/HGNET/p/16396589.html)
 
 
 
@@ -343,7 +344,7 @@ snap version
 
 [https://www.yisu.com/zixun/139260.html](https://www.yisu.com/zixun/139260.html)
 
-- NVIDIA docker——nvidia-docker2的相关安装
+- NVIDIA docker的使用（用文中方式启动docker的插件，然后用docker  run gpu启动，而不是nvidia-docker，这个已经被废弃了）
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
@@ -1050,6 +1051,12 @@ A web-based tool for visualizing and analyzing convolutional neural network arch
 
 [https://dgschwend.github.io/netscope/quickstart.html](https://dgschwend.github.io/netscope/quickstart.html)
 
+前端推理框架相关（还有抱抱脸的js也可以看
+
+[https://morioh.com/p/3e34a2723ab4](https://morioh.com/p/3e34a2723ab4)
+
+
+
 #### 实例参考
 
 各种开发版的基础功能调通
@@ -1092,7 +1099,9 @@ ChatFlow - Personalize your ChatGPT workflows and build the road to automation
 
 [https://github.com/prompt-engineering/chat-flow](https://github.com/prompt-engineering/chat-flow)
 
+达摩院的模型库
 
+[https://www.modelscope.cn/models](https://www.modelscope.cn/models)
 
 ## python
 
@@ -1436,6 +1445,12 @@ C++ Standard Draft Sources（一起成为语言律师）
 
 
 
+c++的那些事（合集了一些c++的相关小技巧和资料的开源仓库
+
+[https://github.com/Light-City/CPlusPlusThings](https://github.com/Light-City/CPlusPlusThings)
+
+
+
 ### C++的杂物间
 
 DJI thermal analysis tool  相关教程（日文
@@ -1644,6 +1659,8 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 ## 英语
 
+目前建议都用chatGPT
+
 ### 英文语法在线修改
 
 [https://www.grammarly.com/](https://www.grammarly.com/)
@@ -1663,4 +1680,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
 

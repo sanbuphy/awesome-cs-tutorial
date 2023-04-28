@@ -13,7 +13,7 @@ github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://
 
 
 
-**基础素质要求（自勉用，参考NJUPA内的要求）**
+**基础素质要求（参考NJU-PA）**
 
 提问的艺术
 
@@ -122,6 +122,14 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 #### 系统相关及系统信息相关
 
+ubuntu实体机快照：
+
+[https://blog.csdn.net/wf19930209/article/details/104236358](https://blog.csdn.net/wf19930209/article/details/104236358)
+
+ubuntu循环依赖问题：
+
+在安装某些东西的时候，你很可能会遇到循环依赖问题，这里慎重降级！！！！除非是必需品。操作不当很容易直接把服务/内核挂了，此时最好的办法是开个docker。（尤其是看到lib XXX的时候要小心）
+
 如何开机自动挂载新硬盘（非ubuntu安装硬盘）
 
 [https://blog.csdn.net/qq_27370437/article/details/117806294](https://blog.csdn.net/qq_27370437/article/details/117806294)
@@ -199,6 +207,10 @@ sudo s-tui
 
 [https://www.jianshu.com/p/4a8f4af4e803](https://www.jianshu.com/p/4a8f4af4e803)
 
+- 查看开源项目的数据以及自己的个人数据（比如年度pr数量）：
+
+[https://ossinsight.io/](https://ossinsight.io/)
+
 
 
 #### ubuntu常见疑难解答
@@ -261,6 +273,42 @@ swap=16GB
 
 在配置设置完之后，在powershell执行`wsl --shutdown`命令进行关闭，随后再打开即可（注意，如果你使用了docker-desktop，实际上也是基于wsl2构建的，所以也会影响到的对应环境的资源
 
+- 暴露wsl的服务（桥接）：[https://www.cnblogs.com/huanliu/p/17161388.html](https://www.cnblogs.com/huanliu/p/17161388.html)   （记得开始要在powershell 中使用`Set-VMSwitch WSL -NetAdapterName 以太网`）此时桥接后可能还不能上网，需要加入8.8.8.8 nameserver
+
+简单启动流程：
+
+ `Set-VMSwitch WSL -NetAdapterName 以太网`
+
+然后运行下列ps1文件
+
+```text
+echo "正在解除wsl桥接..."
+Set-VMSwitch WSL  -SwitchType Internal
+echo "正在重启wsl"
+wsl --shutdown
+wsl --cd ~ -e ls
+echo "`ndone"
+pause
+```
+
+然后wsl中：
+
+```Bash
+new_ip=新的映射ip
+brd=新的映射ip.255
+gateway=网关
+nameserver=网关
+net_dev=eth0
+sudo ip addr del $(ip addr show $net_dev | grep 'inet\b' | awk '{print $2}' | head -n 1) dev $net_dev
+sudo ip addr add $new_ip/24 broadcast $brd dev $net_dev
+sudo ip route add 0.0.0.0/0 via $gateway dev $net_dev
+sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
+```
+
+
+
+- wsl的硬盘空间怎么办？——挂载其他硬盘，如：`sudo mount -t drvfs D: /mnt/d`
+
 
 
 #### windows常见工具箱
@@ -311,9 +359,29 @@ swap=16GB
 
 #### docker相关
 
+【重点提示】对于ubuntu，如果你使用第一种命令行的方式安装了docker engine，切记不要安装docker desktop。或者直接就安装docker desktop。否则会找不到原来的镜像和container！这两并不兼容，详情请看官方说明。如果你不小心装了两个，想要恢复原来的docker，直接apt卸载docker desktop即可。
+
+```text
+Docker Desktop on Linux runs a Virtual Machine (VM) so creates and uses a custom docker context desktop-linux on startup.
+
+This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux
+
+
+```
+
 - docker的一切：
 
 [https://yeasy.gitbook.io/docker_practice/](https://yeasy.gitbook.io/docker_practice/)
+
+- docker官方安装教程
+
+[https://docs.docker.com/desktop/install/ubuntu/](https://docs.docker.com/desktop/install/ubuntu/)
+
+安装结束后记的：`sudo chmod a+rw /var/run/docker.sock`
+
+- 使docker能够避免输入sudo（通过 docker info检查是否要sudo才可输出）
+
+[https://www.yisu.com/zixun/139260.html](https://www.yisu.com/zixun/139260.html)
 
 - windows下安装docker desktop到其他硬盘（主要是mklink /j "C:\Program Files\Docker" "D:\Program Files\Docker"）以防空间占用过多
 
@@ -340,11 +408,7 @@ exec sudo nsenter -t $(pidof systemd) -a su - $LOGNAME
 
 snap version
 ```
-- 使docker能够避免输入sudo（通过 docker info检查是否要sudo才可输出）
-
-[https://www.yisu.com/zixun/139260.html](https://www.yisu.com/zixun/139260.html)
-
-- NVIDIA docker的使用（用文中方式启动docker的插件，然后用docker  run gpu启动，而不是nvidia-docker，这个已经被废弃了）
+- NVIDIA docker的使用（用文中方式启动docker的插件，然后用docker  run gpu启动，而不是nvidia-docker，这个已经被废弃了）（有时候update出问题是nvidia网络抽风了。。别急
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
@@ -360,7 +424,7 @@ snap version
 
 [https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/)
 
-- docker — use proxy（在容器内）
+- docker — use proxy（在容器内）（记得主机listen 172或者0.0.0.0
 
 **方法一：**
 
@@ -374,7 +438,7 @@ nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registr
 
 export ALL_PROXY="[http://172.17.0.1:8888/](http://172.17.0.1:8888/)"
 
-`export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172即可使用）
+`export ALL_PROXY=socks5://172.17.0.1:1088` 即可使用proxy。（有时候还不够用，可以加上https的）（不需要host network 只需要bind 172 即可使用）
 
 ```Bash
 export http_proxy="http://172.17.0.1:8888/"
@@ -425,6 +489,12 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 -v /d/PycharmProjects:/test    （注意一下这个形式）
 -v挂载本地文件夹到docker容器中，在容器中修改/test文件夹中的内容也就是修改D:\PycharmProjects文件夹中的内容
+
+- docker读写：`docker save example-image > example-image.tar`写：`docker load < example-image.tar`
+
+
+
+
 
 
 
@@ -670,6 +740,20 @@ GitHub's largest open-source algorithm library
 [refactoringguru.cn/design-patterns](http://refactoringguru.cn/design-patterns) 
 
 
+
+## 高性能计算等
+
+
+
+### webgpu
+
+WebGPU Fundamentals
+
+[https://webgpufundamentals.org/](https://webgpufundamentals.org/)
+
+wgpu 中文版跨平台开发（Web + App）教程：
+
+[https://jinleili.github.io/learn-wgpu-zh/](https://jinleili.github.io/learn-wgpu-zh/)
 
 ## 深度学习大类
 
@@ -1055,6 +1139,14 @@ A web-based tool for visualizing and analyzing convolutional neural network arch
 
 [https://morioh.com/p/3e34a2723ab4](https://morioh.com/p/3e34a2723ab4)
 
+阿里的边缘端推理压缩量化框架
+
+[https://github.com/alibaba/TinyNeuralNetwork](https://github.com/alibaba/TinyNeuralNetwork)
+
+Run 🤗 Transformers in your browser! 
+
+[https://github.com/xenova/transformers.js](https://github.com/xenova/transformers.js)
+
 
 
 #### 实例参考
@@ -1102,6 +1194,20 @@ ChatFlow - Personalize your ChatGPT workflows and build the road to automation
 达摩院的模型库
 
 [https://www.modelscope.cn/models](https://www.modelscope.cn/models)
+
+trt-samples-for-hackathon-cn(面向 NVIDIA TensorRT 初学者和开发者,提供了 TensorRT 相关学习资料和参考资料、丰富的代码范例)
+
+[https://github.com/NVIDIA/trt-samples-for-hackathon-cn](https://github.com/NVIDIA/trt-samples-for-hackathon-cn)
+
+
+
+#### AIGC
+
+webui的安装相关教程合集
+
+[https://cloud.tencent.com/developer/news/1033320](https://cloud.tencent.com/developer/news/1033320)
+
+
 
 ## python
 
@@ -1152,8 +1258,7 @@ conda所有库更新：`conda update --all`
 
 - 导出自己安装的那些包（freeze是全部！）：使用pipreqs库
 - powershell下看不到（base）之类的虚拟库信息，显示出脚本安全问题无法启用，可在powershell管理员模式下输入`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`即可解决问题。
-
-
+- 使用pip命令时，报错：_sysconfigdata_x86_64_conda_cos7_linux_gnu.py：[https://blog.csdn.net/weixin_44321570/article/details/128514763](https://blog.csdn.net/weixin_44321570/article/details/128514763)
 
 
 
@@ -1393,6 +1498,12 @@ CMake菜谱（CMake Cookbook中文版）（面向实际应用小工具，推荐�
 
 
 
+cmake原理及其新手入门（知乎上的不错的文章
+
+[https://zhuanlan.zhihu.com/p/620839692](https://zhuanlan.zhihu.com/p/620839692)
+
+
+
 C++ reference（字典）
 
 [https://en.cppreference.com/w/](https://en.cppreference.com/w/)
@@ -1403,9 +1514,15 @@ c++并发编程
 
 [https://paul.pub/cpp-concurrency/](https://paul.pub/cpp-concurrency/)
 
-双笙子佯谬    图形学大佬，Zeno和Taichi Blend的作者
+双笙子佯谬    图形学大佬，Zeno和Taichi Blend的作者（by小彭老师
 
 [https://space.bilibili.com/263032155](https://space.bilibili.com/263032155)
+
+
+
+高性能并行编程与优化（by小彭老师
+
+[https://github.com/parallel101/course](https://github.com/parallel101/course)
 
 
 
@@ -1451,6 +1568,12 @@ c++的那些事（合集了一些c++的相关小技巧和资料的开源仓库
 
 
 
+bazel的安装最佳实践：
+
+官方github的release找到bash然后下载运行即可（如果安装到用户权限需要把用户的bin地址加到环境变量）
+
+
+
 ### C++的杂物间
 
 DJI thermal analysis tool  相关教程（日文
@@ -1458,6 +1581,10 @@ DJI thermal analysis tool  相关教程（日文
 [https://qiita.com/tutu/items/b5cf2b39dd30786d9064](https://qiita.com/tutu/items/b5cf2b39dd30786d9064)
 
 
+
+protobuf安装最佳实践（不是官网编译安装）
+
+`sudo apt install  libprotobuf-dev protobuf-compiler`
 
 ### 音视频相关
 
@@ -1612,6 +1739,22 @@ Whisper AI剪视频小工具
 Turn your pandas dataframe into a Tableau-style User Interface for visual analysis（简单可视化数据分析）
 
 [https://github.com/Kanaries/pygwalker](https://github.com/Kanaries/pygwalker)
+
+利用chatgpt生成mermaid语言然后导入即可生成流程图
+
+[https://mermaid-js.github.io/mermaid-live-editor/edit](https://mermaid-js.github.io/mermaid-live-editor/edit)
+
+
+
+## 提示词工程
+
+在线AI Prompt生成工具和Prompt库  
+
+[http://t.cn/A6N4WjEX](http://t.cn/A6N4WjEX)
+
+该工具把 AIGC 提示词可视化，并提供在线编辑功能，动态编辑十分方便
+
+在线体验：[http://t.cn/A6N46h6p](http://t.cn/A6N46h6p)  GitHub：[github.com/Moonvy/OpenPromptStudio](http://github.com/Moonvy/OpenPromptStudio)
 
 
 

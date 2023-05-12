@@ -169,6 +169,10 @@ sudo s-tui
 
 [https://blog.csdn.net/afsafasfa/article/details/125782222](https://blog.csdn.net/afsafasfa/article/details/125782222)
 
+改变ubuntu swap大小
+
+[https://zhuanlan.zhihu.com/p/222512751](https://zhuanlan.zhihu.com/p/222512751)
+
 
 
 #### vscode相关
@@ -355,7 +359,7 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 [http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html](http://obkoro1.com/web_accumulate/codeBlack/正则表达式收集.html)
 
-  
+
 
 #### docker相关
 
@@ -450,7 +454,7 @@ export https_proxy="http://172.17.0.1:8888/"
 export HTTPS_PROXY="http://172.17.0.1:8888/"
 ```
 
-**方法二：**
+**docker build proxy：**
   1. make sure your proxy bind 172.17.0.1 and port  (e.g. 8888)
   2. add that in dockerfile
 
@@ -493,6 +497,12 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 - docker读写：`docker save example-image > example-image.tar`写：`docker load < example-image.tar`
 
 
+
+云服务器相关：
+
+（AWS）boto3使用教程用法
+
+[https://blog.csdn.net/weixin_46105038/article/details/118220439](https://blog.csdn.net/weixin_46105038/article/details/118220439)
 
 
 

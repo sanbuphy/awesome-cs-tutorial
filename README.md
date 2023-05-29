@@ -1030,6 +1030,14 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib
 
 [https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
 
+快速备忘torch gpu安装：[https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/)
+
+```Bash
+pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
+```
+
 
 
 孪生神经网络的相关实现：
@@ -1100,6 +1108,32 @@ Optimum :
  Optimum is an extension of 🤗 Transformers that provides a set of performance optimization tools to train and run models on targeted hardware with maximum efficiency.
 
 [https://huggingface.co/docs/optimum/index](https://huggingface.co/docs/optimum/index)
+
+
+
+nvidia NGC docker tensorrt
+
+[https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags)
+
+2202版本   cuda 116   ;  2108版本  cuda114
+
+
+
+A tool convert TensorRT engine/plan to a fake onnx
+
+[https://github.com/triple-Mu/TensorRT2ONNX](https://github.com/triple-Mu/TensorRT2ONNX)
+
+
+
+Composer is a PyTorch library that enables you to train neural networks faster, at lower cost, and to higher accuracy.
+
+[https://github.com/mosaicml/composer](https://github.com/mosaicml/composer)
+
+
+
+tensorrt samples学习文档
+
+[https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section](https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section)
 
 
 
@@ -1458,6 +1492,8 @@ c++ 在线测试：
 
 
 
+Composer is a PyTorch library that enables you to train neural networks faster, at lower cost, and to higher accuracy.
+
 awesome项目（包含了绝大部分的c++相关资源）
 
 [https://github.com/fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
@@ -1596,6 +1632,8 @@ protobuf安装最佳实践（不是官网编译安装）
 
 `sudo apt install  libprotobuf-dev protobuf-compiler`
 
+
+
 ### 音视频相关
 
 音视频原理必看国内大神-雷神
@@ -1607,6 +1645,8 @@ protobuf安装最佳实践（不是官网编译安装）
 ffmpeg原理 罗上文
 
 [https://ffmpeg.xianwaizhiyin.net/cover.html](https://ffmpeg.xianwaizhiyin.net/cover.html)
+
+
 
 
 
@@ -1627,6 +1667,10 @@ CUDA-Programming-Guide-in-Chinese
 CUDA C++ Programming Guide
 
 [https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
+
+[https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
 
 
 
@@ -1714,7 +1758,9 @@ json可视化：
 
 [https://github.com/ivmm/Student-resources](https://github.com/ivmm/Student-resources)
 
+免费好用的图床
 
+[https://imgur.com/](https://imgur.com/)
 
 ## 有趣的项目
 

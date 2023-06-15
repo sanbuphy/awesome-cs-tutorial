@@ -173,6 +173,18 @@ sudo s-tui
 
 [https://zhuanlan.zhihu.com/p/222512751](https://zhuanlan.zhihu.com/p/222512751)
 
+多线程并发解压缩文件
+
+[https://zhuanlan.zhihu.com/p/389817246](https://zhuanlan.zhihu.com/p/389817246)
+
+```Bash
+pigz -k your_file_name # 压缩文件
+
+tar -cvf - dir1 dir2 dir3 | pigz > output.tar.gz # 压缩文件夹
+
+unpigz -d your_file_name.gz
+```
+
 
 
 #### vscode相关
@@ -255,9 +267,9 @@ sudo s-tui
 
 [https://github.com/DamionGans/ubuntu-wsl2-systemd-script](https://github.com/DamionGans/ubuntu-wsl2-systemd-script)
 
-- WSL中如何使用win v2ray的proxy：（直接在wsl里面跑即可）
-    - 第一步 安装：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)（安装后其他步骤参考[https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray](https://gukaifeng.cn/posts/linux-pei-zhi-v2ray-he-proxychains-shi-xian-ming-ling-xing-dai-li-wu-tu-xing-jie-mian/#1-3-启动-V2Ray)
-    - 第二步 启动：（因为WSL无法用systemctl，所以直接运行即可（或者自己去安装一下wsl2的systemctl），你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
+- WSL中如何使用proxy：（服务器版本的通用方法）
+    - 第一步 下载：[https://github.com/v2fly/fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)  运行 install-release.sh，然后你可能会在里面发现在下载哪个zip要很久，可以直接wget下来解压即可
+    - 第二步 启动：直接 run 即可，然后设置一个本地json。 你可以后台运行，也可以在一个终端中运行起来，然后新开一个终端去export ALLproxy之类的就好，参考docker的做法，或者使用proxychains4也可以。）在终端中运行`/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json` 即可启动！
     - 第三步 使用：就当作一个已经监听了某个端口的proxy使用即可
     - 注释：当然，为了方便你可以自行改造，使用 /etc/init.d/ 目录中的服务命令或 service 命令替代systemctl。
 - 注意！WSL2经常会与主机时间不同步，这可能会造成很多问题（包括proxy用不了），你最好设置一个启动脚本或自己执行`sudo hwclock -s`强制对WSL2时间进行同步，可使用`sudo hwclock`查看WSL的当前时间，
@@ -1017,10 +1029,11 @@ sudo find /usr/ -name 'libcuda.so' #有时候搜索的是libcuda.so.*
 # 假如前一步发现libcuda的位置为：/usr/lib/wsl/lib/libcuda.so
 # 告诉系统要在这里找，你也可以把这句话加入到~/.bashrc然后source ~/.bashrc
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib  
-
 ```
 
-此时再次运行就不会报错了！
+NVIDIA显卡运行时状态监控不错的python库（实时监控）
+
+[https://github.com/XuehaiPan/nvitop](https://github.com/XuehaiPan/nvitop)
 
 
 
@@ -1051,6 +1064,12 @@ pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
 深度学习500问
 
 [https://github.com/shliang0603/Awesome-DeepLearning-500FAQ](https://github.com/shliang0603/Awesome-DeepLearning-500FAQ)
+
+
+
+Gradio常见疑难解答：
+
+如何开启多个gradio对外只有一端口？：两种方法，1、[https://github.com/gradio-app/gradio/issues/2979](https://github.com/gradio-app/gradio/issues/2979)       2、写两个新的fastapi然后把两个gradio的src mount到对应地方
 
 
 
@@ -1158,6 +1177,10 @@ bbuf老师的onnx学习笔记
 TVM官方中文手册
 
 [https://tvm.hyper.ai/docs/](https://tvm.hyper.ai/docs/)
+
+TVM入门笔记整理
+
+[https://github.com/JackonYang/hands-on-tvm](https://github.com/JackonYang/hands-on-tvm)
 
 tensorrt 插件自生成（腾讯TPAT）
 

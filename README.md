@@ -393,7 +393,7 @@ This means images and containers deployed on the Linux Docker Engine (before ins
 
 [https://docs.docker.com/desktop/install/ubuntu/](https://docs.docker.com/desktop/install/ubuntu/)
 
-安装结束后记的：`sudo chmod a+rw /var/run/docker.sock`
+安装结束后记的：`sudo chmod a+rw /var/run/docker.sock`（不过可能在一些用户权限限制比较多的电脑这样可能端口映射后对端口请求可能还是会出现一些问题，你可以通过设定为777权限解决。）
 
 - 使docker能够避免输入sudo（通过 docker info检查是否要sudo才可输出）
 
@@ -510,6 +510,8 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 
 
+#### 其他
+
 云服务器相关：
 
 （AWS）boto3使用教程用法
@@ -518,11 +520,35 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 
 
-
-
 不知道变量怎么命名就可以看看：
 
 [https://unbug.github.io/codelf/](https://unbug.github.io/codelf/)
+
+
+
+电脑装机：
+
+去bilibili随便搜前二的 多看几遍
+
+我自己的配置：
+
+```text
+凯侠1T ：375
+铭瑄3060 12g 2349 （记得卡扣先打开再插显卡
+金白达三星16G*2  389
+爱国者机箱  114 （机箱大比较好处理线
+海韵金牌全模组650W  599
+散热器利民ax120rse   69.9
+13490F + B660M WIFID4重炮手 华硕   2429
+```
+
+
+
+gradio的proxy冲突了怎么办？
+
+——设置不同的监听地址，比如gradio可以直接监听ip或者172的容器地址，不需要127.0.0.1，本地的这个可能要访问huggingface的就
+
+
 
 
 
@@ -683,6 +709,12 @@ MIT 6.S081: Operating System Engineering
 【MIT公开课】6.172 软件性能工程
 
 [https://www.bilibili.com/video/BV1wA411h7N7/](https://www.bilibili.com/video/BV1wA411h7N7/)
+
+
+
+Online 8086 EMULATOR
+
+[https://yjdoc2.github.io/8086-emulator-web/](https://yjdoc2.github.io/8086-emulator-web/)
 
 
 
@@ -923,7 +955,7 @@ Awesome Deep Learning
 
 
 
-### 在线数据集网站
+### 数据集类网站
 
 [https://universe.roboflow.com/](https://universe.roboflow.com/)
 
@@ -934,6 +966,10 @@ NLPDataSet（刘聪NLP收集的各种nlp数据集，接近50个。。。）
 [https://github.com/liucongg/NLPDataSet](https://github.com/liucongg/NLPDataSet)
 
 
+
+NLP Chinese Data Augmentation 一键中文数据增强工具
+
+[https://github.com/425776024/nlpcda](https://github.com/425776024/nlpcda)
 
 ### 3D感知相关
 
@@ -1098,6 +1134,16 @@ MLIR 文章视频汇总（MLIR目的是做一个通用、可复用的编译器�
 
 
 
+cmu 15-884: Machine Learning Systems
+
+[https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/](https://catalyst.cs.cmu.edu/15-884-mlsys-sp21/)
+
+
+
+cmu Deep Learning Systems
+
+[https://dlsyscourse.org/](https://dlsyscourse.org/)
+
 ### 深度学习部署
 
 GiantPandaCV
@@ -1214,7 +1260,13 @@ Run 🤗 Transformers in your browser!
 
 [https://github.com/xenova/transformers.js](https://github.com/xenova/transformers.js)
 
+an end-to-end DynamIc Shape Compiler project for machine learning workloads
 
+[https://github.com/alibaba/BladeDISC](https://github.com/alibaba/BladeDISC)
+
+Tensor library for machine learning
+
+[https://github.com/ggerganov/ggml](https://github.com/ggerganov/ggml)
 
 #### 实例参考
 
@@ -1266,7 +1318,9 @@ trt-samples-for-hackathon-cn(面向 NVIDIA TensorRT 初学者和开发者,提供
 
 [https://github.com/NVIDIA/trt-samples-for-hackathon-cn](https://github.com/NVIDIA/trt-samples-for-hackathon-cn)
 
+how-to-optim-algorithm-in-cuda
 
+[https://github.com/BBuf/how-to-optim-algorithm-in-cuda](https://github.com/BBuf/how-to-optim-algorithm-in-cuda)
 
 #### AIGC
 

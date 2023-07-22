@@ -45,10 +45,6 @@ PPRP：
 
 [直观理解机器学习的数学过程](https://www.bilibili.com/video/BV1iW411T781?p=34&share_medium=iphone&share_plat=ios&share_session_id=918760D9-B272-4504-8DD6-82E44AFA8672&share_source=WEIXIN&share_tag=s_i&timestamp=1641652920&unique_k=aGspGLd)
 
-[矩阵求导入门](https://www.bilibili.com/video/BV1xk4y1B7RQ?p=1&share_medium=iphone&share_plat=ios&share_session_id=1F101D5C-2880-4C53-A556-3D2777F6AFC8&share_source=WEIXIN&share_tag=s_i&timestamp=1641653070&unique_k=GcJNM2u) 或者你也可以参考我整理的文章：
-
-[https://sanbuphy.github.io/p/矩阵求导简易入门手册/](https://sanbuphy.github.io/p/矩阵求导简易入门手册/)
-
 [李航统计学习基础第一章补数学基础](https://www.bilibili.com/video/BV1o5411p7H2?p=8&share_medium=iphone&share_plat=ios&share_session_id=3AD6E589-C577-4D7A-88C6-6A3FAB1E41F1&share_source=WEIXIN&share_tag=s_i&timestamp=1641653147&unique_k=abvhCWL) 只需要第一张 补基础，其他有问题再找
 
 [Deep Learning An MIT Press book](https://www.deeplearningbook.org/)参考第一章即可，[中文版在这](https://github.com/exacity/deeplearningbook-chinese/releases)或者直接下载附件中dlbook_cn_v0.5-beta。
@@ -71,7 +67,15 @@ PPRP：
 
 
 
-其他
+### 线性代数
+
+Linear Algebra for Everyone 图解
+
+[https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra)
+
+[矩阵求导入门](https://www.bilibili.com/video/BV1xk4y1B7RQ?p=1&share_medium=iphone&share_plat=ios&share_session_id=1F101D5C-2880-4C53-A556-3D2777F6AFC8&share_source=WEIXIN&share_tag=s_i&timestamp=1641653070&unique_k=GcJNM2u) 或者你也可以参考我整理的文章：
+
+[https://sanbuphy.github.io/p/矩阵求导简易入门手册/](https://sanbuphy.github.io/p/矩阵求导简易入门手册/)
 
 线代启示录（一位掌握了线代灵魂的老师）
 
@@ -80,6 +84,10 @@ PPRP：
 immersive linear algebra 线性代数可视化
 
 [http://immersivemath.com/ila/index.html](http://immersivemath.com/ila/index.html)
+
+新MIT 线性代数 18.065 by Gilbert Strang
+
+[https://www.bilibili.com/video/BV1a7411M7wH?p=1&vd_source=a6509cab8ccb8b81d6a70af693cc008f](https://www.bilibili.com/video/BV1a7411M7wH?p=1&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
 
 
 
@@ -194,6 +202,10 @@ unpigz -d your_file_name.gz
 首先安装google的格式化程序：`pip install yapf`
 
 然后键入`ctrl+shift+p`然后输入`settings`往下找到用户的json，如果你是WSL的话就要找到对应WSL的config，然后输入` "python.formatting.provider": "yapf"`。之后只要使用`Alt+shift+F`即可格式化整体的python项目代码。
+
+- vscode插件开发
+
+https://github.com/microsoft/vscode-extension-samples
 
 
 
@@ -795,9 +807,17 @@ GitHub's largest open-source algorithm library
 
 
 
-## 高性能计算等
+## 高性能计算与编译器
 
 
+
+LLVM IR入门指南
+
+[https://github.com/Evian-Zhang/llvm-ir-tutorial](https://github.com/Evian-Zhang/llvm-ir-tutorial)
+
+动手写mlir by strint
+
+[http://strint.github.io/220220-mlir/220220-mlir.html](http://strint.github.io/220220-mlir/220220-mlir.html)
 
 ### webgpu
 
@@ -1106,6 +1126,12 @@ pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
 Gradio常见疑难解答：
 
 如何开启多个gradio对外只有一端口？：两种方法，1、[https://github.com/gradio-app/gradio/issues/2979](https://github.com/gradio-app/gradio/issues/2979)       2、写两个新的fastapi然后把两个gradio的src mount到对应地方
+
+
+
+深度学习的学习路线图，包含各大厂的学习资料
+
+[https://github.com/isLinXu/awesome-road-map](https://github.com/isLinXu/awesome-road-map)
 
 
 
@@ -1471,6 +1497,8 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 100个GDB小技巧：
 
+[https://github.com/hellogcc/100-gdb-tips](https://github.com/hellogcc/100-gdb-tips)
+
 [https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html](https://wizardforcel.gitbooks.io/100-gdb-tips/content/part1.html)
 
 标准库收录网站
@@ -1542,6 +1570,12 @@ jupyter kernelspec list
 - 浙大翁恺（简单，适合快速过一遍）：[https://www.bilibili.com/video/BV1dE41167hJ?p=34](https://www.bilibili.com/video/BV1dE41167hJ?p=34)
 - 南科大于仕琪（现代化，十分推荐）[https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1](https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1)
 - 侯捷老师视频（看完于老师可以无缝衔接，资源就不公开了，推荐看完1、2、3）
+
+
+
+可以和c++ primer一起看的 更现代的C++教程:
+
+[https://www.learncpp.com/](https://www.learncpp.com/)
 
 
 
@@ -1749,7 +1783,11 @@ CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
 
 [https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
 
+CS344 Introduction to Parallel Programming class code
 
+[https://github.com/udacity/cs344](https://github.com/udacity/cs344)
+
+[https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
 
 ## 程序性能优化
 
@@ -1838,6 +1876,12 @@ json可视化：
 免费好用的图床
 
 [https://imgur.com/](https://imgur.com/)
+
+pdf24 免费操作pdf文件
+
+[https://tools.pdf24.org/zh/all-tools](https://tools.pdf24.org/zh/all-tools)
+
+
 
 ## 有趣的项目
 
@@ -1931,19 +1975,31 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 [github.com/ayuer/shanghai_house_knowledge](http://github.com/ayuer/shanghai_house_knowledge)
 
+## 开源工具推荐
 
+跨平台的桌面截图 Flameshot
 
-## 英语
+[https://flameshot.org/](https://flameshot.org/)
 
-目前建议都用chatGPT
+跨平台的类似ps的修图软件 gimp
 
-### 英文语法在线修改
+[https://www.gimp.org/](https://www.gimp.org/)
 
-[https://www.grammarly.com/](https://www.grammarly.com/)
+跨平台的看图工具
 
-[https://www.nounplus.net/grammarcheck/](https://www.nounplus.net/grammarcheck/)
+[xnview.com/en/xnviewmp/](http://xnview.com/en/xnviewmp/)
 
-[https://virtualwritingtutor.com/](https://virtualwritingtutor.com/)
+ windows下的bilibli视频下载器（如果要使用ffmpeg，可以下载后加入到系统path环境变量）
+
+[https://github.com/nICEnnnnnnnLee/BilibiliDown](https://github.com/nICEnnnnnnnLee/BilibiliDown)
+
+跨平台 Fast and simple video download library and CLI tool written in Go(适合多种网站)
+
+[https://github.com/iawia002/lux](https://github.com/iawia002/lux)
+
+跨平台 视频硬字幕提取，生成srt文件。无需申请第三方API，本地实现文本识别。基于深度学习的视频字幕提取框架，包含字幕区域检测、字幕内容提取
+
+[https://github.com/YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor)
 
 
 
@@ -1956,6 +2012,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

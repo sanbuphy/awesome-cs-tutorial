@@ -6,7 +6,7 @@
 
 不定期更新
 
-带目录边栏（电脑上可看）：[https://sanbuphy.github.io/p/我的计算机学习网站集合/](https://sanbuphy.github.io/p/我的计算机学习网站集合/)
+带目录边栏（电脑上可看）：[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
 
 
 github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
@@ -195,18 +195,6 @@ unpigz -d your_file_name.gz
 
 
 
-#### vscode相关
-
-- 自动格式化python代码
-
-首先安装google的格式化程序：`pip install yapf`
-
-然后键入`ctrl+shift+p`然后输入`settings`往下找到用户的json，如果你是WSL的话就要找到对应WSL的config，然后输入` "python.formatting.provider": "yapf"`。之后只要使用`Alt+shift+F`即可格式化整体的python项目代码。
-
-- vscode插件开发
-
-https://github.com/microsoft/vscode-extension-samples
-
 
 
 #### git相关
@@ -235,9 +223,15 @@ https://github.com/microsoft/vscode-extension-samples
 
 [https://www.jianshu.com/p/4a8f4af4e803](https://www.jianshu.com/p/4a8f4af4e803)
 
-- 查看开源项目的数据以及自己的个人数据（比如年度pr数量）：
+- git中文乱码问题解决
 
-[https://ossinsight.io/](https://ossinsight.io/)
+```Bash
+git config --global i18n.commitencoding utf-8
+git config --global i18n.logoutputencoding utf-8
+export LESSCHARSET=utf-8
+```
+
+
 
 
 
@@ -258,10 +252,13 @@ https://github.com/microsoft/vscode-extension-samples
     - 接下来将/etc/apt/source.list文件内容清空并保存
     - 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
 - 给第三方软件appimage加上快捷方式：[https://www.cnblogs.com/HGNET/p/16396589.html](https://www.cnblogs.com/HGNET/p/16396589.html)
+- `ncdu` 工具分析磁盘空间占用情况（超好用，如果是wsl，运行`ncdu --exclude /mnt` // wsl下排除/mnt  （当然，你也可以用 sudo du -d 1 -h | less 进一步分析）
 
 
 
 #### WSL2常见疑难解答
+
+【注！ 推荐使用挂载/mnt的系统磁盘进行操作，否则很容易让wsl的虚拟磁盘占用很大，删除后无法释放。若你想要释放则需要参考下面的指定教程】
 
 - WSL入坑指南（很全的资料，包括开发环境的配置）
 
@@ -336,6 +333,7 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 
 - wsl的硬盘空间怎么办？——挂载其他硬盘，如：`sudo mount -t drvfs D: /mnt/d`
+- WSL怎么释放空间：[https://zhuanlan.zhihu.com/p/521747491](https://zhuanlan.zhihu.com/p/521747491)
 
 
 
@@ -361,7 +359,9 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 [https://www.geeksforgeeks.org/linux-vs-windows-commands/](https://www.geeksforgeeks.org/linux-vs-windows-commands/)
 
+- windows下类似apt这种包管理软件——scoop
 
+[https://blog.csdn.net/weixin_45191386/article/details/130662281](https://blog.csdn.net/weixin_45191386/article/details/130662281)
 
 
 
@@ -436,9 +436,11 @@ exec sudo nsenter -t $(pidof systemd) -a su - $LOGNAME
 
 snap version
 ```
-- NVIDIA docker的使用（用文中方式启动docker的插件，然后用docker  run gpu启动，而不是nvidia-docker，这个已经被废弃了）（有时候update出问题是nvidia网络抽风了。。别急
+- NVIDIA docker的使用（用文中方式启动docker的插件，然后用docker  run gpu启动，或者参考下面的教程安装和启动。）（有时候update出问题是nvidia网络抽风了。。别急
 
-[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
+
 
 - docker换源（拉镜像极大加速）
 
@@ -522,6 +524,14 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 
 
+#### 前端相关
+
+nodejs下载安装与初始化方法
+
+[https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+[https://blog.csdn.net/xuchaoxin1375/article/details/121709299](https://blog.csdn.net/xuchaoxin1375/article/details/121709299)
+
 #### 其他
 
 云服务器相关：
@@ -558,7 +568,7 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 gradio的proxy冲突了怎么办？
 
-——设置不同的监听地址，比如gradio可以直接监听ip或者172的容器地址，不需要127.0.0.1，本地的这个可能要访问huggingface的就
+——设置不同的监听地址，比如gradio可以直接监听ip或者172的容器地址，不需要127.0.0.1
 
 
 
@@ -655,6 +665,20 @@ linux inside  讲解了一下linux内部运行机制，比如Program startup pro
 苏剑林的空间（从数学再到NLP再到天文都有涉猎
 
 [https://spaces.ac.cn/](https://spaces.ac.cn/)
+
+
+
+技术博文《Chromium 渲染流水线——字节码到像素的一生 》
+[http://t.cn/A60JwWOw](http://t.cn/A60JwWOw)
+本文回顾了现代浏览器架构和Chromium进程模型的基础知识，以及Chromium 中渲染流水线的整个过程。所谓渲染流水线，就是从接受网络的字节码开始，一步步处理这些字节码把它们转变成屏幕上像素的过程
+
+
+
+深入了解现代 web 浏览器系列文章
+
+计算机的核心 CPU 和 GPU、在进程和线程上执行程序
+
+[http://t.cn/A6ani5Ip](http://t.cn/A6ani5Ip)
 
 
 
@@ -831,6 +855,102 @@ wgpu 中文版跨平台开发（Web + App）教程：
 
 ## 深度学习大类
 
+### NVIDIA环境配置常见问题
+
+- 显卡驱动安装快速方法：
+
+（你也可以在这里下：[https://www.nvidia.com/download/index.aspx?lang=en-us](https://www.nvidia.com/download/index.aspx?lang=en-us)）
+
+ubuntu-drivers devices
+
+sudo apt install  输入显示的推荐版本
+
+（如果安装失败了或者重装，请先把原来的依赖删除：sudo apt-get remove --purge nvidia*
+
+- CUDA与cuDNN的安装：（直接官网文档）【警告⚠，如果你需要安装tensorrt，请用deb形式安装cuda安装包，官方建议如果CUDA采用的是deb方式，tensorrt也要采用deb方式，】
+
+注意：a100和3090ti不支持cuda11以下，请装113以上的版本。
+
+教程可参考官网：[Archive of Previous CUDA Releases](https://developer.nvidia.com/cuda-toolkit-archive)
+
+[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
+
+[https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+
+cudnn的官方安装教程（通过tar文件自己cp或者根据教程安装deb）
+
+[https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)
+
+cudnn的卸载可参考：[https://zhuanlan.zhihu.com/p/83971195](https://zhuanlan.zhihu.com/p/83971195)
+
+cuda之类的卸载参考：[https://blog.csdn.net/m0_37605642/article/details/119637836](https://blog.csdn.net/m0_37605642/article/details/119637836)
+
+(注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装,或在下面的网页中找到archive）
+
+TensorRT的安装（参考Debian Installation）【警告⚠，如果你需要安装tensorrt，请用deb形式安装cuda安装包，官方建议如果CUDA采用的是deb方式，tensorrt也要采用deb方式】
+
+【不要安装最新的cuda工具包，很可能不支持，一般只支持上一个版本（看清楚对应cuda对应）】
+
+[https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian)
+
+
+
+- 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source。
+
+**如果你想要修改版本，可以修改cuda的软链接（选择其他版本的cuda），或者在bashrc中的cuda后面加上版本，如cuda-11.2**
+
+（具体的安装和卸载也可以参考[https://flywine.blog.csdn.net/article/details/81879514](https://flywine.blog.csdn.net/article/details/81879514)）
+
+```Bash
+export PATH="/usr/local/cuda/bin:$PATH" 
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH" 
+
+```
+
+解决nvcc版本不一致问题（可能的方法，更换runtime映射
+
+[https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/) 
+
+解决cudnn找不到 问题（软连接到系统库）
+
+[https://blog.csdn.net/qq451882471/article/details/106967942](https://blog.csdn.net/qq451882471/article/details/106967942)
+
+CUDA GPG Repository Key
+
+[https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772](https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772)
+
+Tensorrt X docker环境搭建（现在（20221228）tensorrt-ubuntu已经支持deb安装，如果tar就选linux的）
+
+[https://blog.csdn.net/hxj0323/article/details/115859174](https://blog.csdn.net/hxj0323/article/details/115859174)
+
+update后nvidia报GPG相关问题（我在18.04的docker遇到）：
+
+```Bash
+echo 'deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /' > /etc/apt/sources.list.d/cuda.list
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com  $(加入报错的密钥)
+apt update
+```
+
+- 解决类似 `error code is libcuda.so: cannot open shared object file: No such file or directory`的问题：[https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file](https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file)
+
+```Bash
+# 此处我们搜索的是libcuda.so
+sudo find /usr/ -name 'libcuda.so' #有时候搜索的是libcuda.so.*
+# 这一步是为了找到所在文件夹，我在WSL中搜到了几个文件夹下，我任意加入一个文件夹到LD_PATH：
+
+# 假如前一步发现libcuda的位置为：/usr/lib/wsl/lib/libcuda.so
+# 告诉系统要在这里找，你也可以把这句话加入到~/.bashrc然后source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib  
+```
+
+NVIDIA显卡运行时状态监控不错的python库（实时监控）
+
+[https://github.com/XuehaiPan/nvitop](https://github.com/XuehaiPan/nvitop)
+
+windows下安装CUDA工具链相关如果出现VS拓展安装失败的问题，可以先卸载本地安装的所有VS相关软件，然后重新安装官方的最新版本的VS就可以。
+
+NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-cn/cuda-gpus](https://developer.nvidia.com/zh-cn/cuda-gpus)
+
 
 
 ### 理论基础（时间少直接看李沐/李宏毅）
@@ -851,7 +971,7 @@ wgpu 中文版跨平台开发（Web + App）教程：
 
 
 
-### **李宏毅相关课程**
+### **深度学习网课**
 
 - 李宏毅老师的课程主页：
 
@@ -885,17 +1005,11 @@ wgpu 中文版跨平台开发（Web + App）教程：
 
 
 
-这个网站给出了不同模型的排名及其开源代码
+伯克利 CS 182 深度学习：深度神经网络设计、可视化与理解 
 
-[https://paperswithcode.com/](https://paperswithcode.com/)
+Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/) 
 
-
-
-pytorch底层源码解析（一个很不错的博主）
-
-[https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
-
-
+[https://www.bilibili.com/video/BV1PK4y1U751](https://www.bilibili.com/video/BV1PK4y1U751)
 
 
 
@@ -991,105 +1105,13 @@ NLP Chinese Data Augmentation 一键中文数据增强工具
 
 [https://github.com/425776024/nlpcda](https://github.com/425776024/nlpcda)
 
+
+
 ### 3D感知相关
 
 从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
 
 [https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch](https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch)
-
-
-
-### NVIDIA环境配置常见问题
-
-- 显卡驱动安装快速方法：
-
-ubuntu-drivers devices
-
-sudo apt install  输入显示的推荐版本
-
-
-
-- CUDA与cuDNN的安装：（直接官网选择）
-
-注意：a100和3090ti不支持cuda11以下，请装113以上的版本。
-
-推荐装cuda的时候可以用sh的模式，然后顺带安装了驱动（之前就不用装了）对动态库的默认支持更好
-
-教程可参考：[https://blog.csdn.net/tangjiahao10/article/details/125227005](https://blog.csdn.net/tangjiahao10/article/details/125227005)
-
-[https://blog.csdn.net/weixin_37926734/article/details/123033286](https://blog.csdn.net/weixin_37926734/article/details/123033286)
-
-cudnn的卸载可参考：[https://zhuanlan.zhihu.com/p/83971195](https://zhuanlan.zhihu.com/p/83971195)
-
-(注意，这里默认是最新版本的，你需要在右下角进入档案选择对应版本安装,或在下面的网页中找到archive）
-
-- [Archive of Previous CUDA Releases](https://developer.nvidia.com/cuda-toolkit-archive)
-
-[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
-
-[https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
-
-cudnn的官方安装教程（通过tar文件自己cp或者根据教程安装deb）
-
-[https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)
-
-TensorRT的安装（参考Debian Installation）
-
-[https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#installing-debian)
-
-
-
-- 安装cuda结束后记得把这两个命令加入到~/.bashrc 然后source。
-
-**如果你想要修改版本，可以修改cuda的软链接（选择其他版本的cuda），或者在bashrc中的cuda后面加上版本，如cuda-11.2**
-
-（具体的安装和卸载也可以参考[https://flywine.blog.csdn.net/article/details/81879514](https://flywine.blog.csdn.net/article/details/81879514)）
-
-```Bash
-export PATH="/usr/local/cuda/bin:$PATH" 
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH" 
-
-```
-
-解决nvcc版本不一致问题（可能的方法，更换runtime映射
-
-[https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/](https://qiyuan-z.github.io/2022/01/06/解决nvidia-smi和nvcc显示信息与所安装CUDA版本不一致问题/) 
-
-解决cudnn找不到 问题（软连接到系统库）
-
-[https://blog.csdn.net/qq451882471/article/details/106967942](https://blog.csdn.net/qq451882471/article/details/106967942)
-
-CUDA GPG Repository Key
-
-[https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772](https://forums.developer.nvidia.com/t/notice-cuda-linux-repository-key-rotation/212772)
-
-Tensorrt X docker环境搭建（现在（20221228）tensorrt-ubuntu已经支持deb安装，如果tar就选linux的）
-
-[https://blog.csdn.net/hxj0323/article/details/115859174](https://blog.csdn.net/hxj0323/article/details/115859174)
-
-update后nvidia报GPG相关问题（我在18.04的docker遇到）：
-
-```Bash
-echo 'deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /' > /etc/apt/sources.list.d/cuda.list
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com  $(加入报错的密钥)
-apt update
-```
-
-- 解决类似 `error code is libcuda.so: cannot open shared object file: No such file or directory`的问题：[https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file](https://stackoverflow.com/questions/54249577/importerror-libcuda-so-1-cannot-open-shared-object-file)
-
-```Bash
-# 此处我们搜索的是libcuda.so
-sudo find /usr/ -name 'libcuda.so' #有时候搜索的是libcuda.so.*
-# 这一步是为了找到所在文件夹，我在WSL中搜到了几个文件夹下，我任意加入一个文件夹到LD_PATH：
-
-# 假如前一步发现libcuda的位置为：/usr/lib/wsl/lib/libcuda.so
-# 告诉系统要在这里找，你也可以把这句话加入到~/.bashrc然后source ~/.bashrc
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib  
-```
-
-NVIDIA显卡运行时状态监控不错的python库（实时监控）
-
-[https://github.com/XuehaiPan/nvitop](https://github.com/XuehaiPan/nvitop)
 
 
 
@@ -1105,6 +1127,9 @@ NVIDIA显卡运行时状态监控不错的python库（实时监控）
 pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
 
 pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
 ```
 
 
@@ -1135,7 +1160,17 @@ Gradio常见疑难解答：
 
 
 
-### MLsystem
+这个网站给出了不同模型的排名及其开源代码
+
+[https://paperswithcode.com/](https://paperswithcode.com/)
+
+
+
+pytorch底层源码解析（一个很不错的博主）
+
+[https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
+
+### 深度学习系统
 
 ML system 入坑指南
 
@@ -1166,9 +1201,17 @@ cmu 15-884: Machine Learning Systems
 
 
 
+CMU 10-414/714 Deep Learning Systems Algorithms and Implementation
+
+[https://dlsyscourse.org/](https://dlsyscourse.org/)
+
+
+
 cmu Deep Learning Systems
 
 [https://dlsyscourse.org/](https://dlsyscourse.org/)
+
+
 
 ### 深度学习部署
 
@@ -1206,7 +1249,7 @@ nvidia NGC docker tensorrt
 
 [https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags)
 
-2202版本   cuda 116   ;  2108版本  cuda114
+22.10 cuda118; 22.02版本   cuda 116   ;  21.08版本  cuda114 
 
 
 
@@ -1227,6 +1270,10 @@ tensorrt samples学习文档
 [https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section](https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section)
 
 
+
+mit 6.S965 course TinyML and Efficient Deep Learning Computing
+
+[https://efficientml.ai/](https://efficientml.ai/)
 
 #### 推理&加速量化框架
 
@@ -1364,7 +1411,7 @@ webui的安装相关教程合集
 
 [https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
-- (windows)anaconda与Jupyter notebook安装教程
+- (windows)anaconda与Jupyter notebook安装教程 (注意，powershell使用anaconda要记得init)
 
 [https://zhuanlan.zhihu.com/p/37093476](https://zhuanlan.zhihu.com/p/37093476)
 
@@ -1789,6 +1836,12 @@ CS344 Introduction to Parallel Programming class code
 
 [https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
 
+谭升的博客，CUDA编程
+
+[https://face2ai.com/program-blog/](https://face2ai.com/program-blog/)
+
+
+
 ## 程序性能优化
 
 性能优化实战收集（包括听风扇声音测性能）
@@ -1881,6 +1934,30 @@ pdf24 免费操作pdf文件
 
 [https://tools.pdf24.org/zh/all-tools](https://tools.pdf24.org/zh/all-tools)
 
+在线生成透明ICO图标
+
+[https://www.ico51.cn/](https://www.ico51.cn/)    或者 [https://tool.lu/favicon/](https://tool.lu/favicon/)
+
+数以千计的免费svg/ico图标
+
+[https://icon-icons.com/zh/](https://icon-icons.com/zh/)
+
+免费的 svg 大图图标
+
+[https://undraw.co/illustrations](https://undraw.co/illustrations)
+
+svg在线编辑器
+
+[http://www.zuohaotu.com/svg/](http://www.zuohaotu.com/svg/)、
+
+Software Download Hub 纯净的软件下载区
+
+[https://www.fosshub.com/](https://www.fosshub.com/)
+
+查看开源项目的数据以及自己的个人数据（比如年度pr数量）：
+
+[https://ossinsight.io/](https://ossinsight.io/)
+
 
 
 ## 有趣的项目
@@ -1921,6 +1998,10 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 [https://mermaid-js.github.io/mermaid-live-editor/edit](https://mermaid-js.github.io/mermaid-live-editor/edit)
 
+免费可用Typora Markdown
+
+[https://babudiu.com/archives/typora](https://babudiu.com/archives/typora)
+
 
 
 ## 提示词工程
@@ -1935,21 +2016,15 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 
 
-
-
 ## 有趣的故事
 
 谷歌背后的数学
 
 [https://www.changhai.org/articles/technology/misc/google_math.php](https://www.changhai.org/articles/technology/misc/google_math.php)
 
-
-
 火光摇曳(数学科普) Rickjin(靳志辉)   （非常好传递了统计之美）
 
 [https://uploads.cosx.org/2014/07/gamma.pdf](https://uploads.cosx.org/2014/07/gamma.pdf)
-
-
 
 计算的极限
 
@@ -2001,6 +2076,20 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 [https://github.com/YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor)
 
+一个跨平台的划词翻译软件
+
+[https://github.com/pot-app/pot-desktop](https://github.com/pot-app/pot-desktop)
+
+tabby 最好的开源终端之一
+
+[https://tabby.sh/](https://tabby.sh/)
+
+windows下开源录制工具Capture Screen, Audio, Cursor, Mouse Clicks and Keystrokes
+
+[https://github.com/MathewSachin/Captura](https://github.com/MathewSachin/Captura)
+
+kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
+
 
 
 ### 英文论文好用工具
@@ -2012,4 +2101,6 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
+
+
 

@@ -197,7 +197,11 @@ unpigz -d your_file_name.gz
 
 
 
-#### git相关
+#### git相关，git指南
+
+- 通过聊天的感觉入门并熟练git
+
+[https://wkevin.github.io/GitChat/gitchat.html#round-1-起步](https://wkevin.github.io/GitChat/gitchat.html#round-1-起步)
 
 - git常见操作整理
 
@@ -363,7 +367,13 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 [https://blog.csdn.net/weixin_45191386/article/details/130662281](https://blog.csdn.net/weixin_45191386/article/details/130662281)
 
+- windows kill 指定端口程序 
 
+```Python
+netstat -ano | findstr :<port_number>
+
+taskkill /PID <pid> /F
+```
 
 #### 正则表达式相关
 
@@ -843,6 +853,18 @@ LLVM IR入门指南
 
 [http://strint.github.io/220220-mlir/220220-mlir.html](http://strint.github.io/220220-mlir/220220-mlir.html)
 
+Toy Tutorial : the implementation of a basic toy language on top of MLIR.
+
+[https://mlir.llvm.org/docs/Tutorials/Toy/](https://mlir.llvm.org/docs/Tutorials/Toy/)
+
+Kaileidoscope: LLVM Tutorial Chinese version(中文版)
+
+[https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/](https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/)
+
+
+
+
+
 ### webgpu
 
 WebGPU Fundamentals
@@ -852,6 +874,52 @@ WebGPU Fundamentals
 wgpu 中文版跨平台开发（Web + App）教程：
 
 [https://jinleili.github.io/learn-wgpu-zh/](https://jinleili.github.io/learn-wgpu-zh/)
+
+### CUDA编程
+
+CUDA Crash Cours BY CoffeeBeforeArch
+
+[https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1](https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1)
+
+官方入门文档
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+适合入门的小型Python编译器项目（包含cuda相关内容）
+
+[https://zhuanlan.zhihu.com/p/603352525](https://zhuanlan.zhihu.com/p/603352525)
+
+cuda学习教程
+
+[https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
+
+CUDA-Programming-Guide-in-Chinese
+
+[https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese](https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese)
+
+CUDA C++ Programming Guide
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
+
+[https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
+
+CS344 Introduction to Parallel Programming class code
+
+[https://github.com/udacity/cs344](https://github.com/udacity/cs344)
+
+[https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
+
+谭升的博客，CUDA编程
+
+[https://face2ai.com/program-blog/](https://face2ai.com/program-blog/)
+
+很好的各种各样CUDA的优化文章合计强烈推荐
+
+[https://github.com/YconquestY/Needle/blob/main/backend.md](https://github.com/YconquestY/Needle/blob/main/backend.md)
+
+
 
 ## 深度学习大类
 
@@ -1013,7 +1081,7 @@ Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/)
 
 
 
-### 手写深度学习入门项目
+### 深度学习动手项目
 
 小土堆 pytorch学习
 
@@ -1032,6 +1100,12 @@ Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/)
 [https://www.bilibili.com/video/BV1JR4y1g77H](https://www.bilibili.com/video/BV1JR4y1g77H?spm_id_from=333.999.0.0&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
 
 [https://space.bilibili.com/472467171](https://space.bilibili.com/472467171)
+
+
+
+学会自己训练一个esrgan等超分辨率模型
+
+ [https://www.youtube.com/watch?v=iH7-eYlf7eg](https://www.youtube.com/watch?v=iH7-eYlf7eg)
 
 
 
@@ -1213,6 +1287,24 @@ cmu Deep Learning Systems
 
 
 
+MIT 6.5940: TinyML and Efficient Deep Learning
+
+ [https://efficientml.ai/](https://efficientml.ai/)
+
+[https://efficientml.ai/schedule/](https://efficientml.ai/schedule/)
+
+包括模型压缩、剪枝、量化、神经架构搜索、分布式训练、数据/模型并行化、梯度压缩等技术，以及针对大型语言模型、扩散模型的特定应用加速技术。
+
+
+
+Programming Heterogeneous Computing Systems with GPUs and other Accelerators (227-0085-51L)
+
+[https://safari.ethz.ch/projects_and_seminars/doku.php?id=heterogeneous_systems](https://safari.ethz.ch/projects_and_seminars/doku.php?id=heterogeneous_systems)
+
+
+
+
+
 ### 深度学习部署
 
 GiantPandaCV
@@ -1274,6 +1366,8 @@ tensorrt samples学习文档
 mit 6.S965 course TinyML and Efficient Deep Learning Computing
 
 [https://efficientml.ai/](https://efficientml.ai/)
+
+
 
 #### 推理&加速量化框架
 
@@ -1341,6 +1435,8 @@ Tensor library for machine learning
 
 [https://github.com/ggerganov/ggml](https://github.com/ggerganov/ggml)
 
+
+
 #### 实例参考
 
 各种开发版的基础功能调通
@@ -1394,6 +1490,16 @@ trt-samples-for-hackathon-cn(面向 NVIDIA TensorRT 初学者和开发者,提供
 how-to-optim-algorithm-in-cuda
 
 [https://github.com/BBuf/how-to-optim-algorithm-in-cuda](https://github.com/BBuf/how-to-optim-algorithm-in-cuda)
+
+
+
+#### 手写类课程
+
+手写量化、剪枝、蒸馏
+
+[https://github.com/mepeichun/Efficient-Neural-Network-Bilibili](https://github.com/mepeichun/Efficient-Neural-Network-Bilibili)
+
+
 
 #### AIGC
 
@@ -1453,6 +1559,8 @@ conda所有库更新：`conda update --all`
 - 导出自己安装的那些包（freeze是全部！）：使用pipreqs库
 - powershell下看不到（base）之类的虚拟库信息，显示出脚本安全问题无法启用，可在powershell管理员模式下输入`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`即可解决问题。
 - 使用pip命令时，报错：_sysconfigdata_x86_64_conda_cos7_linux_gnu.py：[https://blog.csdn.net/weixin_44321570/article/details/128514763](https://blog.csdn.net/weixin_44321570/article/details/128514763)
+
+pip cache不想默认在主目录：`pip config set global.cache-dir 新目录`
 
 
 
@@ -1516,6 +1624,8 @@ requests库官方手册（交互常用，主要需理解请求头等）
 
 [https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
 
+
+
 ### 实例项目等
 
 supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志部署
@@ -1533,6 +1643,18 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 很不错的python状态机（可以画成图）展示工具：
 
 [https://github.com/laike9m/Cyberbrain](https://github.com/laike9m/Cyberbrain)
+
+
+
+### 常见问题解答
+
+- Python requests.exceptions.SSLError: EOF occurred in violation of protocol
+
+python3.10开了代理request会出现类似情况，因为新的标准库更新了ssl版本，需要降低或者使用`pip install urllib3==1.25.11`或者request使用的代理改用
+
+```Python
+{"http": "http://122.230.151.87:35920", "https": "http://122.230.151.87:35920"}
+```
 
 
 
@@ -1776,9 +1898,11 @@ bazel的安装最佳实践：
 
 官方github的release找到bash然后下载运行即可（如果安装到用户权限需要把用户的bin地址加到环境变量）
 
+protobuf安装最佳实践（不是官网编译安装）
 
+`sudo apt install  libprotobuf-dev protobuf-compiler`
 
-### C++的杂物间
+### C++项目相关
 
 DJI thermal analysis tool  相关教程（日文
 
@@ -1786,9 +1910,15 @@ DJI thermal analysis tool  相关教程（日文
 
 
 
-protobuf安装最佳实践（不是官网编译安装）
+TinyWebServer
 
-`sudo apt install  libprotobuf-dev protobuf-compiler`
+[https://github.com/qinguoyi/TinyWebServer/tree/master](https://github.com/qinguoyi/TinyWebServer/tree/master)
+
+
+
+btop （实现一个硬件检测工具）
+
+[https://github.com/aristocratos/btop](https://github.com/aristocratos/btop)
 
 
 
@@ -1805,40 +1935,6 @@ ffmpeg原理 罗上文
 [https://ffmpeg.xianwaizhiyin.net/cover.html](https://ffmpeg.xianwaizhiyin.net/cover.html)
 
 
-
-
-
-### CUDA
-
-适合入门的小型Python编译器项目（包含cuda相关内容）
-
-[https://zhuanlan.zhihu.com/p/603352525](https://zhuanlan.zhihu.com/p/603352525)
-
-cuda学习教程
-
-[https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
-
-CUDA-Programming-Guide-in-Chinese
-
-[https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese](https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese)
-
-CUDA C++ Programming Guide
-
-[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
-
-CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
-
-[https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
-
-CS344 Introduction to Parallel Programming class code
-
-[https://github.com/udacity/cs344](https://github.com/udacity/cs344)
-
-[https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
-
-谭升的博客，CUDA编程
-
-[https://face2ai.com/program-blog/](https://face2ai.com/program-blog/)
 
 
 
@@ -2090,7 +2186,9 @@ windows下开源录制工具Capture Screen, Audio, Cursor, Mouse Clicks and Keys
 
 kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
+油管视频下载器：
 
+[https://github.com/Tyrrrz/YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 
 ### 英文论文好用工具
 
@@ -2101,6 +2199,4 @@ TextRanch 句子参考
 QuillBot 文段改写
 
 [https://quillbot.com/](https://quillbot.com/)
-
-
 

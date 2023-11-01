@@ -39,8 +39,6 @@ PPRP：
 
 ## 数学
 
-
-
 机器学习相关数学基础
 
 [直观理解机器学习的数学过程](https://www.bilibili.com/video/BV1iW411T781?p=34&share_medium=iphone&share_plat=ios&share_session_id=918760D9-B272-4504-8DD6-82E44AFA8672&share_source=WEIXIN&share_tag=s_i&timestamp=1641652920&unique_k=aGspGLd)
@@ -337,13 +335,13 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 
 - wsl的硬盘空间怎么办？——挂载其他硬盘，如：`sudo mount -t drvfs D: /mnt/d`
-- WSL怎么释放空间：[https://zhuanlan.zhihu.com/p/521747491](https://zhuanlan.zhihu.com/p/521747491)
+- WSL怎么释放空间，wsl硬盘压缩虚拟硬盘压缩：[https://zhuanlan.zhihu.com/p/521747491](https://zhuanlan.zhihu.com/p/521747491)
 
 
 
 #### windows常见工具箱
 
-- 有关win家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
+- 有关windows家的镜像源以及VS等的纯净安装文件，以及各种网络工程师能用到的软件程序安装包
 
 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/)
 
@@ -843,7 +841,11 @@ GitHub's largest open-source algorithm library
 
 ## 高性能计算与编译器
 
+常用MPI、cublas等高性能基础库调用api快速入门
 
+[https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html](https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html)
+
+### mlir
 
 LLVM IR入门指南
 
@@ -918,6 +920,12 @@ CS344 Introduction to Parallel Programming class code
 很好的各种各样CUDA的优化文章合计强烈推荐
 
 [https://github.com/YconquestY/Needle/blob/main/backend.md](https://github.com/YconquestY/Needle/blob/main/backend.md)
+
+
+
+### MPI通信
+
+如何同时实现高性能并行+分布式计算？| Taichi x MPI4Py - 太极图形的文章 - 知乎 [https://zhuanlan.zhihu.com/p/581896682](https://zhuanlan.zhihu.com/p/581896682)
 
 
 
@@ -1303,6 +1311,12 @@ Programming Heterogeneous Computing Systems with GPUs and other Accelerators (22
 
 
 
+ MiniTorch
+
+MiniTorch is a diy teaching library for machine learning engineers who wish to learn about the internal concepts underlying deep learning systems. It is a pure Python re-implementation of the Torch API designed to be simple, easy-to-read, tested, and incremental. The final library can run Torch code.
+
+[https://minitorch.github.io/](https://minitorch.github.io/)
+
 
 
 ### 深度学习部署
@@ -1560,7 +1574,7 @@ conda所有库更新：`conda update --all`
 - powershell下看不到（base）之类的虚拟库信息，显示出脚本安全问题无法启用，可在powershell管理员模式下输入`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`即可解决问题。
 - 使用pip命令时，报错：_sysconfigdata_x86_64_conda_cos7_linux_gnu.py：[https://blog.csdn.net/weixin_44321570/article/details/128514763](https://blog.csdn.net/weixin_44321570/article/details/128514763)
 
-pip cache不想默认在主目录：`pip config set global.cache-dir 新目录`
+pip 下载 cache不想默认在主目录：`pip config set global.cache-dir 新目录`
 
 
 
@@ -1779,6 +1793,12 @@ awesome项目（包含了绝大部分的c++相关资源）
 [https://github.com/fffaraz/awesome-cpp](https://github.com/fffaraz/awesome-cpp)
 
 [http://jobbole.github.io/awesome-python-cn/](http://jobbole.github.io/awesome-python-cn/)
+
+
+
+C++查看 算法原理
+
+[https://hackingcpp.com/cpp/std/algorithms.html](https://hackingcpp.com/cpp/std/algorithms.html)
 
 
 
@@ -2054,7 +2074,17 @@ Software Download Hub 纯净的软件下载区
 
 [https://ossinsight.io/](https://ossinsight.io/)
 
+常用的在线avif格式转换器
 
+[https://convertio.co/zh/formats/avif/](https://convertio.co/zh/formats/avif/)
+
+在线图片批量缩放网站 birme
+
+[https://www.birme.net/?target_height=640](https://www.birme.net/?target_height=640)
+
+方便找素材的照片素材网站
+
+[https://pixabay.com/photos/](https://pixabay.com/photos/)
 
 ## 有趣的项目
 
@@ -2098,7 +2128,9 @@ Turn your pandas dataframe into a Tableau-style User Interface for visual analys
 
 [https://babudiu.com/archives/typora](https://babudiu.com/archives/typora)
 
+Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
+[https://github.com/fhefh2015/Fast-GitHub](https://github.com/fhefh2015/Fast-GitHub)
 
 ## 提示词工程
 
@@ -2189,6 +2221,12 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 油管视频下载器：
 
 [https://github.com/Tyrrrz/YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
+
+最好的免费pdf处理开源程序
+
+[https://github.com/torakiki/pdfsam](https://github.com/torakiki/pdfsam)
+
+
 
 ### 英文论文好用工具
 

@@ -107,7 +107,7 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 ### 基本操作 
 
-#### GDB、VIM、GIT、SHELL等常见linux操作基础（慢慢来，在使用中学
+#### GDB、VIM、GIT、Terminal艺术
 
 - The Missing Semester of Your CS Education 中文版（强烈推荐）
     - 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
@@ -128,21 +128,15 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 #### 系统相关及系统信息相关
 
-ubuntu实体机快照：
+获取CPU的性能信息和常见信息，涵盖x86/arm等多硬件
 
-[https://blog.csdn.net/wf19930209/article/details/104236358](https://blog.csdn.net/wf19930209/article/details/104236358)
+[https://github.com/pytorch/cpuinfo](https://github.com/pytorch/cpuinfo)
 
-ubuntu循环依赖问题：
 
-在安装某些东西的时候，你很可能会遇到循环依赖问题，这里慎重降级！！！！除非是必需品。操作不当很容易直接把服务/内核挂了，此时最好的办法是开个docker。（尤其是看到lib XXX的时候要小心）
 
 如何开机自动挂载新硬盘（非ubuntu安装硬盘）
 
 [https://blog.csdn.net/qq_27370437/article/details/117806294](https://blog.csdn.net/qq_27370437/article/details/117806294)
-
-获取CPU的性能信息和常见信息，涵盖x86/arm等多硬件
-
-[https://github.com/pytorch/cpuinfo](https://github.com/pytorch/cpuinfo)
 
 如何维护和切换gcc与g++代码（两种方案）
 
@@ -165,19 +159,13 @@ sudo update-alternatives --config gcc
 
 [https://cloud.tencent.com/developer/article/1430839](https://cloud.tencent.com/developer/article/1430839)
 
+
+
 如何及时获取可视化的CPU频率和使用率信息：(Linux 查看CPU当前运行频率和温度)
 
 sudo pip install s-tui
 
 sudo s-tui
-
-如何打造Ubuntu Togo  利用虚拟机
-
-[https://blog.csdn.net/afsafasfa/article/details/125782222](https://blog.csdn.net/afsafasfa/article/details/125782222)
-
-改变ubuntu swap大小
-
-[https://zhuanlan.zhihu.com/p/222512751](https://zhuanlan.zhihu.com/p/222512751)
 
 多线程并发解压缩文件
 
@@ -190,8 +178,6 @@ tar -cvf - dir1 dir2 dir3 | pigz > output.tar.gz # 压缩文件夹
 
 unpigz -d your_file_name.gz
 ```
-
-
 
 
 
@@ -232,8 +218,7 @@ git config --global i18n.commitencoding utf-8
 git config --global i18n.logoutputencoding utf-8
 export LESSCHARSET=utf-8
 ```
-
-
+- git 删除历史记录大文件，减轻负担 [https://blog.csdn.net/baobaoxiannv/article/details/105586187](https://blog.csdn.net/baobaoxiannv/article/details/105586187)
 
 
 
@@ -254,7 +239,26 @@ export LESSCHARSET=utf-8
     - 接下来将/etc/apt/source.list文件内容清空并保存
     - 恢复网络，将第一步中取消掉的四个选项重新点选然后在最佳国内服务器更新即可。
 - 给第三方软件appimage加上快捷方式：[https://www.cnblogs.com/HGNET/p/16396589.html](https://www.cnblogs.com/HGNET/p/16396589.html)
+- ubuntu实体机快照：
+
+    [https://blog.csdn.net/wf19930209/article/details/104236358](https://blog.csdn.net/wf19930209/article/details/104236358)
+- ubuntu循环依赖问题：
+
+    在安装某些东西的时候，你很可能会遇到循环依赖问题，这里慎重降级！！！！除非是必需品。操作不当很容易直接把服务/内核挂了，此时最好的办法是开个docker。（尤其是看到lib XXX的时候要小心）
 - `ncdu` 工具分析磁盘空间占用情况（超好用，如果是wsl，运行`ncdu --exclude /mnt` // wsl下排除/mnt  （当然，你也可以用 sudo du -d 1 -h | less 进一步分析）
+- 如何打造Ubuntu Togo  利用虚拟机
+
+    [https://blog.csdn.net/afsafasfa/article/details/125782222](https://blog.csdn.net/afsafasfa/article/details/125782222)
+- 改变ubuntu swap大小
+
+    [https://zhuanlan.zhihu.com/p/222512751](https://zhuanlan.zhihu.com/p/222512751)
+- ubuntu陷入休眠怎么办如何关闭ubuntu自动休眠：
+
+    首先检查系统日志是不是陷入休眠了，或者直接看`systemctl status sleep.target`
+
+    如果loaded说明启动了挂起规则，此时只需要如此操作后重新查看状态至masked即可：
+
+    `sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`
 
 
 
@@ -336,6 +340,22 @@ sudo sed -i "\$c nameserver $nameserver" /etc/resolv.conf
 
 - wsl的硬盘空间怎么办？——挂载其他硬盘，如：`sudo mount -t drvfs D: /mnt/d`
 - WSL怎么释放空间，wsl硬盘压缩虚拟硬盘压缩：[https://zhuanlan.zhihu.com/p/521747491](https://zhuanlan.zhihu.com/p/521747491)
+    - 在Program Files\DOCKERimages\DockerDesktopWSL\data 之类的地方搜索
+    - 或者是 C:\Users\hp\AppData\Local\Packages\之类的地方搜索能找到ext4.vhdx文件
+- WSL 有时候发现没法使用nvidia-smi怎么办？其实有时候是因为没有权限，如果你发现sudo nvidia-smi可以但是非sudo不行那可能是因为root 切 用户的时候权限错了。。。sudo su 用户 就可以解决问题，并不是显卡挂了
+- 一个巨坑，WSL 和 Docker Desktop 的 bug 问题，如果你装了这两个可能会在启动wsl或者vscode链接wsl的时候遇到如下类似的问题：
+
+```Python
+Processing fstab with mount -a failed.
+
+<3>WSL (8) ERROR: CreateProcessEntryCommon:370: getpwuid(0) failed 2
+<3>WSL (8) ERROR: CreateProcessEntryCommon:374: getpwuid(0) failed 2
+<3>WSL (8) ERROR: CreateProcessEntryCommon:577: execvpe /bin/sh failed 2
+<3>WSL (8) ERROR: CreateProcessEntryCommon:586: Create process not expected to return
+
+```
+
+    因为这时候你使用`wsl -l`会发现默认的发行版是 docker-desktop，所以我们需要把他切换成ubuntu即可：使用 `wsl -s Ubuntu` 设置成发行版即可（在 wsl -l 里找你的ubuntu版本）
 
 
 
@@ -448,8 +468,6 @@ snap version
 
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 
-
-
 - docker换源（拉镜像极大加速）
 
 [https://blog.51cto.com/u_13281972/2997681](https://blog.51cto.com/u_13281972/2997681)
@@ -473,6 +491,8 @@ nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registr
 ```
 
 此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
+
+
 
 export ALL_PROXY="[http://172.17.0.1:8888/](http://172.17.0.1:8888/)"
 
@@ -540,6 +560,8 @@ nodejs下载安装与初始化方法
 
 [https://blog.csdn.net/xuchaoxin1375/article/details/121709299](https://blog.csdn.net/xuchaoxin1375/article/details/121709299)
 
+
+
 #### 其他
 
 云服务器相关：
@@ -556,7 +578,7 @@ nodejs下载安装与初始化方法
 
 
 
-电脑装机：
+电脑装机，组装一台电脑：
 
 去bilibili随便搜前二的 多看几遍
 
@@ -577,8 +599,6 @@ nodejs下载安装与初始化方法
 gradio的proxy冲突了怎么办？
 
 ——设置不同的监听地址，比如gradio可以直接监听ip或者172的容器地址，不需要127.0.0.1
-
-
 
 
 
@@ -839,11 +859,21 @@ GitHub's largest open-source algorithm library
 
 
 
+### 高性能计算
+
+华东师范大学高等数值分析（高性能计算，并行计算）(Parallel and High Performance Computing)
+
+[https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/](https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/)
+
+
+
 ## 高性能计算与编译器
 
 常用MPI、cublas等高性能基础库调用api快速入门
 
 [https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html](https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html)
+
+
 
 ### mlir
 
@@ -921,6 +951,22 @@ CS344 Introduction to Parallel Programming class code
 
 [https://github.com/YconquestY/Needle/blob/main/backend.md](https://github.com/YconquestY/Needle/blob/main/backend.md)
 
+CUDA samples CUDA官方案例
+
+[https://github.com/NVIDIA/CUDALibrarySamples](https://github.com/NVIDIA/CUDALibrarySamples)
+
+
+
+#### CUDA 课本相关
+
+Programming-Massively-Parallel-Processors 相关习题作业
+
+[https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md](https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md)
+
+[https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu](https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu)
+
+[https://github.com/Syencil/Programming_Massively_Parallel_Processors](https://github.com/Syencil/Programming_Massively_Parallel_Processors)
+
 
 
 ### MPI通信
@@ -941,7 +987,9 @@ ubuntu-drivers devices
 
 sudo apt install  输入显示的推荐版本
 
-（如果安装失败了或者重装，请先把原来的依赖删除：sudo apt-get remove --purge nvidia*
+（如果安装失败了或者重装或者遇到冲突依赖，请先把原来的依赖删除：sudo apt-get remove --purge nvidia*
+
+如果你使用docker，驱动重新安装后请根据 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) 重新启动docker
 
 - CUDA与cuDNN的安装：（直接官网文档）【警告⚠，如果你需要安装tensorrt，请用deb形式安装cuda安装包，官方建议如果CUDA采用的是deb方式，tensorrt也要采用deb方式，】
 
@@ -1117,6 +1165,10 @@ Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/)
 
 
 
+超分辨率训练框架
+
+[https://github.com/muslll/neosr](https://github.com/muslll/neosr)
+
 ### 开源库/项目
 
 OpenMMLab
@@ -1171,6 +1223,8 @@ Awesome Deep Learning
 
 
 
+
+
 ### 数据集类网站
 
 [https://universe.roboflow.com/](https://universe.roboflow.com/)
@@ -1194,6 +1248,22 @@ NLP Chinese Data Augmentation 一键中文数据增强工具
 从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
 
 [https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch](https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch)
+
+
+
+### AIGC
+
+不错的aigc设计资讯网 
+
+[https://www.uisdc.com/category/ai](https://www.uisdc.com/category/ai)
+
+在线AI Prompt生成工具和Prompt库  
+
+[http://t.cn/A6N4WjEX](http://t.cn/A6N4WjEX)
+
+该工具把 AIGC 提示词可视化，并提供在线编辑功能，动态编辑十分方便
+
+在线体验：[http://t.cn/A6N46h6p](http://t.cn/A6N46h6p)  GitHub：[github.com/Moonvy/OpenPromptStudio](http://github.com/Moonvy/OpenPromptStudio)、
 
 
 
@@ -1292,6 +1362,13 @@ CMU 10-414/714 Deep Learning Systems Algorithms and Implementation
 cmu Deep Learning Systems
 
 [https://dlsyscourse.org/](https://dlsyscourse.org/)
+
+
+
+CSE599W system for ML
+
+CSE 599W - Systems for ML - 辛酸阅读记录 - 清欢守护者的文章 - 知乎
+[https://zhuanlan.zhihu.com/p/104649426](https://zhuanlan.zhihu.com/p/104649426)
 
 
 
@@ -1504,6 +1581,10 @@ trt-samples-for-hackathon-cn(面向 NVIDIA TensorRT 初学者和开发者,提供
 how-to-optim-algorithm-in-cuda
 
 [https://github.com/BBuf/how-to-optim-algorithm-in-cuda](https://github.com/BBuf/how-to-optim-algorithm-in-cuda)
+
+A repository for storing models that have been inter-converted between various frameworks. Supported frameworks are TensorFlow, PyTorch, ONNX, OpenVINO, TFJS, TFTRT, TensorFlowLite (Float32/16/INT8), EdgeTPU, CoreML
+
+[https://github.com/PINTO0309/PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo)
 
 
 
@@ -1942,6 +2023,12 @@ btop （实现一个硬件检测工具）
 
 
 
+内存泄露咋办？
+
+先看监控一两周的情况。。实在不行上 ASAN Valgrind等
+
+
+
 ### 音视频相关
 
 音视频原理必看国内大神-雷神
@@ -2086,9 +2173,23 @@ Software Download Hub 纯净的软件下载区
 
 [https://pixabay.com/photos/](https://pixabay.com/photos/)
 
-## 有趣的项目
+[https://stockup.sitebuilderreport.com/](https://stockup.sitebuilderreport.com/)
 
-比disco diffusion更强大的绘制工具SD：
+[https://www.shopify.com/stock-photos](https://www.shopify.com/stock-photos)
+
+各类开源工具收录的网站HelloGitHub 
+
+[https://hellogithub.com/](https://hellogithub.com/)
+
+Machine Learning Engineering Online Book:
+
+An open collection of methodologies to help with successful training of large language models and multi-modal models.
+
+[https://github.com/stas00/ml-engineering](https://github.com/stas00/ml-engineering)
+
+
+
+## 有趣的项目
 
 在自己电脑运行Stable Diffusion和完整项目下载
 
@@ -2132,15 +2233,15 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 [https://github.com/fhefh2015/Fast-GitHub](https://github.com/fhefh2015/Fast-GitHub)
 
-## 提示词工程
+硬盘空间分析工具spacesniffer
 
-在线AI Prompt生成工具和Prompt库  
+[https://sourceforge.net/projects/spacesniffer/](https://sourceforge.net/projects/spacesniffer/)
 
-[http://t.cn/A6N4WjEX](http://t.cn/A6N4WjEX)
+开源下载工具
 
-该工具把 AIGC 提示词可视化，并提供在线编辑功能，动态编辑十分方便
+[https://motrix.app/download](https://motrix.app/download)
 
-在线体验：[http://t.cn/A6N46h6p](http://t.cn/A6N46h6p)  GitHub：[github.com/Moonvy/OpenPromptStudio](http://github.com/Moonvy/OpenPromptStudio)
+
 
 
 
@@ -2157,6 +2258,8 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 计算的极限
 
 [https://fwjmath.wordpress.com/recommended-list/](https://fwjmath.wordpress.com/recommended-list/)
+
+
 
 ## 心理健康建设
 
@@ -2177,6 +2280,10 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 2020年11月上海购房指南
 
 [github.com/ayuer/shanghai_house_knowledge](http://github.com/ayuer/shanghai_house_knowledge)
+
+
+
+
 
 ## 开源工具推荐
 
@@ -2204,7 +2311,7 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 [https://github.com/YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor)
 
-一个跨平台的划词翻译软件
+一个跨平台的划词翻译软件pot
 
 [https://github.com/pot-app/pot-desktop](https://github.com/pot-app/pot-desktop)
 
@@ -2222,13 +2329,31 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 [https://github.com/Tyrrrz/YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 
+[https://youtubemultidownloader.net/playlists.html](https://youtubemultidownloader.net/playlists.html)
+
 最好的免费pdf处理开源程序
 
 [https://github.com/torakiki/pdfsam](https://github.com/torakiki/pdfsam)
 
+开源版本的按键精灵
+
+[https://github.com/taojy123/KeymouseGo](https://github.com/taojy123/KeymouseGo)
+
+开源视频录制、git录制
+
+[https://github.com/NickeManarin/ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
 
 
-### 英文论文好用工具
+
+## AI方向团队协作工具
+
+此处收集一些海内外先进的合作方式（尤其是AI）
+
+
+
+
+
+## 英文论文好用工具
 
 TextRanch 句子参考
 

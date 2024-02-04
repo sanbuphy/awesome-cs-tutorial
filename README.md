@@ -219,6 +219,36 @@ git config --global i18n.logoutputencoding utf-8
 export LESSCHARSET=utf-8
 ```
 - git 删除历史记录大文件，减轻负担 [https://blog.csdn.net/baobaoxiannv/article/details/105586187](https://blog.csdn.net/baobaoxiannv/article/details/105586187)
+- git如何结束一大堆的safe directory问题（少部分还可以自己一个个忽略，如果全都是就只能这样先把所有safe git 警告关闭 `git config --global --add safe.directory '*'`
+- git-ssh: connect to host [github.com](http://github.com) port 22: Connection timed out 
+    - 先看看ssh -T -p 443 [git@ssh.github.com](mailto:git@ssh.github.com)能不能访问，可以的话就进行修改转发：
+
+        编辑 ~/.ssh/config 文件，如果没有config文件的话就直接 vim ~/.ssh/config加入以下内容 （windows在C:\Users\你的用户名\.ssh 中）
+
+```C++
+Host github.com
+HostName ssh.github.com   #或者是Hostname
+Port 443
+```
+
+        再次测试 `ssh -T git@github.com`即可
+- vscode免密登陆远程服务器
+    1. 确保已经有本地公钥私钥，如果没有就`ssh-keygen `生成
+    2. 默认拷贝本地公钥到目标服务器（如果有端口也-p加上端口），随后 `ssh-copy-id  user@remote-host`即可，如果你是windows强烈建议手动指定下：`C:\\Users\\你的用户名\\.ssh\\id_rsa.pub`  linux下也可：`ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-host`
+
+        ，这步结束后，可以直接在终端ssh测试下能否直接连上，理论上可以直接。
+    3. vscode中加入配置即可：（修改下列配置成为你自己的配置），如果还需要密码就是IdentityFile 了
+
+```Python
+Host 名字
+  HostName ssh的名字
+  Port 端口
+  User username
+  IdentityFile "C:\Users\你的用户名\.ssh\id_rsa"
+  IdentityFile "~/.ssh/id_rsa"
+```
+- git 放宽安全策略（safe directory）`git config --global --add safe.directory '*'`
+-  server certificate verification failed. CAfile: none CRLfile: none 相关错误：`git config --global http.sslverify false`
 
 
 
@@ -559,6 +589,12 @@ nodejs下载安装与初始化方法
 [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
 [https://blog.csdn.net/xuchaoxin1375/article/details/121709299](https://blog.csdn.net/xuchaoxin1375/article/details/121709299)
+
+用自然语言对话生成前端页面
+
+[https://v0.dev/](https://v0.dev/)
+
+node npm切换版本
 
 
 
@@ -1169,6 +1205,14 @@ Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/)
 
 [https://github.com/muslll/neosr](https://github.com/muslll/neosr)
 
+
+
+手写各种论文、复现各种论文项目
+
+[https://github.com/lucidrains](https://github.com/lucidrains)
+
+
+
 ### 开源库/项目
 
 OpenMMLab
@@ -1240,6 +1284,14 @@ NLPDataSet（刘聪NLP收集的各种nlp数据集，接近50个。。。）
 NLP Chinese Data Augmentation 一键中文数据增强工具
 
 [https://github.com/425776024/nlpcda](https://github.com/425776024/nlpcda)
+
+
+
+url_img to dataset
+
+Easily turn large sets of image urls to an image dataset. Can download, resize and package 100M urls in 20h on one machine.
+
+[https://github.com/rom1504/img2dataset](https://github.com/rom1504/img2dataset)
 
 
 
@@ -1685,6 +1737,12 @@ Python 3 标准库实例教程(真正现代、进阶的python教程
 
 
 
+完整的Python大项目模板，如果你想实现一个包含完整的静态检查、单元测试、CI、文档的项目
+
+[https://github.com/waynerv/cookiecutter-pypackage/tree/master](https://github.com/waynerv/cookiecutter-pypackage/tree/master)
+
+
+
 pandas教程
 
 [https://pandas.pydata.org/docs/getting_started/install.html](https://pandas.pydata.org/docs/getting_started/install.html)
@@ -2089,6 +2147,10 @@ AI论文检索
 
 [https://elicit.org/](https://elicit.org/)
 
+AI阅读论文
+
+[https://www.aminer.cn/](https://www.aminer.cn/)
+
 
 
 ## 其他日常使用网站
@@ -2186,6 +2248,10 @@ Machine Learning Engineering Online Book:
 An open collection of methodologies to help with successful training of large language models and multi-modal models.
 
 [https://github.com/stas00/ml-engineering](https://github.com/stas00/ml-engineering)
+
+excel表格转为markdown格式互转
+
+[https://tableconvert.com/zh-cn/excel-to-markdown#google_vignette](https://tableconvert.com/zh-cn/excel-to-markdown#google_vignette)
 
 
 
@@ -2299,6 +2365,10 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 [xnview.com/en/xnviewmp/](http://xnview.com/en/xnviewmp/)
 
+最好的windows下b站下载器
+
+[https://space.bilibili.com/1608325226](https://space.bilibili.com/1608325226)
+
  windows下的bilibli视频下载器（如果要使用ffmpeg，可以下载后加入到系统path环境变量）
 
 [https://github.com/nICEnnnnnnnLee/BilibiliDown](https://github.com/nICEnnnnnnnLee/BilibiliDown)
@@ -2343,13 +2413,21 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 [https://github.com/NickeManarin/ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
 
+最好的windows开源OCR软件
+
+[https://github.com/hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR)
+
+开源视频编辑器
+
+[https://github.com/OpenShot/openshot-qt/releases/tag/v3.1.1](https://github.com/OpenShot/openshot-qt/releases/tag/v3.1.1)
 
 
-## AI方向团队协作工具
 
-此处收集一些海内外先进的合作方式（尤其是AI）
+## startup协作工具
 
+Ship your startup in days,not weeks
 
+[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端健权等
 
 
 

@@ -232,9 +232,9 @@ Port 443
 ```
 
         再次测试 `ssh -T git@github.com`即可
-- vscode免密登陆远程服务器
+- vscode免密登陆远程服务器，git免密
     1. 确保已经有本地公钥私钥，如果没有就`ssh-keygen `生成
-    2. 默认拷贝本地公钥到目标服务器（如果有端口也-p加上端口），随后 `ssh-copy-id  user@remote-host`即可，如果你是windows强烈建议手动指定下：`C:\\Users\\你的用户名\\.ssh\\id_rsa.pub`  linux下也可：`ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-host`
+    2. 默认拷贝本地公钥到目标服务器（如果有端口也-p加上端口）如果是windows可以在gitbash中操作即可或者用wsl的鉴权地址指定，随后 `ssh-copy-id  user@remote-host`即可，如果你是windows强烈建议手动指定下：`C:\\Users\\你的用户名\\.ssh\\id_rsa.pub`  linux下也可：`ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-host`
 
         ，这步结束后，可以直接在终端ssh测试下能否直接连上，理论上可以直接。
     3. vscode中加入配置即可：（修改下列配置成为你自己的配置），如果还需要密码就是IdentityFile 了
@@ -249,6 +249,7 @@ Host 名字
 ```
 - git 放宽安全策略（safe directory）`git config --global --add safe.directory '*'`
 -  server certificate verification failed. CAfile: none CRLfile: none 相关错误：`git config --global http.sslverify false`
+- mirror加速： [https://mirror.ghproxy.com/](https://mirror.ghproxy.com/)
 
 
 
@@ -289,6 +290,14 @@ Host 名字
     如果loaded说明启动了挂起规则，此时只需要如此操作后重新查看状态至masked即可：
 
     `sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target`
+- 快速挂载一个新的盘：
+
+```Bash
+# 如果要格式化请执行： sudo mkfs.ext4 /dev/sdb
+sudo mkdir /mnt/mydisk
+sudo mount /dev/sdb1 /mnt/mydisk
+
+```
 
 
 
@@ -422,6 +431,18 @@ netstat -ano | findstr :<port_number>
 
 taskkill /PID <pid> /F
 ```
+- 硬盘分区和文件强制删除工具（比大多数的粉碎工具都好用）
+
+    [https://www.diskgenius.cn/](https://www.diskgenius.cn/)
+- 用于在其他系统去除windows的`\r`标识，避免macos和linux运行报错：
+
+```Bash
+sed -i '' $'s/\r$//' filename
+```
+
+
+
+
 
 #### 正则表达式相关
 
@@ -865,6 +886,10 @@ tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问�
 
 ### 数据结构与算法
 
+hello 算法，图文并茂的简单入门
+
+[https://www.hello-algo.com/](https://www.hello-algo.com/)
+
 程序员如何准备面试中的算法
 
 [https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html)
@@ -1133,6 +1158,14 @@ NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-
 
 ### **深度学习网课**
 
+EECS 498-007 / 598-005
+
+[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/)
+
+[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html)
+
+
+
 - 李宏毅老师的课程主页：
 
 [https://speech.ee.ntu.edu.tw/~hylee/index.php](https://speech.ee.ntu.edu.tw/~hylee/index.php) 这是李老师的个人主页，可以找到每年ML的课程主页，然后获取作业代码和Kaggle链接  
@@ -1170,6 +1203,13 @@ NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-
 Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/) 
 
 [https://www.bilibili.com/video/BV1PK4y1U751](https://www.bilibili.com/video/BV1PK4y1U751)
+
+
+
+CV相关，有关各种国外AIlab的课 某科学的计算机视觉学习路线
+
+某科学的计算机视觉学习路线 - Zircon的文章 - 知乎
+[https://zhuanlan.zhihu.com/p/418853202](https://zhuanlan.zhihu.com/p/418853202)
 
 
 
@@ -1317,6 +1357,10 @@ Easily turn large sets of image urls to an image dataset. Can download, resize a
 
 在线体验：[http://t.cn/A6N46h6p](http://t.cn/A6N46h6p)  GitHub：[github.com/Moonvy/OpenPromptStudio](http://github.com/Moonvy/OpenPromptStudio)、
 
+comfyui工作流分享网站
+
+[https://openart.ai/workflows/home?workflowSort=featured](https://openart.ai/workflows/home?workflowSort=featured)
+
 
 
 ### 其他
@@ -1407,6 +1451,10 @@ cmu 15-884: Machine Learning Systems
 
 CMU 10-414/714 Deep Learning Systems Algorithms and Implementation
 
+神课，必修
+
+[https://csdiy.wiki/机器学习系统/CMU10-414/](https://csdiy.wiki/机器学习系统/CMU10-414/)
+
 [https://dlsyscourse.org/](https://dlsyscourse.org/)
 
 
@@ -1445,6 +1493,12 @@ Programming Heterogeneous Computing Systems with GPUs and other Accelerators (22
 MiniTorch is a diy teaching library for machine learning engineers who wish to learn about the internal concepts underlying deep learning systems. It is a pure Python re-implementation of the Torch API designed to be simple, easy-to-read, tested, and incremental. The final library can run Torch code.
 
 [https://minitorch.github.io/](https://minitorch.github.io/)
+
+
+
+libtorch 非官方教程
+
+[https://github.com/DataXujing/libtorch_tutorials/tree/main](https://github.com/DataXujing/libtorch_tutorials/tree/main)
 
 
 
@@ -2253,6 +2307,18 @@ excel表格转为markdown格式互转
 
 [https://tableconvert.com/zh-cn/excel-to-markdown#google_vignette](https://tableconvert.com/zh-cn/excel-to-markdown#google_vignette)
 
+4k电影截图
+
+[https://highdefdiscnews.com/4k-screenshots/](https://highdefdiscnews.com/4k-screenshots/)
+
+arxiv 总结  推送
+
+[https://papers.cool/](https://papers.cool/)
+
+ the latest advances in MM-LLMs.
+
+[https://mm-llms.github.io/](https://mm-llms.github.io/)
+
 
 
 ## 有趣的项目
@@ -2400,6 +2466,8 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 [https://github.com/Tyrrrz/YoutubeDownloader](https://github.com/Tyrrrz/YoutubeDownloader)
 
 [https://youtubemultidownloader.net/playlists.html](https://youtubemultidownloader.net/playlists.html)
+
+
 
 最好的免费pdf处理开源程序
 

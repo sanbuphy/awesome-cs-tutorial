@@ -1,19 +1,46 @@
 ## 写在前面
 
-收录了个人喜好觉得品味好的网站（也有一些小工具），
+If any English-speaking friends see my GitHub repository, some of the resources here might be helpful to you too! You can use translation software to read it.
 
-如果有其他好的建议也欢迎提出，非常感谢。
+Here, I have curated a collection of websites and small tools that I find to be of good taste, covering but not limited to the following areas:
 
-不定期更新
+- Mathematics learning
+- Basic computer science learning (operating systems, etc.)
+- Basic computer operations (Windows system, Linux system, Docker)
+- Basic deep learning study materials and practical resources
+- Deep learning system study materials
+- Basic language learning (Python, C++)
+- Interesting open-source projects and tools (can replace common workflows)
+
+Updated periodically, enjoy your time here! 🕶
+
+With a sidebar directory (viewable on desktop): [https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
+GitHub open-source repository: [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
+
+
+
+这里收录了我个人觉得品味好的网站和小工具，涵盖不限于以下几个领域：
+
+- 数学学习
+- 计算机基础学习（操作系统等）
+- 计算机操作基础（windows系统、linux系统、docker）
+- 深度学习基础学习资料及实践资料
+- 深度学习系统学习资料
+- 语言基础学习（python、c++）
+- 有趣的开源项目和工具（可替换常见工作流）
+
+不定期更新，希望你在这能玩得开心！🕶
 
 带目录边栏（电脑上可看）：[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
-
-
 github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
 
 
-**基础素质要求（参考NJU-PA）**
+🤗 Feel free to discuss with me in the github issue!
+
+
+
+**学习基础素质要求（参考NJU-PA **[https://nju-projectn.github.io/ics-pa-gitbook/ics2024/](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)  **）**
 
 提问的艺术
 
@@ -22,6 +49,8 @@ github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://
 不像弱智一样提问
 
 [https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)
+
+不要再偷懒了——蒋炎岩老师（nju jyy）
 
 
 
@@ -34,8 +63,6 @@ PPRP：
 
 
 **如需转载请注释原出处即可，谢谢**
-
-
 
 ## 数学
 
@@ -293,11 +320,33 @@ Host 名字
 - 快速挂载一个新的盘：
 
 ```Bash
-# 如果要格式化请执行： sudo mkfs.ext4 /dev/sdb
+# 方法一（推荐）先分区然后创建文件系统
+fdisk /dev/vdb
+# 依次输入:n->p->1->回车->回车->w
+fdisk -l # 查看到刚才分出来的新分区
+mkfs.ext4 /dev/vdb1
+
+# 方法二（不推荐） 直接格式化创建文件系统
+# 执行：lsblk  然后  sudo mkfs.ext4 /dev/sdb
 sudo mkdir /mnt/mydisk
 sudo mount /dev/sdb1 /mnt/mydisk
 
+# 永久挂载：
+#打开配置文件
+vi /etc/fstab
+#在配置文件最后输入
+/dev/vdb1 /目标目录   ext4    defaults        0 0
+
 ```
+- 已有文件系统在扩容硬盘，如何继续扩容
+
+```Bash
+# 检查文件系统是否有错误，并准备扩展
+sudo e2fsck -f /dev/sdb
+# 使用 resize2fs 工具扩展文件系统：
+sudo resize2fs /dev/sdb
+```
+- wget下载如何不需要 -O 强制重命名文件，加入参数 `--content-disposition` ，wget可下载多文件，直接顺序空格间距接下去url 即可，或者 -i xxx.txt
 
 
 
@@ -1206,10 +1255,22 @@ Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/)
 
 
 
+University of Waterloo CS 886: Recent Advances on Foundation Models
+
+[https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/](https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/)
+
+
+
 CV相关，有关各种国外AIlab的课 某科学的计算机视觉学习路线
 
 某科学的计算机视觉学习路线 - Zircon的文章 - 知乎
 [https://zhuanlan.zhihu.com/p/418853202](https://zhuanlan.zhihu.com/p/418853202)
+
+
+
+paper with code 做法
+
+[https://nn.labml.ai/](https://nn.labml.ai/)
 
 
 
@@ -1762,6 +1823,8 @@ conda所有库更新：`conda update --all`
 - 使用pip命令时，报错：_sysconfigdata_x86_64_conda_cos7_linux_gnu.py：[https://blog.csdn.net/weixin_44321570/article/details/128514763](https://blog.csdn.net/weixin_44321570/article/details/128514763)
 
 pip 下载 cache不想默认在主目录：`pip config set global.cache-dir 新目录`
+
+python 生成launch.json调试配置，zpdb库 [https://github.com/LYMDLUT/zpdb](https://github.com/LYMDLUT/zpdb)
 
 
 
@@ -2373,7 +2436,17 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 [https://motrix.app/download](https://motrix.app/download)
 
+微软的免费用户行为洞察埋点工具
 
+[https://clarity.microsoft.com/](https://clarity.microsoft.com/)
+
+
+
+## PPT之神
+
+各种软件架构图
+
+ [https://www.iodraw.com/template?pn=3](https://www.iodraw.com/template?pn=3)
 
 
 
@@ -2495,17 +2568,5 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 Ship your startup in days,not weeks
 
-[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端健权等
-
-
-
-## 英文论文好用工具
-
-TextRanch 句子参考
-
-[https://textranch.com/](https://textranch.com/)
-
-QuillBot 文段改写
-
-[https://quillbot.com/](https://quillbot.com/)
+[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端鉴权等
 

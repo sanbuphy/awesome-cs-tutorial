@@ -2,6 +2,7 @@
 
 If any English-speaking friends see my GitHub repository, some of the resources here might be helpful to you too! You can use translation software to read it.
 
+
 Here, I have curated a collection of websites and small tools that I find to be of good taste, covering but not limited to the following areas:
 
 - Mathematics learning
@@ -14,12 +15,14 @@ Here, I have curated a collection of websites and small tools that I find to be 
 
 Updated periodically, enjoy your time here! 🕶
 
-With a sidebar directory (viewable on desktop): [https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
+With a sidebar directory (viewable on desktop): 
+
+[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
+
+
 GitHub open-source repository: [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
-
-
-这里收录了我个人觉得品味好的网站和小工具，涵盖不限于以下几个领域：
+收录了品味好的网站和小工具，涵盖不限于以下几个领域：
 
 - 数学学习
 - 计算机基础学习（操作系统等）
@@ -29,18 +32,15 @@ GitHub open-source repository: [https://github.com/sanbuphy/my-awesome-cs](https
 - 语言基础学习（python、c++）
 - 有趣的开源项目和工具（可替换常见工作流）
 
-不定期更新，希望你在这能玩得开心！🕶
+不定期更新
 
 带目录边栏（电脑上可看）：[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
+
 github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
+Feel free to discuss with me in the github issue!
 
-
-🤗 Feel free to discuss with me in the github issue!
-
-
-
-**学习基础素质要求（参考NJU-PA **[https://nju-projectn.github.io/ics-pa-gitbook/ics2024/](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)  **）**
+**基础素质要求（NJU-PA **[https://nju-projectn.github.io/ics-pa-gitbook/ics2024/](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)  **）**
 
 提问的艺术
 
@@ -277,6 +277,22 @@ Host 名字
 - git 放宽安全策略（safe directory）`git config --global --add safe.directory '*'`
 -  server certificate verification failed. CAfile: none CRLfile: none 相关错误：`git config --global http.sslverify false`
 - mirror加速： [https://mirror.ghproxy.com/](https://mirror.ghproxy.com/)
+- github mirror大全[https://blog.csdn.net/liveon_/article/details/127933041](https://blog.csdn.net/liveon_/article/details/127933041)
+- 调整一些规则（主要是代理规则），可以使用比如 `git config --global --edit`
+- github 镜像加速，快速更换所有文件 `find . -type f -exec sed -i 's|https://github.com/|https://更换成镜像加速地址/|g' {} +`
+- wsl 提示 NTA 网络问题无法 proxy： 
+
+```text
+# 在 Windows 的 %UserProfile%\.wslconfig 文件中添加以下内容：
+# Settings apply across all Linux distros running on WSL 2
+[wsl2]
+networkingMode=mirrored # 开启镜像网络
+dnsTunneling=true # 开启 DNS Tunneling
+firewall=true # 开启 Windows 防火墙
+autoProxy=true # 开启自动同步代理
+[experimental]
+hostAddressLoopback=true
+```
 
 
 
@@ -321,10 +337,10 @@ Host 名字
 
 ```Bash
 # 方法一（推荐）先分区然后创建文件系统
-fdisk /dev/vdb
+fdisk /dev/sdb
 # 依次输入:n->p->1->回车->回车->w
 fdisk -l # 查看到刚才分出来的新分区
-mkfs.ext4 /dev/vdb1
+mkfs.ext4 /dev/sdb1
 
 # 方法二（不推荐） 直接格式化创建文件系统
 # 执行：lsblk  然后  sudo mkfs.ext4 /dev/sdb
@@ -341,12 +357,33 @@ vi /etc/fstab
 - 已有文件系统在扩容硬盘，如何继续扩容
 
 ```Bash
+# 没有分区，直接构建文件系统的情况
 # 检查文件系统是否有错误，并准备扩展
 sudo e2fsck -f /dev/sdb
 # 使用 resize2fs 工具扩展文件系统：
 sudo resize2fs /dev/sdb
+
+# 已有分区，扩展该分区的文件系统
+sudo apt-get install cloud-guest-utils
+sudo growpart /dev/vdb 1
+sudo resize2fs /dev/vdb1
+sudo mount /dev/vdb1 /挂载点
+
 ```
 - wget下载如何不需要 -O 强制重命名文件，加入参数 `--content-disposition` ，wget可下载多文件，直接顺序空格间距接下去url 即可，或者 -i xxx.txt
+-  /lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.30' not found 类似问题：
+
+```text
+# 更新系统 gcc 比较麻烦可以用 conda 里面的，直接修改环境变量就可以让他被优先查找
+conda install -c conda-forge gcc_linux-64=12.1.0 gxx_linux-64=12.1.0
+export PATH=$CONDA_PREFIX/bin:$PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+# 永久保存 （不建议）
+echo 'export PATH=$CONDA_PREFIX/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+source ~/.bashrc
+
+```
 
 
 
@@ -444,6 +481,9 @@ Processing fstab with mount -a failed.
 ```
 
     因为这时候你使用`wsl -l`会发现默认的发行版是 docker-desktop，所以我们需要把他切换成ubuntu即可：使用 `wsl -s Ubuntu` 设置成发行版即可（在 wsl -l 里找你的ubuntu版本）
+- 注意不同的操作系统编辑创建文件后行尾符可能不同，使用的时候请显式在IDE指定是LF（如果需要在linux运行）否则会出现 command not found 的 报错。LF（Line Feed）使用于 Unix 和类 Unix 系统，表示为 `\n`，是单个字符（ASCII 10）；CRLF（Carriage Return + Line Feed）使用于 Windows 系统，表示为 `\r\n`，包含两个字符：回车（ASCII 13）和换行（ASCII 10）。
+
+
 
 
 
@@ -664,7 +704,11 @@ nodejs下载安装与初始化方法
 
 [https://v0.dev/](https://v0.dev/)
 
-node npm切换版本
+node npm切换版本 
+
+```text
+nvm use xxx
+```
 
 
 
@@ -705,6 +749,13 @@ node npm切换版本
 gradio的proxy冲突了怎么办？
 
 ——设置不同的监听地址，比如gradio可以直接监听ip或者172的容器地址，不需要127.0.0.1
+
+
+
+QT报错如何，类似 qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found. [https://neucrack.com/p/407](https://neucrack.com/p/407)
+  - export QT_QPA_PLATFORM="xcb"
+  - export QT_DEBUG_PLUGINS=1
+  - export QT_QPA_PLATFORM=offscreen
 
 
 
@@ -1093,7 +1144,7 @@ Programming-Massively-Parallel-Processors 相关习题作业
 
 （你也可以在这里下：[https://www.nvidia.com/download/index.aspx?lang=en-us](https://www.nvidia.com/download/index.aspx?lang=en-us)）
 
-ubuntu-drivers devices
+  ubuntu-drivers devices
 
 sudo apt install  输入显示的推荐版本
 
@@ -1207,6 +1258,20 @@ NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-
 
 ### **深度学习网课**
 
+Anthropic 核心成员写的现代深度学习教材，包括CNN、transformer可解释性、强化学习，拥有大量有趣实验，非常推荐。
+
+[https://arena3-chapter1-transformer-interp.streamlit.app/](https://arena3-chapter1-transformer-interp.streamlit.app/)
+
+
+
+基础方向的经典 code [https://github.com/sgrvinod](https://github.com/sgrvinod)
+
+
+
+案例式入门深度学习，每个算法都与有最小data和code  [https://course.fast.ai/](https://course.fast.ai/) 
+
+
+
 EECS 498-007 / 598-005
 
 [https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/)
@@ -1311,6 +1376,12 @@ paper with code 做法
 手写各种论文、复现各种论文项目
 
 [https://github.com/lucidrains](https://github.com/lucidrains)
+
+
+
+手写复现各种 vit 网络
+
+[https://github.com/lucidrains/vit-pytorch](https://github.com/lucidrains/vit-pytorch)
 
 
 
@@ -1440,6 +1511,18 @@ pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 ```
+
+xformers与pytorch版本对应
+
+```Bash
+2.3.0  pip install xformers==0.0.26.post1
+2.2.2  pip install xformers==0.0.25.post1
+2.2.0  pip install xformers==0.0.24
+2.1.2  pip install xformers==0.0.23.post1
+2.1.0  pip install xformers==0.0.22.post7
+```
+
+
 
 
 
@@ -2540,8 +2623,6 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 [https://youtubemultidownloader.net/playlists.html](https://youtubemultidownloader.net/playlists.html)
 
-
-
 最好的免费pdf处理开源程序
 
 [https://github.com/torakiki/pdfsam](https://github.com/torakiki/pdfsam)
@@ -2562,11 +2643,30 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 [https://github.com/OpenShot/openshot-qt/releases/tag/v3.1.1](https://github.com/OpenShot/openshot-qt/releases/tag/v3.1.1)
 
+优雅的图片浏览器
+
+[https://imageglass.org/](https://imageglass.org/)
+
+开源、重复图片和文件搜索神器
+
+[https://github.com/qarmin/czkawka/releases/tag/7.0.0](https://github.com/qarmin/czkawka/releases/tag/7.0.0)
+
 
 
 ## startup协作工具
 
 Ship your startup in days,not weeks
 
-[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端鉴权等
+[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端健权等
 
+
+
+## 英文论文好用工具
+
+TextRanch 句子参考
+
+[https://textranch.com/](https://textranch.com/)
+
+QuillBot 文段改写
+
+[https://quillbot.com/](https://quillbot.com/)

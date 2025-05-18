@@ -1,70 +1,50 @@
 ## 写在前面
 
-If any English-speaking friends see my GitHub repository, some of the resources here might be helpful to you too! You can use translation software to read it.
+Websites and tools to help you quickly get started with modern computer science fundamentals / deep learning fundamentals, covering but not limited to the following areas:
 
+- **Mathematics Learning**
+- **Computer Science Fundamentals**(Operating Systems, etc.)
+- **Basic Computer Operations**(Windows, Linux, Docker, and other common commands)
+- **Deep Learning Resources and Practical Materials**(PyTorch basics, large language models, computer vision fundamentals, functional implementations)
+- **Programming Language Learning**(Python, C++)
+- **Interesting Open-Source Projects and Tools**(Alternatives to commonly used tools)
 
-Here, I have curated a collection of websites and small tools that I find to be of good taste, covering but not limited to the following areas:
+GitHub Repository:[https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
 
-- Mathematics learning
-- Basic computer science learning (operating systems, etc.)
-- Basic computer operations (Windows system, Linux system, Docker)
-- Basic deep learning study materials and practical resources
-- Deep learning system study materials
-- Basic language learning (Python, C++)
-- Interesting open-source projects and tools (can replace common workflows)
+Feel free to discuss with me in the GitHub Issues!
 
-Updated periodically, enjoy your time here! 🕶
+```Bash
+帮助你快速入门现代计算机基础 / 深度学习基础的网站和小工具，涵盖但不限于以下几个领域：
 
-With a sidebar directory (viewable on desktop): 
+数学学习
+计算机基础学习（操作系统等）
+计算机操作基础（Windows系统、Linux系统、Docker等常用指令）
+深度学习系统学习资料及实践资料（PyTorch基础、大语言模型、计算机视觉基础、功能实现）
+编程语言学习（Python、C++）
+有趣的开源项目和工具（替换常见使用工具）
+GitHub开源仓库地址：https://github.com/sanbuphy/my-awesome-cs
 
-[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
+欢迎在Issue中与我讨论
 
-
-GitHub open-source repository: [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
-
-收录了品味好的网站和小工具，涵盖不限于以下几个领域：
-
-- 数学学习
-- 计算机基础学习（操作系统等）
-- 计算机操作基础（windows系统、linux系统、docker）
-- 深度学习基础学习资料及实践资料
-- 深度学习系统学习资料
-- 语言基础学习（python、c++）
-- 有趣的开源项目和工具（可替换常见工作流）
-
-不定期更新
-
-带目录边栏（电脑上可看）：[https://www.aispacewalk.cn/docs/other/awesomeweb](https://www.aispacewalk.cn/docs/other/awesomeweb)
-
-github开源仓库地址： [https://github.com/sanbuphy/my-awesome-cs](https://github.com/sanbuphy/my-awesome-cs)
-
-Feel free to discuss with me in the github issue!
-
-**基础素质要求（NJU-PA **[https://nju-projectn.github.io/ics-pa-gitbook/ics2024/](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)  **）**
-
-提问的艺术
-
-[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
-
-不像弱智一样提问
-
-[https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)
-
-不要再偷懒了——蒋炎岩老师（nju jyy）
+```
 
 
 
-**部分内容出自以下参考网站，也欢迎关注他们**
-
-PPRP：
-
-[https://www.cnblogs.com/pprp/p/8880493.html](https://www.cnblogs.com/pprp/p/8880493.html)
-
-
-
-**如需转载请注释原出处即可，谢谢**
+**转载请注释原出处**
 
 ## 数学
+
+简单来说，需要掌握的范畴可以从最小出发，推荐边学变做：
+
+- 线性代数：矩阵/张量乘法、求逆，奇异值分解/特征值分解，行列式，范数等
+- 统计与概率：概率分布，独立性与贝叶斯，最大似然（MLE）和最大后验估计（MAP）等
+- 优化：线性优化，非线性优化(凸优化/非凸优化)以及其衍生的求解方法如梯度下降、牛顿法、基因算法和模拟退火等
+- 微积分：偏微分，链式法则，矩阵求导等
+- 信息论、数值理论等
+
+
+
+
 
 机器学习相关数学基础
 
@@ -98,9 +78,17 @@ Linear Algebra for Everyone 图解
 
 [https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra](https://github.com/kenjihiranabe/The-Art-of-Linear-Algebra)
 
-[矩阵求导入门](https://www.bilibili.com/video/BV1xk4y1B7RQ?p=1&share_medium=iphone&share_plat=ios&share_session_id=1F101D5C-2880-4C53-A556-3D2777F6AFC8&share_source=WEIXIN&share_tag=s_i&timestamp=1641653070&unique_k=GcJNM2u) 或者你也可以参考我整理的文章：
+矩阵求导matrixcookbook
 
-[https://sanbuphy.github.io/p/矩阵求导简易入门手册/](https://sanbuphy.github.io/p/矩阵求导简易入门手册/)
+[https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
+
+矩阵求导在线矩阵计算验证
+
+[http://www.matrixcalculus.org/](http://www.matrixcalculus.org/)
+
+最推荐的矩阵求导入门
+
+[http://media.ee.ntu.edu.tw/personal/pcwu/tutorials/matrix_calculus.pdf](http://media.ee.ntu.edu.tw/personal/pcwu/tutorials/matrix_calculus.pdf)
 
 线代启示录（一位掌握了线代灵魂的老师）
 
@@ -114,9 +102,27 @@ immersive linear algebra 线性代数可视化
 
 [https://www.bilibili.com/video/BV1a7411M7wH?p=1&vd_source=a6509cab8ccb8b81d6a70af693cc008f](https://www.bilibili.com/video/BV1a7411M7wH?p=1&vd_source=a6509cab8ccb8b81d6a70af693cc008f)
 
+線性代數 趙啟超
+
+[https://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=89](https://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=89)
 
 
-## CS大类
+
+## 计算机科学
+
+学习的基本素质：（不要再偷懒了——蒋炎岩（nju jyy））
+
+[https://nju-projectn.github.io/ics-pa-gitbook/ics2024/](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)  
+
+提问的艺术
+
+[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
+
+不像弱智一样提问
+
+[https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)
+
+
 
 CS自学指南【必看】
 
@@ -130,11 +136,9 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 [https://xushanxiang.com/ref/](https://xushanxiang.com/ref/)
 
+### 常识
 
-
-### 基本操作 
-
-#### GDB、VIM、GIT、Terminal艺术
+#### GDB、VIM、GIT、Terminal
 
 - The Missing Semester of Your CS Education 中文版（强烈推荐）
     - 官方中文站点：[https://missing-semester-cn.github.io/](https://missing-semester-cn.github.io/)
@@ -153,7 +157,59 @@ Quick Reference开发人员速查表（各种语言、脚本、常用工具的�
 
 [https://tools.kalvinbg.cn/txt/ascii](https://tools.kalvinbg.cn/txt/ascii)
 
-#### 系统相关及系统信息相关
+vim 插件与操作合集
+
+[https://github.com/jaywcjlove/vim-web](https://github.com/jaywcjlove/vim-web)
+
+配置喜欢的neovim：
+
+```Markdown
+# 建议编译安装neovim，进去后 cmake . -B build ,  make -j20   make install
+https://github.com/neovim/neovim
+# 安装 lazyvim
+sudo apt install lua5.1 luarocks luajit fd-find ripgrep python3-venv
+https://www.lazyvim.org/
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+然后终端运行 nvim ，进去后就会开始安装插件了
+
+# python 开发环境配置
+推荐在 Mason 下找到 pyright debugpy 安装，然后必须有 nodejs 18 以上的环境，才可以使用，这样就支持了定义跳转。
+
+## DEBUG
+1. debugpy lazyvim require
+2. pip install debugpy pytest
+### python lsp
+离线：
+pip install 'python-lsp-server[all]' pylsp-rope rope jedi
+记得修改文件：
+nvim ~/.config/nvim/init.lua
+require('lspconfig').pylsp.setup({
+  settings = {
+    pylsp = {
+      plugins = {
+        pylsp_rope = { enabled = true },
+        jedi_completion = { enabled = true }, -- 也可以启用 jedi 补全
+        rope_completion = { enabled = true }, -- 如果你还用了 rope 包
+      },
+    },
+  },
+})
+
+之后记得的 check 检查状态就好了。
+
+如果能访问网络实用  pyright：
+nvm use 18
+npm install pyright
+npm list -g pyright
+
+## 字体
+https://www.nerdfonts.com/font-downloads
+
+```
+
+
+
+#### 操作系统信息
 
 获取CPU的性能信息和常见信息，涵盖x86/arm等多硬件
 
@@ -194,21 +250,9 @@ sudo pip install s-tui
 
 sudo s-tui
 
-多线程并发解压缩文件
-
-[https://zhuanlan.zhihu.com/p/389817246](https://zhuanlan.zhihu.com/p/389817246)
-
-```Bash
-pigz -k your_file_name # 压缩文件
-
-tar -cvf - dir1 dir2 dir3 | pigz > output.tar.gz # 压缩文件夹
-
-unpigz -d your_file_name.gz
-```
 
 
-
-#### git相关，git指南
+#### git指南
 
 - 通过聊天的感觉入门并熟练git
 
@@ -278,7 +322,12 @@ Host 名字
 -  server certificate verification failed. CAfile: none CRLfile: none 相关错误：`git config --global http.sslverify false`
 - mirror加速： [https://mirror.ghproxy.com/](https://mirror.ghproxy.com/)
 - github mirror大全[https://blog.csdn.net/liveon_/article/details/127933041](https://blog.csdn.net/liveon_/article/details/127933041)
-- 调整一些规则（主要是代理规则），可以使用比如 `git config --global --edit`
+- 调整一些规则（主要是代理规则），可以使用比如 `git config --global --edit\`
+
+```text
+git config --global url."https://hub.fastgit.xyz/".insteadOf "https://github.com/"
+git config protocol.https.allow always
+```
 - github 镜像加速，快速更换所有文件 `find . -type f -exec sed -i 's|https://github.com/|https://更换成镜像加速地址/|g' {} +`
 - wsl 提示 NTA 网络问题无法 proxy： 
 
@@ -293,6 +342,7 @@ autoProxy=true # 开启自动同步代理
 [experimental]
 hostAddressLoopback=true
 ```
+- github 访问加速 [https://github.com/521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)
 
 
 
@@ -365,8 +415,8 @@ sudo resize2fs /dev/sdb
 
 # 已有分区，扩展该分区的文件系统
 sudo apt-get install cloud-guest-utils
-sudo growpart /dev/vdb 1
-sudo resize2fs /dev/vdb1
+sudo growpart /dev/sdb 1
+sudo resize2fs /dev/sdb1
 sudo mount /dev/vdb1 /挂载点
 
 ```
@@ -384,6 +434,9 @@ echo 'export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 
 ```
+- ImportError: No module named 'apt_pkg'  when apt update 
+    - 查看该目录下动态库版本ls -la /usr/lib/python3/dist-packages/apt_pkg.cpython-3{xxx}m-x86_64-linux-gnu.so
+    - 切换对应版本至 update-alternatives  --set python3  /usr/bin/python3{xxxx}
 
 
 
@@ -482,8 +535,24 @@ Processing fstab with mount -a failed.
 
     因为这时候你使用`wsl -l`会发现默认的发行版是 docker-desktop，所以我们需要把他切换成ubuntu即可：使用 `wsl -s Ubuntu` 设置成发行版即可（在 wsl -l 里找你的ubuntu版本）
 - 注意不同的操作系统编辑创建文件后行尾符可能不同，使用的时候请显式在IDE指定是LF（如果需要在linux运行）否则会出现 command not found 的 报错。LF（Line Feed）使用于 Unix 和类 Unix 系统，表示为 `\n`，是单个字符（ASCII 10）；CRLF（Carriage Return + Line Feed）使用于 Windows 系统，表示为 `\r\n`，包含两个字符：回车（ASCII 13）和换行（ASCII 10）。
+- windows 和wsl 的路径互相转换
 
+```Bash
 
+# 1. 将 Windows 路径转换为 WSL 路径
+wsl wslpath "F:/download"
+
+# 2. 将当前的CMD目录转换为 WSL 路径
+wsl wslpath "%cd%"
+
+# 在WSL中运行这些命令：
+
+# 1. 将 WSL 路径转换为 Windows 路径
+wsl wslpath -w "/mnt/f/download"
+
+# 2. 将当前的WSL目录转换为 Windows 路径
+wsl wslpath -w `pwd`
+```
 
 
 
@@ -528,12 +597,33 @@ taskkill /PID <pid> /F
 ```Bash
 sed -i '' $'s/\r$//' filename
 ```
+- 美化 power shell全教程 [https://www.kwchang0831.dev/dev-env/pwsh/oh-my-posh](https://www.kwchang0831.dev/dev-env/pwsh/oh-my-posh)
+
+    我的推荐主题：
+
+```PowerShell
+oh-my-posh init pwsh | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\montys.omp.json" | Invoke-Expression
+Import-Module posh-git
+
+```
+- windows 的文件管理器替代
+
+    [https://www.softwareok.com/](https://www.softwareok.com/)
 
 
 
+#### mac常见工具箱
+
+开发环境配置：
+
+[https://zhuanlan.zhihu.com/p/667029220](https://zhuanlan.zhihu.com/p/667029220)
+
+[https://zhuanlan.zhihu.com/p/114364577](https://zhuanlan.zhihu.com/p/114364577)
 
 
-#### 正则表达式相关
+
+#### 正则表达式
 
 - 正则表达式入门与练习
 
@@ -553,7 +643,7 @@ sed -i '' $'s/\r$//' filename
 
 
 
-#### docker相关
+#### docker
 
 【重点提示】对于ubuntu，如果你使用第一种命令行的方式安装了docker engine，切记不要安装docker desktop。或者直接就安装docker desktop。否则会找不到原来的镜像和container！这两并不兼容，详情请看官方说明。如果你不小心装了两个，想要恢复原来的docker，直接apt卸载docker desktop即可。
 
@@ -622,6 +712,25 @@ snap version
 
 - docker — use proxy（在容器内）（记得主机listen 172或者0.0.0.0
 
+```JSON
+# /root/.docker/config.json
+{
+  "auths": {},
+  "aliases": {
+    "builder": "buildx"
+  },
+  "proxies":
+  {
+    "default":
+    {
+    "httpProxy": "http://172.17.0.1:10808",
+    "httpsProxy": "http://172.17.0.1:10808"
+    }
+  }
+}
+
+```
+
 **方法一：**
 
 -it 以及加上了host命令进入docker后（比如：）
@@ -631,8 +740,6 @@ nvidia-docker run --name paddle-test -v $PWD:/paddle --network=host -it [registr
 ```
 
 此时在内部可以看到两个网卡，我们可以监听172ip的某个端口，然后使用
-
-
 
 export ALL_PROXY="[http://172.17.0.1:8888/](http://172.17.0.1:8888/)"
 
@@ -665,6 +772,23 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 **方法三：**运行终端版的v2ray之类的软件，后台运行后直接使用proxychains4的http代理即可（很多不能走socker）
 
+或者：
+
+```Python
+sudo mkdir -p /etc/systemd/system/docker.service.d
+sudo vim /etc/systemd/system/docker.service.d/http-proxy.conf
+# 在文件中添加以下内容：
+[Service]
+Environment="HTTP_PROXY=http://127.0.0.1:10808"
+Environment="HTTPS_PROXY=http://127.0.0.1:10808"
+Environment="NO_PROXY=localhost,127.0.0.1"
+# 重启守护进程
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+
+
 注释：如果而在终端遇到curl之类的奇怪的http问题，请env|grep查看有无奇怪的环境变量或者关闭proxy的系统proxy功能。因为无需开启也可以操作。
 
 - docker磁盘占用查看与缓存清理
@@ -692,7 +816,7 @@ ENV HTTPS_PROXY "http://172.17.0.1:8888/"
 
 
 
-#### 前端相关
+#### 前端
 
 nodejs下载安装与初始化方法
 
@@ -710,9 +834,29 @@ node npm切换版本
 nvm use xxx
 ```
 
+nvm 离线安装包 （执行 bash install.sh）
+
+[https://github.com/nvm-sh/nvm/tags](https://github.com/nvm-sh/nvm/tags)
 
 
-#### 其他
+
+
+
+#### 其他备份归档
+
+多线程并发解压缩文件
+
+[https://zhuanlan.zhihu.com/p/389817246](https://zhuanlan.zhihu.com/p/389817246)
+
+```Bash
+pigz -k your_file_name # 压缩文件
+
+tar -cvf - dir1 dir2 dir3 | pigz > output.tar.gz # 压缩文件夹
+
+unpigz -d your_file_name.gz
+```
+
+
 
 云服务器相关：
 
@@ -728,11 +872,7 @@ nvm use xxx
 
 
 
-电脑装机，组装一台电脑：
-
-去bilibili随便搜前二的 多看几遍
-
-我自己的配置：
+电脑装机，组装一台电脑：去bilibili随便搜前二的 多看几遍，以下为我自己的配置：
 
 ```text
 凯侠1T ：375
@@ -753,13 +893,190 @@ gradio的proxy冲突了怎么办？
 
 
 QT报错如何，类似 qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found. [https://neucrack.com/p/407](https://neucrack.com/p/407)
-  - export QT_QPA_PLATFORM="xcb"
-  - export QT_DEBUG_PLUGINS=1
-  - export QT_QPA_PLATFORM=offscreen
+
+```Bash
+export QT_QPA_PLATFORM="xcb"
+export QT_QPA_PLATFORM=offscreen
+export QT_DEBUG_PLUGINS=1
+```
 
 
 
-### 其他有趣的文章
+### 操作系统与体系结构
+
+南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（不建议一开始就读csapp
+
+赶时间可以直接看配套书。
+
+[https://www.icourse163.org/course/nju-1001625001#/info](https://www.icourse163.org/course/nju-1001625001#/info)
+
+前置：南京大学计算机基础实验（做了能让你真的变强）[https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
+
+  
+
+2022 南京大学拔尖计划《操作系统：设计与实现》 
+
+(蒋炎岩出品必看)
+
+课程主页：[http://jyywiki.cn/OS/2022/](http://jyywiki.cn/OS/2022/) (slides、示例代码)
+
+视频地址： [https://www.bilibili.com/video/BV1Cm4y1d7Ur/](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) 
+
+
+
+操作系统（哈工大李治军老师）课件可在下方链接获取。
+
+- 慕课网: [http://www.feemic.cn/mooc/icourse163/1002692015#。](http://www.feemic.cn/mooc/icourse163/1002692015#。)
+- 百度云链接：[https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw](https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw) 提取码：qoll
+- 配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
+
+
+
+MIT 6.S081: Operating System Engineering
+
+[https://csdiy.wiki/操作系统/MIT6.S081/](https://csdiy.wiki/操作系统/MIT6.S081/)
+
+
+
+浙江大学周亚金老师的操作系统课课件（写的很好，有操作和现代的一些规范备注）
+
+在Schedule中可以获取到全部课件
+
+[https://yajin.org/os2018fall/](https://yajin.org/os2018fall/)
+
+
+
+南京大学软件分析课程：
+
+[https://tai-e.pascal-lab.net/pa1.html#_1-作业导览](https://tai-e.pascal-lab.net/pa1.html#_1-作业导览)
+
+[https://space.bilibili.com/2919428/channel/series](https://space.bilibili.com/2919428/channel/series)
+
+
+
+教科书《计算机体系结构基础》（胡伟武等，第三版）的开源版本
+
+[https://github.com/foxsen/archbase](https://github.com/foxsen/archbase)
+
+
+
+【MIT公开课】6.172 软件性能工程
+
+[https://www.bilibili.com/video/BV1wA411h7N7/](https://www.bilibili.com/video/BV1wA411h7N7/)
+
+
+
+Online 8086 EMULATOR
+
+[https://yjdoc2.github.io/8086-emulator-web/](https://yjdoc2.github.io/8086-emulator-web/)
+
+
+
+**其他有趣文章:**
+
+如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
+
+从一个ELF程序的加载窥探操作系统内核:
+
+[https://blog.csdn.net/goolyoh/category_11298420.html](https://blog.csdn.net/goolyoh/category_11298420.html)
+
+如何实现最小的hello world?
+
+[https://cjting.me/2020/12/10/tiny-x64-helloworld/](https://cjting.me/2020/12/10/tiny-x64-helloworld/)
+
+Linux 内核揭密（一系列关于 Linux 内核和其内在机理的帖子。）
+
+[https://xinqiu.gitbooks.io/linux-inside-zh/content/](https://xinqiu.gitbooks.io/linux-inside-zh/content/)
+
+
+
+### 计算机网络
+
+tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/](http://plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/)
+
+
+
+这个博主写了网络编程相关的一系列文章：[https://juejin.cn/user/862486453028888/posts](https://juejin.cn/user/862486453028888/posts)
+
+其中我最喜欢：Nginx一网打尽：动静分离、压缩、缓存、黑白名单、跨域、高可用、性能优化：
+
+[https://juejin.cn/post/7112826654291918855](https://juejin.cn/post/7112826654291918855)
+
+
+
+有前端Nginx服务器在线配置，及大改善修改nginx的配置体验
+
+[https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN)
+
+项目来源：[https://github.com/digitalocean/nginxconfig.io](https://github.com/digitalocean/nginxconfig.io)
+
+
+
+### 数据结构与算法
+
+hello 算法，图文并茂的简单入门
+
+[https://www.hello-algo.com/](https://www.hello-algo.com/)
+
+程序员如何准备面试中的算法
+
+[https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html)
+
+labuladong 的算法小抄
+
+[https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
+
+ACWING的课
+
+[https://www.acwing.com/activity/](https://www.acwing.com/activity/)
+
+GitHub's largest open-source algorithm library
+
+[https://the-algorithms.com/](https://the-algorithms.com/)
+
+数据结构与算法可视化
+
+[https://visualgo.net/zh](https://visualgo.net/zh)
+
+leetcode hot 100 learn video
+
+[https://www.bilibili.com/video/BV1ta411a7UK/](https://www.bilibili.com/video/BV1ta411a7UK/)
+
+
+
+### 设计模式
+
+一个图文并茂的设计模式学习网站
+
+[refactoringguru.cn/design-patterns](http://refactoringguru.cn/design-patterns) 
+
+
+
+### 程序性能优化
+
+性能优化实战收集（包括听风扇声音测性能）
+
+[https://github.com/plantegg/programmer_case](https://github.com/plantegg/programmer_case)
+
+byte-unixbench  用于测试linux环境下的benchmark测试（包括云服务器）
+
+[https://github.com/kdlucas/byte-unixbench](https://github.com/kdlucas/byte-unixbench)
+
+
+
+### 高性能计算
+
+华东师范大学高等数值分析（高性能计算，并行计算）(Parallel and High Performance Computing)
+
+[https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/](https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/)
+
+常用MPI、cublas等高性能基础库调用api快速入门
+
+[https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html](https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html)
+
+
+
+### 文章与博客推荐
 
 有关linux的基础讲解，有配图和自己的理解，推荐一读。
 
@@ -867,278 +1184,9 @@ linux inside  讲解了一下linux内部运行机制，比如Program startup pro
 
 
 
-### 操作系统与体系结构
-
-南京大学计算机基础（袁春风）CSAPP的青春版，但比csapp好懂得多（强烈不建议一开始就读csapp
-
-赶时间可以直接看配套书。
-
-[https://www.icourse163.org/course/nju-1001625001#/info](https://www.icourse163.org/course/nju-1001625001#/info)
-
-前置：南京大学计算机基础实验（做了能让你真的变强）[https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html](https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html)
-
-  
-
-2022 南京大学拔尖计划《操作系统：设计与实现》 
-
-(蒋炎岩 我永远的超级无敌酷炫宝藏男神，还有什么好说的呢？没有他我就永远不懂计算机的美丽 
-
-当然包云岗老师也是我的男神哈哈哈哈哈哈)
-
-课程主页：[http://jyywiki.cn/OS/2022/](http://jyywiki.cn/OS/2022/) (slides、示例代码)
-
-视频地址： [https://www.bilibili.com/video/BV1Cm4y1d7Ur/](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) 
-
-
-
-操作系统（哈工大李治军老师）课件可在下方链接获取。
-
-- 慕课网: [http://www.feemic.cn/mooc/icourse163/1002692015#。](http://www.feemic.cn/mooc/icourse163/1002692015#。)
-- 百度云链接：[https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw](https://pan.baidu.com/s/1h2aEk6A_DGpXkZvRtNmeUw) 提取码：qoll
-- 配套实验课：[https://www.shiyanlou.com/courses/115](https://www.shiyanlou.com/courses/115)
-
-
-
-MIT 6.S081: Operating System Engineering
-
-[https://csdiy.wiki/操作系统/MIT6.S081/](https://csdiy.wiki/操作系统/MIT6.S081/)
-
-
-
-浙江大学周亚金老师的操作系统课课件（写的很好，有操作和现代的一些规范备注，我很喜欢）
-
-在Schedule中可以获取到全部课件
-
-[https://yajin.org/os2018fall/](https://yajin.org/os2018fall/)
-
-
-
-南京大学软件分析课程：
-
-[https://tai-e.pascal-lab.net/pa1.html#_1-作业导览](https://tai-e.pascal-lab.net/pa1.html#_1-作业导览)
-
-[https://space.bilibili.com/2919428/channel/series](https://space.bilibili.com/2919428/channel/series)
-
-
-
-教科书《计算机体系结构基础》（胡伟武等，第三版）的开源版本
-
-[https://github.com/foxsen/archbase](https://github.com/foxsen/archbase)
-
-
-
-【MIT公开课】6.172 软件性能工程
-
-[https://www.bilibili.com/video/BV1wA411h7N7/](https://www.bilibili.com/video/BV1wA411h7N7/)
-
-
-
-Online 8086 EMULATOR
-
-[https://yjdoc2.github.io/8086-emulator-web/](https://yjdoc2.github.io/8086-emulator-web/)
-
-
-
-**其他有趣文章:**
-
-如何实现一个elf的loader：[https://blog.csdn.net/GoolyOh/article/details/119801160](https://blog.csdn.net/GoolyOh/article/details/119801160)
-
-从一个ELF程序的加载窥探操作系统内核:
-
-[https://blog.csdn.net/goolyoh/category_11298420.html](https://blog.csdn.net/goolyoh/category_11298420.html)
-
-如何实现最小的hello world?
-
-[https://cjting.me/2020/12/10/tiny-x64-helloworld/](https://cjting.me/2020/12/10/tiny-x64-helloworld/)
-
-Linux 内核揭密（一系列关于 Linux 内核和其内在机理的帖子。）
-
-[https://xinqiu.gitbooks.io/linux-inside-zh/content/](https://xinqiu.gitbooks.io/linux-inside-zh/content/)
-
-
-
-### 计算机网络学习
-
-课程类待补充
-
-
-其他文章：
-
-tcp高级疑难汇总案例分析：[plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/](http://plantegg.github.io/2021/02/14/TCP疑难问题案例汇总/)
-
-
-
-这个博主写了网络编程相关的一系列文章：[https://juejin.cn/user/862486453028888/posts](https://juejin.cn/user/862486453028888/posts)
-
-其中我最喜欢：Nginx一网打尽：动静分离、压缩、缓存、黑白名单、跨域、高可用、性能优化：
-
-[https://juejin.cn/post/7112826654291918855](https://juejin.cn/post/7112826654291918855)
-
-
-
-有前端Nginx服务器在线配置，及大改善修改nginx的配置体验
-
-[https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN)
-
-项目来源：[https://github.com/digitalocean/nginxconfig.io](https://github.com/digitalocean/nginxconfig.io)
-
-
-
-### 数据结构与算法
-
-hello 算法，图文并茂的简单入门
-
-[https://www.hello-algo.com/](https://www.hello-algo.com/)
-
-程序员如何准备面试中的算法
-
-[https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/00.01.html)
-
-labuladong 的算法小抄
-
-[https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
-
-ACWING的课
-
-[https://www.acwing.com/activity/](https://www.acwing.com/activity/)
-
-GitHub's largest open-source algorithm library
-
-[https://the-algorithms.com/](https://the-algorithms.com/)
-
-数据结构与算法可视化
-
-[https://visualgo.net/zh](https://visualgo.net/zh)
-
-
-
-### 设计模式
-
-一个图文并茂的设计模式学习网站
-
-[refactoringguru.cn/design-patterns](http://refactoringguru.cn/design-patterns) 
-
-
-
-### 高性能计算
-
-华东师范大学高等数值分析（高性能计算，并行计算）(Parallel and High Performance Computing)
-
-[https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/](https://math.ecnu.edu.cn/~jypan/Teaching/ParaComp/)
-
-
-
-## 高性能计算与编译器
-
-常用MPI、cublas等高性能基础库调用api快速入门
-
-[https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html](https://docs.hpc.sjtu.edu.cn/app/compilers_and_languages/intel_mpi.html)
-
-
-
-### mlir
-
-LLVM IR入门指南
-
-[https://github.com/Evian-Zhang/llvm-ir-tutorial](https://github.com/Evian-Zhang/llvm-ir-tutorial)
-
-动手写mlir by strint
-
-[http://strint.github.io/220220-mlir/220220-mlir.html](http://strint.github.io/220220-mlir/220220-mlir.html)
-
-Toy Tutorial : the implementation of a basic toy language on top of MLIR.
-
-[https://mlir.llvm.org/docs/Tutorials/Toy/](https://mlir.llvm.org/docs/Tutorials/Toy/)
-
-Kaileidoscope: LLVM Tutorial Chinese version(中文版)
-
-[https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/](https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/)
-
-
-
-
-
-### webgpu
-
-WebGPU Fundamentals
-
-[https://webgpufundamentals.org/](https://webgpufundamentals.org/)
-
-wgpu 中文版跨平台开发（Web + App）教程：
-
-[https://jinleili.github.io/learn-wgpu-zh/](https://jinleili.github.io/learn-wgpu-zh/)
-
-### CUDA编程
-
-CUDA Crash Cours BY CoffeeBeforeArch
-
-[https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1](https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1)
-
-官方入门文档
-
-[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
-
-适合入门的小型Python编译器项目（包含cuda相关内容）
-
-[https://zhuanlan.zhihu.com/p/603352525](https://zhuanlan.zhihu.com/p/603352525)
-
-cuda学习教程
-
-[https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
-
-CUDA-Programming-Guide-in-Chinese
-
-[https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese](https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese)
-
-CUDA C++ Programming Guide
-
-[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
-
-CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
-
-[https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
-
-CS344 Introduction to Parallel Programming class code
-
-[https://github.com/udacity/cs344](https://github.com/udacity/cs344)
-
-[https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
-
-谭升的博客，CUDA编程
-
-[https://face2ai.com/program-blog/](https://face2ai.com/program-blog/)
-
-很好的各种各样CUDA的优化文章合计强烈推荐
-
-[https://github.com/YconquestY/Needle/blob/main/backend.md](https://github.com/YconquestY/Needle/blob/main/backend.md)
-
-CUDA samples CUDA官方案例
-
-[https://github.com/NVIDIA/CUDALibrarySamples](https://github.com/NVIDIA/CUDALibrarySamples)
-
-
-
-#### CUDA 课本相关
-
-Programming-Massively-Parallel-Processors 相关习题作业
-
-[https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md](https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md)
-
-[https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu](https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu)
-
-[https://github.com/Syencil/Programming_Massively_Parallel_Processors](https://github.com/Syencil/Programming_Massively_Parallel_Processors)
-
-
-
-### MPI通信
-
-如何同时实现高性能并行+分布式计算？| Taichi x MPI4Py - 太极图形的文章 - 知乎 [https://zhuanlan.zhihu.com/p/581896682](https://zhuanlan.zhihu.com/p/581896682)
-
-
-
 ## 深度学习大类
 
-### NVIDIA环境配置常见问题
+### NVIDIA环境配置指南
 
 - 显卡驱动安装快速方法：
 
@@ -1238,11 +1286,68 @@ NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-
 
 
 
-### 理论基础（时间少直接看李沐/李宏毅）
+### 通识教程
 
-**周志华**
+#### 基础课程
 
-南瓜书主页
+斯坦福 CS336: Language Modeling from Scratch 现代大语言模型理解和入门，高性能推理（非常现代的课程 推荐！）
+
+[https://stanford-cs336.github.io/spring2025/](https://stanford-cs336.github.io/spring2025/)
+
+
+
+伯克利 CS 182 深度学习：深度神经网络设计、可视化与理解 
+
+Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/) 
+
+[https://www.bilibili.com/video/BV1PK4y1U751](https://www.bilibili.com/video/BV1PK4y1U751)
+
+
+
+University of Waterloo CS 886: Recent Advances on Foundation Models
+
+[https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/](https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/)
+
+
+
+EECS 498-007 / 598-005
+
+[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/)
+
+[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html)
+
+
+
+CV相关，有关各种国外AIlab的课 某科学的计算机视觉学习路线
+
+某科学的计算机视觉学习路线 - Zircon的文章 - 知乎
+[https://zhuanlan.zhihu.com/p/418853202](https://zhuanlan.zhihu.com/p/418853202)
+
+
+
+#### 基础实践
+
+Anthropic 核心成员写的现代深度学习教材，包括CNN、transformer可解释性、强化学习，拥有大量有趣实验，非常推荐。
+
+[https://arena3-chapter1-transformer-interp.streamlit.app/](https://arena3-chapter1-transformer-interp.streamlit.app/)
+
+基础方向的经典 code，手写transformer、sr、img-caption等 [https://github.com/sgrvinod](https://github.com/sgrvinod)
+
+案例式入门深度学习，每个算法都与有最小data和code  [https://course.fast.ai/](https://course.fast.ai/) 
+
+paper with code 做法
+
+[https://nn.labml.ai/](https://nn.labml.ai/)
+
+Deep Learning Paper Implementations：60+ Implementations/tutorials of deep learning papers with side-by-side notes  including transformers (original, xl, switch, feedback, vit, ...),
+
+[https://github.com/labmlai/annotated_deep_learning_paper_implementations](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+
+
+
+#### 理论知识
+
+南瓜书主页（理论知识时间少直接看李沐/李宏毅）
 
 [https://datawhalechina.github.io/pumpkin-book/#/](https://datawhalechina.github.io/pumpkin-book/#/)
 
@@ -1253,30 +1358,6 @@ NVIDIA显卡计算能力？(如sm75）查询：[https://developer.nvidia.com/zh-
 周志华《机器学习》笔记（主要是文本） by yv.l1.pnn
 
  [https://zhuanlan.zhihu.com/p/134089340](https://zhuanlan.zhihu.com/p/134089340)
-
-
-
-### **深度学习网课**
-
-Anthropic 核心成员写的现代深度学习教材，包括CNN、transformer可解释性、强化学习，拥有大量有趣实验，非常推荐。
-
-[https://arena3-chapter1-transformer-interp.streamlit.app/](https://arena3-chapter1-transformer-interp.streamlit.app/)
-
-
-
-基础方向的经典 code [https://github.com/sgrvinod](https://github.com/sgrvinod)
-
-
-
-案例式入门深度学习，每个算法都与有最小data和code  [https://course.fast.ai/](https://course.fast.ai/) 
-
-
-
-EECS 498-007 / 598-005
-
-[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/)
-
-[https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html](https://web.eecs.umich.edu/~justincj/teaching/eecs498/FA2020/schedule.html)
 
 
 
@@ -1312,46 +1393,15 @@ EECS 498-007 / 598-005
 
 
 
-伯克利 CS 182 深度学习：深度神经网络设计、可视化与理解 
-
-Home: [https://cs182sp21.github.io/](https://cs182sp21.github.io/) 
-
-[https://www.bilibili.com/video/BV1PK4y1U751](https://www.bilibili.com/video/BV1PK4y1U751)
-
-
-
-University of Waterloo CS 886: Recent Advances on Foundation Models
-
-[https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/](https://cs.uwaterloo.ca/~wenhuche/teaching/cs886/)
-
-
-
-CV相关，有关各种国外AIlab的课 某科学的计算机视觉学习路线
-
-某科学的计算机视觉学习路线 - Zircon的文章 - 知乎
-[https://zhuanlan.zhihu.com/p/418853202](https://zhuanlan.zhihu.com/p/418853202)
-
-
-
-paper with code 做法
-
-[https://nn.labml.ai/](https://nn.labml.ai/)
-
-
-
-### 深度学习动手项目
+#### 手写网络
 
 小土堆 pytorch学习
 
 [https://space.bilibili.com/203989554](https://space.bilibili.com/203989554?spm_id_from=333.337.search-card.all.click)
 
-
-
 霹雳吧啦Wz 图像分类篇章 以及目标检测
 
 [https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290](https://space.bilibili.com/18161609/channel/collectiondetail?sid=48290)
-
-
 
 手写YOLO系列和fast rcnn系列：
 
@@ -1359,33 +1409,62 @@ paper with code 做法
 
 [https://space.bilibili.com/472467171](https://space.bilibili.com/472467171)
 
-
-
 学会自己训练一个esrgan等超分辨率模型
 
  [https://www.youtube.com/watch?v=iH7-eYlf7eg](https://www.youtube.com/watch?v=iH7-eYlf7eg)
-
-
 
 超分辨率训练框架
 
 [https://github.com/muslll/neosr](https://github.com/muslll/neosr)
 
-
-
 手写各种论文、复现各种论文项目
 
 [https://github.com/lucidrains](https://github.com/lucidrains)
-
-
 
 手写复现各种 vit 网络
 
 [https://github.com/lucidrains/vit-pytorch](https://github.com/lucidrains/vit-pytorch)
 
+Machine learning, in numpy from scratch
+
+[https://github.com/ddbourgin/numpy-ml](https://github.com/ddbourgin/numpy-ml)
 
 
-### 开源库/项目
+
+#### pytorch
+
+快速下载torch安装包（wget下载然后直接pip install）
+
+[https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
+
+快速备忘torch gpu安装：[https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/)
+
+```Bash
+pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+```
+
+xformers与pytorch版本对应
+
+```Bash
+2.3.0  pip install xformers==0.0.26.post1
+2.2.2  pip install xformers==0.0.25.post1
+2.2.0  pip install xformers==0.0.24
+2.1.2  pip install xformers==0.0.23.post1
+2.1.0  pip install xformers==0.0.22.post7
+```
+
+pytorch底层源码解析（一个很不错的博主）
+
+[https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
+
+
+
+### 值得收藏的开源仓库
 
 OpenMMLab
 
@@ -1395,15 +1474,9 @@ OpenMMLab
 
 
 
-paddle
+Paddle深度学习框架-百度
 
 [https://github.com/PaddlePaddle](https://github.com/PaddlePaddle)
-
-
-
-Deep Learning Paper Implementations
-
-[https://github.com/labmlai/annotated_deep_learning_paper_implementations](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 
 
 
@@ -1441,7 +1514,7 @@ Awesome Deep Learning
 
 
 
-### 数据集类网站
+### 数据集
 
 [https://universe.roboflow.com/](https://universe.roboflow.com/)
 
@@ -1467,15 +1540,33 @@ Easily turn large sets of image urls to an image dataset. Can download, resize a
 
 
 
-### 3D感知相关
-
-从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
-
-[https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch](https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch)
 
 
+### 大语言模型实践
 
-### AIGC
+这是一个从头训练大语言模型的项目，包括预训练、微调和直接偏好优化，模型拥有1B参数，支持中英文。
+
+[https://github.com/qiufengqijun/mini_qwen](https://github.com/qiufengqijun/mini_qwen)
+
+[https://zhuanlan.zhihu.com/p/19353252686](https://zhuanlan.zhihu.com/p/19353252686)
+
+基于 Qwen2.5-0.5B 微调训练 Ner 命名实体识别任务
+
+[https://blog.csdn.net/qq_43692950/article/details/142631780](https://blog.csdn.net/qq_43692950/article/details/142631780)
+
+使用Lora对Qwen1.5-7B进行（增量）预训练
+
+[https://zhuanlan.zhihu.com/p/698826811](https://zhuanlan.zhihu.com/p/698826811)
+
+Modded-NanoGPT: reaches the same performance as Karpathy's original GPT-2 trainer in: 3 minutes on 8xH100 (original trainer needed 45) 0.73B tokens (original trainer needed 10B)
+
+[https://github.com/KellerJordan/modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt)
+
+
+
+### 计算机视觉
+
+#### AIGC
 
 不错的aigc设计资讯网 
 
@@ -1493,36 +1584,21 @@ comfyui工作流分享网站
 
 [https://openart.ai/workflows/home?workflowSort=featured](https://openart.ai/workflows/home?workflowSort=featured)
 
+webui的安装相关教程合集
+
+[https://cloud.tencent.com/developer/news/1033320](https://cloud.tencent.com/developer/news/1033320)
+
+
+
+#### 3D
+
+从零开始搭一套激光SLAM出来, 通过代码的角度一点一点地深入学习激光SLAM.
+
+[https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch](https://github.com/xiangli0608/Creating-2D-laser-slam-from-scratch)
+
 
 
 ### 其他
-
-快速下载torch安装包（wget下载然后直接pip install）
-
-[https://download.pytorch.org/whl/torch/](https://download.pytorch.org/whl/torch/)
-
-快速备忘torch gpu安装：[https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/)
-
-```Bash
-pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
-
-pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1
-
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-```
-
-xformers与pytorch版本对应
-
-```Bash
-2.3.0  pip install xformers==0.0.26.post1
-2.2.2  pip install xformers==0.0.25.post1
-2.2.0  pip install xformers==0.0.24
-2.1.2  pip install xformers==0.0.23.post1
-2.1.0  pip install xformers==0.0.22.post7
-```
-
-
 
 
 
@@ -1558,11 +1634,9 @@ Gradio常见疑难解答：
 
 
 
-pytorch底层源码解析（一个很不错的博主）
+### MLSYS
 
-[https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5](https://www.cnblogs.com/rossiXYZ/category/1626268.html?page=5)
-
-### 深度学习系统
+#### 通识课基础
 
 ML system 入坑指南
 
@@ -1632,7 +1706,7 @@ Programming Heterogeneous Computing Systems with GPUs and other Accelerators (22
 
 
 
- MiniTorch
+MiniTorch
 
 MiniTorch is a diy teaching library for machine learning engineers who wish to learn about the internal concepts underlying deep learning systems. It is a pure Python re-implementation of the Torch API designed to be simple, easy-to-read, tested, and incremental. The final library can run Torch code.
 
@@ -1643,64 +1717,6 @@ MiniTorch is a diy teaching library for machine learning engineers who wish to l
 libtorch 非官方教程
 
 [https://github.com/DataXujing/libtorch_tutorials/tree/main](https://github.com/DataXujing/libtorch_tutorials/tree/main)
-
-
-
-### 深度学习部署
-
-GiantPandaCV
-
-国内最好的部署相关公众平台之一，涉及部署的内容比较多且硬核，五星推荐。
-
-[http://giantpandacv.com/resources/](http://giantpandacv.com/resources/)
-
-[http://giantpandacv.com/project/部署优化/](http://giantpandacv.com/project/部署优化/)
-
-
-
-ncnn推理框架开发版测试
-
-[https://zhuanlan.zhihu.com/p/458139435](https://zhuanlan.zhihu.com/p/458139435)
-
-
-
-Build & Share Delightful Machine Learning Apps
-
-[https://gradio.app/](https://gradio.app/)
-
-
-
-Optimum :
-
- Optimum is an extension of 🤗 Transformers that provides a set of performance optimization tools to train and run models on targeted hardware with maximum efficiency.
-
-[https://huggingface.co/docs/optimum/index](https://huggingface.co/docs/optimum/index)
-
-
-
-nvidia NGC docker tensorrt
-
-[https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags)
-
-22.10 cuda118; 22.02版本   cuda 116   ;  21.08版本  cuda114 
-
-
-
-A tool convert TensorRT engine/plan to a fake onnx
-
-[https://github.com/triple-Mu/TensorRT2ONNX](https://github.com/triple-Mu/TensorRT2ONNX)
-
-
-
-Composer is a PyTorch library that enables you to train neural networks faster, at lower cost, and to higher accuracy.
-
-[https://github.com/mosaicml/composer](https://github.com/mosaicml/composer)
-
-
-
-tensorrt samples学习文档
-
-[https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section](https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section)
 
 
 
@@ -1776,15 +1792,75 @@ Tensor library for machine learning
 
 [https://github.com/ggerganov/ggml](https://github.com/ggerganov/ggml)
 
+Modern columnar data format for ML and LLMs implemented in Rust. Convert from parquet in 2 lines of code for 100x faster random access,dataset faster
+
+[https://github.com/lancedb/lance](https://github.com/lancedb/lance)
 
 
-#### 实例参考
+
+#### 实战参考
+
+GiantPandaCV
+
+国内最好的部署相关公众平台之一，涉及部署的内容比较多且硬核，五星推荐。
+
+[http://giantpandacv.com/resources/](http://giantpandacv.com/resources/)
+
+[http://giantpandacv.com/project/部署优化/](http://giantpandacv.com/project/部署优化/)
+
+
+
+ncnn推理框架开发版测试
+
+[https://zhuanlan.zhihu.com/p/458139435](https://zhuanlan.zhihu.com/p/458139435)
+
+
+
+Build & Share Delightful Machine Learning Apps
+
+[https://gradio.app/](https://gradio.app/)
+
+
+
+Optimum :
+
+ Optimum is an extension of 🤗 Transformers that provides a set of performance optimization tools to train and run models on targeted hardware with maximum efficiency.
+
+[https://huggingface.co/docs/optimum/index](https://huggingface.co/docs/optimum/index)
+
+
+
+nvidia NGC docker tensorrt
+
+[https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorrt/tags)
+
+22.10 cuda118; 22.02版本   cuda 116   ;  21.08版本  cuda114 
+
+
+
+A tool convert TensorRT engine/plan to a fake onnx
+
+[https://github.com/triple-Mu/TensorRT2ONNX](https://github.com/triple-Mu/TensorRT2ONNX)
+
+
+
+Composer is a PyTorch library that enables you to train neural networks faster, at lower cost, and to higher accuracy.
+
+[https://github.com/mosaicml/composer](https://github.com/mosaicml/composer)
+
+
+
+tensorrt samples学习文档
+
+[https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section](https://docs.nvidia.com/deeplearning/tensorrt/sample-support-guide/index.html#python_samples_section)
+
+
 
 各种开发版的基础功能调通
 
 [https://blog.csdn.net/sxj731533730](https://blog.csdn.net/sxj731533730)
 
-待测试
+ai 部署，工作人士可参考内功心法
 
 [成蹊 - 知乎 (zhihu.com)](https://www.zhihu.com/people/li-li-fu-70/posts)
 
@@ -1836,27 +1912,129 @@ A repository for storing models that have been inter-converted between various f
 
 [https://github.com/PINTO0309/PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo)
 
-
-
-#### 手写类课程
-
 手写量化、剪枝、蒸馏
 
 [https://github.com/mepeichun/Efficient-Neural-Network-Bilibili](https://github.com/mepeichun/Efficient-Neural-Network-Bilibili)
 
 
 
-#### AIGC
+#### MLIR
 
-webui的安装相关教程合集
+LLVM IR入门指南
 
-[https://cloud.tencent.com/developer/news/1033320](https://cloud.tencent.com/developer/news/1033320)
+[https://github.com/Evian-Zhang/llvm-ir-tutorial](https://github.com/Evian-Zhang/llvm-ir-tutorial)
+
+动手写mlir by strint
+
+[http://strint.github.io/220220-mlir/220220-mlir.html](http://strint.github.io/220220-mlir/220220-mlir.html)
+
+Toy Tutorial : the implementation of a basic toy language on top of MLIR.
+
+[https://mlir.llvm.org/docs/Tutorials/Toy/](https://mlir.llvm.org/docs/Tutorials/Toy/)
+
+Kaileidoscope: LLVM Tutorial Chinese version(中文版)
+
+[https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/](https://kaleidoscope-llvm-tutorial-zh-cn.readthedocs.io/zh_CN/latest/)
 
 
 
-## python
+#### webgpu
 
-### **anaconda基础**
+WebGPU Fundamentals
+
+[https://webgpufundamentals.org/](https://webgpufundamentals.org/)
+
+wgpu 中文版跨平台开发（Web + App）教程：
+
+[https://jinleili.github.io/learn-wgpu-zh/](https://jinleili.github.io/learn-wgpu-zh/)
+
+
+
+#### CUDA编程
+
+CUDA Crash Cours BY CoffeeBeforeArch
+
+[https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1](https://www.youtube.com/watch?v=2NgpYFdsduY&list=PLxNPSjHT5qvtYRVdNN1yDcdSl39uHV_sU&index=1)
+
+官方入门文档
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+适合入门的小型Python编译器项目（包含cuda相关内容）
+
+[https://zhuanlan.zhihu.com/p/603352525](https://zhuanlan.zhihu.com/p/603352525)
+
+cuda学习教程
+
+[https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805](https://space.bilibili.com/37270391/channel/seriesdetail?sid=1454805)
+
+CUDA-Programming-Guide-in-Chinese
+
+[https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese](https://github.com/HeKun-NVIDIA/CUDA-Programming-Guide-in-Chinese)
+
+CUDA C++ Programming Guide
+
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+
+CUDA Freshman:Some of them are from the book "Professional CUDA C Programming"
+
+[https://github.com/Tony-Tan/CUDA_Freshman](https://github.com/Tony-Tan/CUDA_Freshman)
+
+CS344 Introduction to Parallel Programming class code
+
+[https://github.com/udacity/cs344](https://github.com/udacity/cs344)
+
+[https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
+
+谭升的博客，CUDA编程
+
+[https://face2ai.com/program-blog/](https://face2ai.com/program-blog/)
+
+很好的各种各样CUDA的优化文章合计强烈推荐
+
+[https://github.com/YconquestY/Needle/blob/main/backend.md](https://github.com/YconquestY/Needle/blob/main/backend.md)
+
+CUDA samples CUDA官方案例
+
+[https://github.com/NVIDIA/CUDALibrarySamples](https://github.com/NVIDIA/CUDALibrarySamples)
+
+
+
+#### CUDA 课本相关
+
+Programming-Massively-Parallel-Processors 相关习题作业
+
+[https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md](https://github.com/guanrenyang/Programming-Massively-Parallel-Processors/blob/master/Chapter04/README.md)
+
+[https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu](https://github.com/nvixnu/pmpp__programming_massively_parallel_processors/blob/master/chapter_04/ch4__matrix_mul.cu)
+
+[https://github.com/Syencil/Programming_Massively_Parallel_Processors](https://github.com/Syencil/Programming_Massively_Parallel_Processors)
+
+
+
+#### MPI通信
+
+如何同时实现高性能并行+分布式计算？| Taichi x MPI4Py - 太极图形的文章 - 知乎 [https://zhuanlan.zhihu.com/p/581896682](https://zhuanlan.zhihu.com/p/581896682)
+
+
+
+#### 数据处理加速
+
+数据集读取神器 webdataset：可以帮助加快硬盘图片的读取速度，尤其是机械硬盘（在机械硬盘上，webdataset基本上带来了10倍的读取速度提升。
+[https://zhuanlan.zhihu.com/p/412772439](https://zhuanlan.zhihu.com/p/412772439)
+[https://webdataset.github.io/webdataset/](https://webdataset.github.io/webdataset/)
+
+
+
+数据预处理加速神器（cpu或者gpu都可以用，比torchvision块一倍）：NVIDIA DALI图片预处理速度测试与对比 - asdfgh的文章 - 知乎
+
+ [https://zhuanlan.zhihu.com/p/574018567](https://zhuanlan.zhihu.com/p/574018567)
+
+
+
+## Python
+
+### Anaconda
 
 - 国内的anaconda镜像下载
 
@@ -1979,7 +2157,7 @@ requests库官方手册（交互常用，主要需理解请求头等）
 
 
 
-### 实例项目等
+### Python 参考项目
 
 supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志部署
 
@@ -1999,7 +2177,7 @@ supervisor + gunicorn + flask 高并发的接口 + 完整（标准）的日志�
 
 
 
-### 常见问题解答
+### 常见问题 QA
 
 - Python requests.exceptions.SSLError: EOF occurred in violation of protocol
 
@@ -2087,7 +2265,7 @@ jupyter kernelspec list
 
 ## C++
 
-**c++入门学习（看自己兴趣按需索取）**
+**c++入门学习**
 
 - 浙大翁恺（简单，适合快速过一遍）：[https://www.bilibili.com/video/BV1dE41167hJ?p=34](https://www.bilibili.com/video/BV1dE41167hJ?p=34)
 - 南科大于仕琪（现代化，十分推荐）[https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1](https://www.bilibili.com/video/BV1Vf4y1P7pq?p=1)
@@ -2301,21 +2479,15 @@ ffmpeg原理 罗上文
 
 
 
+## 产品与心理学
 
+飞书设计团队推出的《认知偏差知识手册 》，将人在思考和决策时容易犯的67种认知偏差总结而成，
 
-## 程序性能优化
-
-性能优化实战收集（包括听风扇声音测性能）
-
-[https://github.com/plantegg/programmer_case](https://github.com/plantegg/programmer_case)
-
-byte-unixbench  用于测试linux环境下的benchmark测试（包括云服务器）
-
-[https://github.com/kdlucas/byte-unixbench](https://github.com/kdlucas/byte-unixbench)
+[https://s75w5y7vut.feishu.cn/docs/doccn3BatnScBJe7wD7K3S5poFf](https://s75w5y7vut.feishu.cn/docs/doccn3BatnScBJe7wD7K3S5poFf)
 
 
 
-## 学术论文
+## 科研工具
 
 查询接受率的网站:
 
@@ -2351,9 +2523,17 @@ AI阅读论文
 
 [https://www.aminer.cn/](https://www.aminer.cn/)
 
+引用关系互相查找论文
+
+[https://www.connectedpapers.com/](https://www.connectedpapers.com/)
+
+很好用的论文搜索,比谷歌学术好用带 AI增强
+
+[https://www.semanticscholar.org/](https://www.semanticscholar.org/)
 
 
-## 其他日常使用网站
+
+## 其他推荐网站与工具
 
 有关思维导图的代码（类似markdown）生成：
 
@@ -2465,9 +2645,17 @@ arxiv 总结  推送
 
 [https://mm-llms.github.io/](https://mm-llms.github.io/)
 
+pdf编辑工具、pdf目录编辑
+
+[https://blog.csdn.net/qq_46106285/article/details/134104985](https://blog.csdn.net/qq_46106285/article/details/134104985)
+
+一款开源的桌面下载工具，能够从各种网站下载图片/视频/音乐/文本等资源
+
+[https://github.com/KurtBestor/Hitomi-Downloader](https://github.com/KurtBestor/Hitomi-Downloader)
 
 
-## 有趣的项目
+
+## 有趣的项目和工具
 
 在自己电脑运行Stable Diffusion和完整项目下载
 
@@ -2523,9 +2711,13 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 [https://clarity.microsoft.com/](https://clarity.microsoft.com/)
 
+chrome 网页前端技术分析 BuiltWith Technology Profiler
+
+chrome爬虫 imageassistant-batch-imag
 
 
-## PPT之神
+
+## PPT制作
 
 各种软件架构图
 
@@ -2549,13 +2741,11 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 
 
 
-## 心理健康建设
+## 人生
 
 如何在工作中学习（好的方法论）
 
 [https://plantegg.github.io/2018/05/24/如何在工作中学习V1.1/](https://plantegg.github.io/2018/05/24/如何在工作中学习V1.1/)
-
-
 
 2017年买房经历总结出来的买房购房知识
 
@@ -2568,8 +2758,6 @@ Github下载很慢，用上了这个插件后，下载速度嗖嗖嗖的
 2020年11月上海购房指南
 
 [github.com/ayuer/shanghai_house_knowledge](http://github.com/ayuer/shanghai_house_knowledge)
-
-
 
 
 
@@ -2651,22 +2839,28 @@ kazam ubuntu下最轻便的录制工具，可以直接apt install kazam
 
 [https://github.com/qarmin/czkawka/releases/tag/7.0.0](https://github.com/qarmin/czkawka/releases/tag/7.0.0)
 
+Netflix级字幕切割、翻译、对齐、甚至加上配音，一键全自动视频搬运AI字幕组
+
+[https://github.com/Huanshere/VideoLingo](https://github.com/Huanshere/VideoLingo)
+
+Discover Open Source Alternatives to Popular Software [https://openalternative.co/](https://openalternative.co/)
+
+对标nvidia视频流分析工具的开源视频流分析框架
+
+[https://github.com/sherlockchou86/VideoPipe](https://github.com/sherlockchou86/VideoPipe)
 
 
-## startup协作工具
+
+### 前后端一栈式工具
 
 Ship your startup in days,not weeks
 
-[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端健权等
+[https://shipfa.st/](https://shipfa.st/)  包含一切所需的前后端鉴权等
 
 
 
-## 英文论文好用工具
+## Reference
 
-TextRanch 句子参考
+参考过的合集网站
 
-[https://textranch.com/](https://textranch.com/)
-
-QuillBot 文段改写
-
-[https://quillbot.com/](https://quillbot.com/)
+PPRP：[https://www.cnblogs.com/pprp/p/8880493.html](https://www.cnblogs.com/pprp/p/8880493.html)
